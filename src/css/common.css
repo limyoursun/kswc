@@ -41,15 +41,11 @@ select::-ms-expand {display: none;}
 .font_skyblue{color:#1994dd !important;}
 .font_blue{color:#156897 !important;}
 
-#wrap{min-width:1420px;}
-.wrap{max-width:1420px;margin:0 auto;padding:0 10px;}
-.con_wrap{min-height:calc(100% - 297px);padding:27px 0 60px;}
+#wrap{min-width:1500px;margin:0 auto;} /*레이아웃 확정 전 임시 입력*/
 .flex_wrap{display:flex;}
 .f_sb{justify-content:space-between;}
-.f_c{justify-content:center;}
 
 /* Btn */
-.btn_comM{padding:3px 8px;font-size:13px;}
 .btn_com{padding:4px 12px;font-size:13px;}
 .btn_search{width:61px;height:34px;padding:6px 8px 9px 6px;font-size:14px;font-weight:bold;letter-spacing:-1.4px;}
 .btn_grayline{border:1px solid #cdcdcd;background-color:#fff;color:#777777;}
