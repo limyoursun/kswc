@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* Reset */
+*{margin:0;padding:0;}
+body,h1,h2,h3,h4,h5,h6,th,td,input,select,textarea,ul,li,dl,dt,dd,button,p,a{color:#555;font-family:"Malgun Gothic","맑은고딕","AppleSDGothic","Nanum Barun Gothic","NanumGothic","AppleGothic","Dotum","Arial",sans-serif;font-size:12px;font-weight:normal;word-spacing:.02em;letter-spacing:-.05em;margin:0;padding:0;}
+body,html{text-align:center;-webkit-text-size-adjust:none;background:#fff;font-size:0;}
+b{font-weight:600;}
+h1,h2,h3,h4,h5,h6{box-sizing:border-box;width:auto;}
+ul,ol,li{box-sizing:border-box;list-style:none;}
+img,fieldset,iframe{border:none;}
+img,input,select{vertical-align:middle;}
+span,
+a{display:inline-block;text-decoration:none;box-sizing:border-box;}
+a:hover{text-decoration:none;}
+caption{width:0;height:0;overflow:hidden;visibility:hidden;font-size:0;line-height:0;}
+em,address,i{font-style:normal;}
+table{border:0;border-spacing:0;width:100%;text-align:center;border-collapse:collapse;}
+button{display:inline-block;border:none;cursor:pointer;box-sizing:border-box;background:transparent;}
+.block,.block div{display:block;}
+input[type="text"],input[type="password"],textarea,select{height:25px;border:1px solid #cccccc;color:#555;background-color:rgba(255,255,255,.9);vertical-align:middle;padding:0 5px;box-sizing:border-box;}
+input[type=checkbox]{width:15px;height:14px;}
+select{min-width:50px;padding-right:20px;background:url(../images/btn_select.png) right 5px center no-repeat, rgba(255,255,255,.9);;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+select::-ms-expand {display: none;}
+
+/* Common */
+.blind{position:absolute;left:-9999px;top:-9999px;width:0;height:0;font-size:0;overflow:hidden;line-height:0;text-indent:-9999px;}
+.clearfix{*zoom:1;}
+.clearfix::before,
+.clearfix::after{display:block;content:"";line-height:0;clear:both;}
+.blind{position:absolute;left:-9999px;}
+
+.fl{float:left;}
+.fr{float:right;}
+.alignL{text-align:left;}
+.alignR{text-align:right;}
+.alignC{text-align:center;}
+
+.font_b{font-weight:bold;}
+.font_black{color:#555 !important;;}
+.font_red{color:#f86c6c !important;}
+.font_deepred{color:#e95a5a !important;}
+.font_skyblue{color:#1994dd !important;}
+.font_blue{color:#156897 !important;}
+
+#wrap{min-width:1420px;}
+.wrap{max-width:1420px;margin:0 auto;padding:0 10px;}
+.con_wrap{min-height:calc(100% - 297px);padding:27px 0 60px;}
+.flex_wrap{display:flex;}
+.f_sb{justify-content:space-between;}
+.f_c{justify-content:center;}
+
+/* Btn */
+.btn_comM{padding:3px 8px;font-size:13px;}
+.btn_com{padding:4px 12px;font-size:13px;}
+.btn_search{width:61px;height:34px;padding:6px 8px 9px 6px;font-size:14px;font-weight:bold;letter-spacing:-1.4px;}
+.btn_grayline{border:1px solid #cdcdcd;background-color:#fff;color:#777777;}
+.btn_grayline:hover, .btn_grayline:active{background-color:#cdcdcd;color:#fff;}
+.btn_skyblueline{border:1px solid #1994dd;background-color:#fff;color:#1994dd;}
+.btn_skyblueline:hover, .btn_skyblueline:active{background-color:#1994dd;color:#fff;}
+.btn_greenline{border:1px solid #15981c;background-color:#fff;color:#15981c;}
+.btn_greenline:hover, .btn_greenline:active{background-color:#15981c;color:#fff;}
+.btn_blue{border:transparent;background-color:#156897;color:#fff;}
+.btn_blue:hover, .btn_blue:active{background-color:#003366;color:#fff;}
+.btn_skyblue{border:transparent;background-color:#1994dd;color:#fff;}
+.btn_skyblue:hover, .btn_skyblue:active{background-color:#0066cc;color:#fff;}
+.btn_black{border:transparent;background-color:#000000;color:#fff;}
+.btn_black:hover, .btn_black:active{background-color:#333333;color:#fff;}
+
+/* Table */
+.tbl_list{border-top:2px solid #367fa9;}
+.tbl_list th{font-size:14px;font-weight:bold;color:#000;letter-spacing:-1.4px;}
+.tbl_list td{font-size:13px;letter-spacing:-0.33px;line-height:1.38;}
+.tbl_list tr{border-top:1px solid #dfdfdf;border-bottom:1px solid #dfdfdf;}
+.tbl_list tbody tr:hover,.tbl tbody tr:active{background-color:#f3f3f3;}
+
+/* select & Input */
+label{font-size:12px;}
+select option:checked,
+select option:hover{background:#f3f3f3;color:#555;}select option:checked,
+select option:hover{box-shadow:0 0 10px 100px #f3f3f3 inset;color:#555;}
+
+/* paginate */
+.paginate{margin-top:27px;text-align:center}
+.paginate a,.paginate .on{display:inline-block;position:relative;_width /**/:14px;min-width:23px;padding:1px 5px 2px 4px;color:#333;font-size:15px;line-height:normal;box-sizing:border-box;font-weight:normal;margin:0 3px;font-family:"Malgun Gothic","맑은고딕","AppleSDGothic","Nanum Barun Gothic","NanumGothic","AppleGothic","Dotum","Arial",sans-serif;}
+.paginate a:hover, .paginate .on{color:#fff;background-color:#367fa9;}
+.paginate .pre,
+.paginate .next,
+.paginate .first,
+.paginate .last{_width /**/:47px;width:23px;height:23px;color:#777;background-color:#fff;border:1px solid #d7d7d7;margin:0 1px;font-size:10px;line-height:19px;font-weight:bold;}
+
+/* jquery-ui custom */
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button{font-family:"Malgun Gothic","맑은고딕","AppleSDGothic","Nanum Barun Gothic","NanumGothic","AppleGothic","Dotum","Arial",sans-serif;}
+.ui-datepicker{z-index:9000!important;;}
+.ui-datepicker-title{display:block;width:auto;margin:0 2em;}
+.ui-datepicker-title select{min-width:auto;height:auto;}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year{width:40%;margin-bottom:3px;padding:0;}
+.ui-datepicker select.ui-datepicker-year{width:42%;}
+.ui-datepicker select.ui-datepicker-month{margin-left:8px;}
+.ui-datepicker-trigger,
+.ui-monthpicker-trigger{cursor:pointer;}
+.ui-monthpicker select.ui-datepicker-year{width:75px;}
+
+/* Header */
+
+/* Gnb */
+
+/* Footer */

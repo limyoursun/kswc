@@ -1,2 +1,2 @@
-# KSWC
-The Korean Space Weather Center (KSWC)
+# ᓚᘏᗢ kswc
+우주전파센터 재난대응 시스템
