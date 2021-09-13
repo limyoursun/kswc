@@ -11,4 +11,9 @@ $(function () {
     $('.damage_press>li').removeClass('on');
     $(this).addClass('on');
   })
+
+  $('.con_list .more').on('click', function () {
+    $(this).toggleClass('on');
+    $(this).parent('p').nextAll('ul').slideToggle('fast');
+  })
 })

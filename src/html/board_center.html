@@ -1,0 +1,700 @@
+@@include('inc/top.html')
+
+<body>
+  <div id="wrap">
+    @@include('inc/header.html')
+    <!-- Contents -->
+    <div class="con_wrap center">
+      <div class="tit_board flex_wrap">
+        <div class="situation_warp flex_wrap">
+          <h2>실상황</h2>
+          <div class="current_wrap">
+            <p>위기경보재난 관심상황</p>
+            <span>2021-07-01 12:00:00</span>
+            <ul>
+              <li>S0</li>
+              <li>S3</li>
+              <li>관심</li>
+            </ul>
+          </div>
+        </div>
+        <div class="status_warp">
+          <ul class="flex_wrap">
+            <li class="on">
+              <b>관심</b>
+              <p>2021-07-01 12:00</p>
+            </li>
+            <li>
+              <b>주의</b>
+              <p>&nbsp;</p>
+            </li>
+            <li>
+              <b>경계</b>
+              <p>&nbsp;</p>
+            </li>
+            <li>
+              <b>심각</b>
+              <p>&nbsp;</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex_wrap f_sb">
+        <div class="con_situation">
+          <div class="flex_wrap f_sb">
+            <div>
+              <select name="prev_sit">
+                <option value="이전 상황 불러오기">이전 상황 불러오기</option>
+              </select>
+              <button type="button">우주전파환경 경보 발령/변경</button>
+              <button type="button">우주전파환경 경보 해제</button>
+            </div>
+            <ul class="legend_wrap">
+              <li>
+                <ul class="legend_time">
+                  <li>수행시간</li>
+                  <li>완료시간</li>
+                  <li>소요시간</li>
+                </ul>
+              </li>
+              <li>
+                <ul class="legend_fulfill">
+                  <li>수행이전</li>
+                  <li>수행중</li>
+                  <li>수행완료</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <ul class="con_list flex_wrap f_sb">
+            <li>
+              <h3>상황전파</h3>
+              <ul>
+                <li>
+                  <p>1. 상황발생 SMS 문자 발송</p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    
+                    <span class="fulfill_f"></span>
+                  </div>
+                </li>
+                <li>
+                  <p>2. 대응반 비상소집 문자 발송</p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_w"></span>
+                  </div>
+                </li>
+                <li>
+                  <p>3. 우주전파재난 비상소집 SMS 상황<br>전파 발송 후 개인자리로 이동 확인
+                    <span class="more">more</span>
+                  </p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_b"></span>
+                  </div>
+                  <ul>
+                    <li>
+                      <p>3-1. 위성, 항공 상황전파</p>
+                      <div class="time_wrap">
+                        <ul>
+                          <li>07-12 12:00</li>
+                          <li>07-12 12:30</li>
+                          <li>30분 00초</li>
+                        </ul>
+                        <span class="fulfill_b"></span>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>4. 대응반 비상소집 문자 발송</p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_f"></span>
+                  </div>
+                </li>
+                <li>
+                  <p>5. 대응반 비상소집 문자 발송</p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_w"></span>
+                  </div>
+                </li>
+                <li>
+                  <p>6. 대응반 비상소집 문자 발송</p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_w"></span>
+                  </div>
+                </li>
+                <li>
+                  <p>7. 상황발생 SMS 문자 발송
+                    <span class="more">more</span>
+                  </p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_b"></span>
+                  </div>
+                  <ul>
+                    <li>
+                      <p>7-1. 위성, 항공 상황전파</p>
+                      <div class="time_wrap">
+                        <ul>
+                          <li>07-12 12:00</li>
+                          <li>07-12 12:30</li>
+                          <li>30분 00초</li>
+                        </ul>
+                        <span class="fulfill_b"></span>
+                      </div>
+                    </li>
+                    <li>
+                      <p>7-2. 상황발생 SMS 문자 발송</p>
+                      <div class="time_wrap">
+                        <ul>
+                          <li>07-12 12:00</li>
+                          <li>07-12 12:30</li>
+                          <li>30분 00초</li>
+                        </ul>
+                        <span class="fulfill_b"></span>
+                      </div>
+                    </li>
+                    <li>
+                      <p>7-3. 상황발생 SMS 문자 발송</p>
+                      <div class="time_wrap">
+                        <ul>
+                          <li>07-12 12:00</li>
+                          <li>07-12 12:30</li>
+                          <li>30분 00초</li>
+                        </ul>
+                        <span class="fulfill_b"></span>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>상황발생</h3>
+              <ul>
+                <li>
+                  <p>1. 상황발생 SMS 문자 발송</p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_f"></span>
+                  </div>
+                </li>
+                <li>
+                  <p>2. 대응반 비상소집 문자 발송</p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_w"></span>
+                  </div>
+                </li>
+                <li>
+                  <p>3. 우주전파재난 비상소집 SMS 상황<br>전파 발송 후 개인자리로 이동 확인
+                    <span class="more">more</span>
+                  </p>
+                  
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_b"></span>
+                  </div>
+                  <ul>
+                    <li>
+                      <p>3-1. 위성, 항공 상황전파</p>
+                      <div class="time_wrap">
+                        <ul>
+                          <li>07-12 12:00</li>
+                          <li>07-12 12:30</li>
+                          <li>30분 00초</li>
+                        </ul>
+                        <span class="fulfill_b"></span>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>4. 대응반 비상소집 문자 발송</p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_f"></span>
+                  </div>
+                </li>
+                <li>
+                  <p>5. 대응반 비상소집 문자 발송</p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_w"></span>
+                  </div>
+                </li>
+                <li>
+                  <p>6. 대응반 비상소집 문자 발송</p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_w"></span>
+                  </div>
+                </li>
+                <li>
+                  <p>7. 상황발생 SMS 문자 발송
+                    <span class="more">more</span>
+                  </p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_b"></span>
+                  </div>
+                  <ul>
+                    <li>
+                      <p>7-1. 위성, 항공 상황전파</p>
+                      <div class="time_wrap">
+                        <ul>
+                          <li>07-12 12:00</li>
+                          <li>07-12 12:30</li>
+                          <li>30분 00초</li>
+                        </ul>
+                        <span class="fulfill_b"></span>
+                      </div>
+                    </li>
+                    <li>
+                      <p>7-2. 상황발생 SMS 문자 발송</p>
+                      <div class="time_wrap">
+                        <ul>
+                          <li>07-12 12:00</li>
+                          <li>07-12 12:30</li>
+                          <li>30분 00초</li>
+                        </ul>
+                        <span class="fulfill_b"></span>
+                      </div>
+                    </li>
+                    <li>
+                      <p>7-3. 상황발생 SMS 문자 발송</p>
+                      <div class="time_wrap">
+                        <ul>
+                          <li>07-12 12:00</li>
+                          <li>07-12 12:30</li>
+                          <li>30분 00초</li>
+                        </ul>
+                        <span class="fulfill_b"></span>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>상황경과</h3>
+              <ul>
+                <li>
+                  <p>1. 상황발생 SMS 문자 발송</p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_f"></span>
+                  </div>
+                </li>
+                <li>
+                  <p>2. 대응반 비상소집 문자 발송</p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_w"></span>
+                  </div>
+                </li>
+                <li>
+                  <p>3. 우주전파재난 비상소집 SMS 상황<br>전파 발송 후 개인자리로 이동 확인
+                    <span class="more">more</span>
+                  </p>
+                  
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_b"></span>
+                  </div>
+                  <ul>
+                    <li>
+                      <p>3-1. 위성, 항공 상황전파</p>
+                      <div class="time_wrap">
+                        <ul>
+                          <li>07-12 12:00</li>
+                          <li>07-12 12:30</li>
+                          <li>30분 00초</li>
+                        </ul>
+                        <span class="fulfill_b"></span>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>4. 대응반 비상소집 문자 발송</p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_f"></span>
+                  </div>
+                </li>
+                <li>
+                  <p>5. 대응반 비상소집 문자 발송</p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_w"></span>
+                  </div>
+                </li>
+                <li>
+                  <p>6. 대응반 비상소집 문자 발송</p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_w"></span>
+                  </div>
+                </li>
+                <li>
+                  <p>7. 상황발생 SMS 문자 발송
+                    <span class="more">more</span>
+                  </p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_b"></span>
+                  </div>
+                  <ul>
+                    <li>
+                      <p>7-1. 위성, 항공 상황전파</p>
+                      <div class="time_wrap">
+                        <ul>
+                          <li>07-12 12:00</li>
+                          <li>07-12 12:30</li>
+                          <li>30분 00초</li>
+                        </ul>
+                        <span class="fulfill_b"></span>
+                      </div>
+                    </li>
+                    <li>
+                      <p>7-2. 상황발생 SMS 문자 발송</p>
+                      <div class="time_wrap">
+                        <ul>
+                          <li>07-12 12:00</li>
+                          <li>07-12 12:30</li>
+                          <li>30분 00초</li>
+                        </ul>
+                        <span class="fulfill_b"></span>
+                      </div>
+                    </li>
+                    <li>
+                      <p>7-3. 상황발생 SMS 문자 발송</p>
+                      <div class="time_wrap">
+                        <ul>
+                          <li>07-12 12:00</li>
+                          <li>07-12 12:30</li>
+                          <li>30분 00초</li>
+                        </ul>
+                        <span class="fulfill_b"></span>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>상황종료</h3>
+              <ul>
+                <li>
+                  <p>1. 상황발생 SMS 문자 발송</p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_f"></span>
+                  </div>
+                </li>
+                <li>
+                  <p>2. 대응반 비상소집 문자 발송</p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_w"></span>
+                  </div>
+                </li>
+                <li>
+                  <p>3. 우주전파재난 비상소집 SMS 상황<br>전파 발송 후 개인자리로 이동 확인
+                    <span class="more">more</span>
+                  </p>
+                  
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_b"></span>
+                  </div>
+                  <ul>
+                    <li>
+                      <p>3-1. 위성, 항공 상황전파</p>
+                      <div class="time_wrap">
+                        <ul>
+                          <li>07-12 12:00</li>
+                          <li>07-12 12:30</li>
+                          <li>30분 00초</li>
+                        </ul>
+                        <span class="fulfill_b"></span>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>4. 대응반 비상소집 문자 발송</p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_f"></span>
+                  </div>
+                </li>
+                <li>
+                  <p>5. 대응반 비상소집 문자 발송</p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_w"></span>
+                  </div>
+                </li>
+                <li>
+                  <p>6. 대응반 비상소집 문자 발송</p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_w"></span>
+                  </div>
+                </li>
+                <li>
+                  <p>7. 상황발생 SMS 문자 발송
+                    <span class="more">more</span>
+                  </p>
+                  <div class="time_wrap">
+                    <ul>
+                      <li>07-12 12:00</li>
+                      <li>07-12 12:30</li>
+                      <li>30분 00초</li>
+                    </ul>
+                    <span class="fulfill_b"></span>
+                  </div>
+                  <ul>
+                    <li>
+                      <p>7-1. 위성, 항공 상황전파</p>
+                      <div class="time_wrap">
+                        <ul>
+                          <li>07-12 12:00</li>
+                          <li>07-12 12:30</li>
+                          <li>30분 00초</li>
+                        </ul>
+                        <span class="fulfill_b"></span>
+                      </div>
+                    </li>
+                    <li>
+                      <p>7-2. 상황발생 SMS 문자 발송</p>
+                      <div class="time_wrap">
+                        <ul>
+                          <li>07-12 12:00</li>
+                          <li>07-12 12:30</li>
+                          <li>30분 00초</li>
+                        </ul>
+                        <span class="fulfill_b"></span>
+                      </div>
+                    </li>
+                    <li>
+                      <p>7-3. 상황발생 SMS 문자 발송</p>
+                      <div class="time_wrap">
+                        <ul>
+                          <li>07-12 12:00</li>
+                          <li>07-12 12:30</li>
+                          <li>30분 00초</li>
+                        </ul>
+                        <span class="fulfill_b"></span>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <ul class="con_board">
+          <li>
+            <h3>예경보 시스템</h3>
+            <a href="#" class="more">more</a>
+            <div class="chart">
+              chart
+            </div>
+          </li>
+          <li>
+            <h3>유관기관 피해 현황</h3>
+            <a href="#" class="more">more</a>
+            <ul class="con_notice">
+              <li>
+                <a href="#">
+                  <span>A 유관기관 피해 현황</span>
+                  <span>2021.09.07</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>A 유관기관 피해 현황</span>
+                  <span>2021.09.07</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>A 유관기관 피해 현황</span>
+                  <span>2021.09.07</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h3>국내 피해 뉴스</h3>
+            <a href="#" class="more">more</a>
+            <ul class="con_notice">
+              <li>
+                <a href="#">
+                  <span>A 국내 피해 뉴스</span>
+                  <span>2021.09.07</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>A 국내 피해 뉴스</span>
+                  <span>2021.09.07</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>A 국내 피해 뉴스</span>
+                  <span>2021.09.07</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h3>해외 피해 뉴스</h3>
+            <a href="#" class="more">more</a>
+            <ul class="con_notice">
+              <li>
+                <a href="#">
+                  <span>A 해외 피해 뉴스</span>
+                  <span>2021.09.07</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>A 해외 피해 뉴스</span>
+                  <span>2021.09.07</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>A 해외 피해 뉴스</span>
+                  <span>2021.09.07</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- // Contents -->
+  </div>
+  @@include('inc/script.html')
+</body>
+
+</html>
