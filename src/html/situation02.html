@@ -1,0 +1,189 @@
+@@include('inc/top.html')
+
+<body>
+  <div id="wrap">
+    @@include('inc/header.html')
+    <!-- Contents -->
+    <div class="con_wrap situation02">
+      <div class="tit_wrap">
+        <h2>재난&sol;모의 이력 관리</h2>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">상황 관리</a></li>
+            <li>재난&sol;모의 이력관리</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub_wrap">
+        <div class="search_wrap">
+          <ul class="search f_sb">
+            <li>
+              <label for="sort" class="dot">구분</label>
+              <select id="sort" title="전체">
+                <option value="전체">전체</option>
+                <option value="실제상황">실제상황</option>
+                <option value="모의훈련">모의훈련</option>
+              </select>
+            </li>
+            <li>
+              <label for="situation" class="dot">상황별 유형</label>
+              <select id="situation" title="전체">
+                <option value="전체">전체</option>
+                <option value="태양흑점폭발 3단계">태양흑점폭발 3단계</option>
+                <option value="태양흑점폭발 4단계">태양흑점폭발 4단계</option>
+                <option value="태양흑점폭발 5단계">태양흑점폭발 5단계</option>
+                <option value="태양입자유입 3단계">태양입자유입 3단계</option>
+                <option value="태양입자유입 4단계">태양입자유입 4단계</option>
+                <option value="태양입자유입 5단계">태양입자유입 5단계</option>
+                <option value="지자기교란 3단계">지자기교란 3단계</option>
+                <option value="지자기교란 4단계">지자기교란 4단계</option>
+                <option value="지자기교란 5단계">지자기교란 5단계</option>
+              </select>
+            </li>
+            <li>
+              <label for="date" class="dot">기간</label>
+              <span class="period period_multi">
+                <input type="text" class="datepicker from" id="date" name="date" placeholder="YYYY-MM-DD" readonly
+                  dataformat="from" title="시작 날짜 선택">
+                <input type="text" class="datepicker to" name="date" placeholder="YYYY-MM-DD" readonly dataformat="to"
+                  title="종료  날짜 선택">
+              </span>
+            </li>
+            <li>
+              <label for="searchword" class="dot">검색어</label>
+              <input type="text" id="searchword" placeholder="검색어">
+            </li>
+          </ul>
+          <div class="btn_wrap alignR">
+            <a href="#" class="btn_com_l btn_blue">검색</a>
+            <a href="#" class="btn_com_l btn_gray">초기화</a>
+          </div>
+        </div>
+        <div class="article">
+          <div class="tbl_wrap">
+            <div class="tbl_top">
+              <p>총 <b>99</b>건 <b>1</b> &sol; 10페이지</p>
+            </div>
+            <table class="tbl_common">
+              <colgroup>
+                <col width="100">
+                <col width="185">
+                <col width="285">
+                <col width="600">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">NO</th>
+                  <th scope="col">구분</th>
+                  <th scope="col">상황별 유형</th>
+                  <th scope="col">제목</th>
+                  <th scope="col">상황발생일</th>
+                  <th scope="col">상황종료일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>99</td>
+                  <td>실제상황</td>
+                  <td>태양입자유입 R5 단계</td>
+                  <td>태양입자유입 R5 단계 이력</td>
+                  <td>2021-06-21</td>
+                  <td>2021-06-21</td>
+                </tr>
+                <tr>
+                  <td>98</td>
+                  <td>실제상황</td>
+                  <td>태양입자유입 R5 단계</td>
+                  <td>태양입자유입 R5 단계 이력</td>
+                  <td>2021-06-21</td>
+                  <td>2021-06-21</td>
+                </tr>
+                <tr>
+                  <td>97</td>
+                  <td>실제상황</td>
+                  <td>태양입자유입 R5 단계</td>
+                  <td>태양입자유입 R5 단계 이력</td>
+                  <td>2021-06-21</td>
+                  <td>2021-06-21</td>
+                </tr>
+                <tr>
+                  <td>96</td>
+                  <td>실제상황</td>
+                  <td>태양입자유입 R5 단계</td>
+                  <td>태양입자유입 R5 단계 이력</td>
+                  <td>2021-06-21</td>
+                  <td>2021-06-21</td>
+                </tr>
+                <tr>
+                  <td>95</td>
+                  <td>실제상황</td>
+                  <td>태양입자유입 R5 단계</td>
+                  <td>태양입자유입 R5 단계 이력</td>
+                  <td>2021-06-21</td>
+                  <td>2021-06-21</td>
+                </tr>
+                <tr>
+                  <td>94</td>
+                  <td>실제상황</td>
+                  <td>태양입자유입 R5 단계</td>
+                  <td>태양입자유입 R5 단계 이력</td>
+                  <td>2021-06-21</td>
+                  <td>2021-06-21</td>
+                </tr>
+                <tr>
+                  <td>93</td>
+                  <td>실제상황</td>
+                  <td>태양입자유입 R5 단계</td>
+                  <td>태양입자유입 R5 단계 이력</td>
+                  <td>2021-06-21</td>
+                  <td>2021-06-21</td>
+                </tr>
+                <tr>
+                  <td>92</td>
+                  <td>실제상황</td>
+                  <td>태양입자유입 R5 단계</td>
+                  <td>태양입자유입 R5 단계 이력</td>
+                  <td>2021-06-21</td>
+                  <td>2021-06-21</td>
+                </tr>
+                <tr>
+                  <td>91</td>
+                  <td>실제상황</td>
+                  <td>태양입자유입 R5 단계</td>
+                  <td>태양입자유입 R5 단계 이력</td>
+                  <td>2021-06-21</td>
+                  <td>2021-06-21</td>
+                </tr>
+                <tr>
+                  <td>90</td>
+                  <td>실제상황</td>
+                  <td>태양입자유입 R5 단계</td>
+                  <td>태양입자유입 R5 단계 이력</td>
+                  <td>2021-06-21</td>
+                  <td>2021-06-21</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="paginate">
+              <a href="#" class="first" title="처음">〈〈</a>
+              <a href="#" class="pre" title="이전">〈</a>
+              <span>
+                <a href="#" class="on">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+              </span>
+              <a href="#" class="next" title="다음">〉</a>
+              <a href="#" class="last" title="마지막">〉〉</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // Contents -->
+  </div>
+  @@include('inc/script.html')
+</body>
+
+</html>

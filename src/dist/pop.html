@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>우주전파센터 재난대응 시스템</title>
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../plugins/axicon/axicon.min.css" />
+  <link rel="stylesheet" href="../plugins/jquery-ui/themes/base/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.css" />
+  <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/pop.css">
+</head>
+<body>
+  <div id="wrap">
+    <!-- Header -->
+<header>
+  <div class="util">
+    <ul class="user_svc">
+      <li><b>관리자</b>님 반갑습니다.</li>
+      <li><button type="button">내정보</button></li>
+      <li><button type="button">로그아웃</button></li>
+      <li><button type="button">상황판 본부용</button></li>
+    </ul>
+  </div>
+  <nav>
+    <h1><a href="#"><img src="../images/img_logo.png" alt="우주전파센터 재난대응 시스템"></a></h1>
+    <ul id="gnb">
+      <li>
+        <a href="#" class="depth1 empty">센터용 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 empty">모의훈련 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 empty">본부용 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 on active">재난 기준 관리</a>
+        <ul class="depth2">
+          <li><a href="#" class="on">실무&sol;표준 매뉴얼 관리</a></li>
+          <li><a href="#">행동 매뉴얼 관리</a></li>
+          <li><a href="#">상황판단회의 보고서 관리</a></li>
+          <li><a href="#">상황대응 보고서 관리</a></li>
+          <li><a href="#">국내 보도자료 관리</a></li>
+          <li><a href="#">해외 보도자료 관리</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="depth1">상황 관리</a>
+        <ul class="depth2">
+          <li><a href="#">재난대응 시나리오 관리</a></li>
+          <li><a href="#">재난&sol;모의 이력관리</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="depth1">공통 관리</a>
+        <ul class="depth2">
+          <li><a href="#">내&sol;외부 주소록관리</a></li>
+          <li><a href="#">그룹 관리</a></li>
+          <li><a href="#">사용자관리</a></li>
+          <li><a href="#">코드 관리</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+<!-- // Header -->
+    <!-- Contents -->
+    <div class="pop_overlay">
+  <div class="pop_wrap p_common02">
+    <div class="pop_tit">
+      <h1>주소록 불러오기</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_view alignL">
+          <caption>내역보기</caption>
+          <colgroup>
+            <col width='100'>
+            <col width='*'>
+          </colgroup>
+          <tr>
+            <th>제 목</th>
+            <td><input type="text" value="모의훈련 상황 평가 전달"></td>
+          </tr>
+          <tr>
+            <th class="three">담 당 자</th>
+            <td><input type="text" value="평가 담당자"></td>
+          </tr>
+          <tr>
+            <th>내 용</th>
+            <td>
+              <textarea>모의훈련 평가 등록 영역</textarea>
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignL">
+          <button type="button" class="btn_com btn_blue">등록</button>
+        </div>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_com btn_gray">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="pop_overlay">
+  <div class="pop_wrap p_common02">
+    <div class="pop_tit">
+      <h1>권한설정</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_view alignL">
+          <caption>내역보기</caption>
+          <colgroup>
+            <col width='150'>
+            <col width='*'>
+          </colgroup>
+          <tr>
+            <th class="four">권 한 설 정</th>
+            <td>
+              <select name="">
+                <option value="시스템 관리자">시스템 관리자</option>
+                <option value="내부 사용자">내부 사용자</option>
+                <option value="본부 사용자">본부 사용자</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_com btn_gray">변경</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="pop_overlay">
+  <div class="pop_wrap p_common02">
+    <div class="pop_tit">
+      <h1>코드항목 추가</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_view alignL">
+          <caption>내역보기</caption>
+          <colgroup>
+            <col width='150'>
+            <col width='*'>
+          </colgroup>
+          <tr>
+            <th class="four">코 드 그 룹 추 가</th>
+            <td>
+              <input type="text" placeholder="코드그룹">
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_com btn_gray">적용</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="pop_overlay">
+  <div class="pop_wrap p_common02">
+    <div class="pop_tit">
+      <h1>하위코드 추가</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_view alignL">
+          <caption>내역보기</caption>
+          <colgroup>
+            <col width='150'>
+            <col width='*'>
+          </colgroup>
+          <tr>
+            <th class="four">개 별 코 드</th>
+            <td>
+              <input type="text" placeholder="개별코드">
+            </td>
+          </tr>
+          <tr>
+            <th class="four">개 별 코 드 명</th>
+            <td>
+              <input type="text" placeholder="개별코드명">
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_com btn_gray">적용</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="pop_overlay">
+  <div class="pop_wrap p_common02">
+    <div class="pop_tit">
+      <h1>보고서 내역보기</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <img src="http://placehold.it/530x300">
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_com btn_gray">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- // Contents -->
+  </div>
+  <script src="../plugins/jquery/dist/jquery.min.js"></script>
+<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/i18n/jquery-ui-timepicker-ko.js"></script>
+<script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
+<script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>
+<script src="../js/ui_common.js"></script>
+</body>
+</html>
