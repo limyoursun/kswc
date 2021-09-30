@@ -47,7 +47,7 @@ select::-ms-expand {display:none;}
 .f_s{justify-content:flex-start;}
 
 /* Btn */
-.btn_com{padding:6px 30px;font-size:16px;}
+.btn_com{padding:5px 30px;font-size:16px;}
 .btn_com_s{padding:3px 9px 4px;border-radius:3px;font-size:12px;}
 .btn_com_m{padding:4px 15px 7px;border-radius:3px;font-size:14px;}
 .btn_com_l{width:90px;line-height:31px;font-size:14px;font-size:16px;text-align:center;}
@@ -56,10 +56,13 @@ select::-ms-expand {display:none;}
 .btn_grayline{border:1px solid #cdcdcd;background-color:#fff;color:#777777;}
 .btn_grayline:hover, .btn_grayline:active{background-color:#cdcdcd;color:#fff;}
 .btn_blue{border:1px solid #284278;background-color:#284278;color:#fff;}
-.btn_blue:hover, .btn_blue:active{background-color:#395fac;color:#fff;}
-.btn_skyblue{background-color:#3c7ed3;border-color:#3c7ed3;color:#fff;}
+.btn_blue:hover, .btn_blue:active{background-color:#395fac;border:1px solid #395fac;color:#fff;}
+.btn_skyblue{background-color:#3c7ed3;border:1px solid #3c7ed3;color:#fff;}
+.btn_skyblue:hover{background-color:#225599;border:1px solid #225599;color:#fff;}
 .btn_skyblueline{border:2px solid #3c7ed3;background-color:#fff;color:#3c7ed3;}
+.btn_skyblueline:hover{background-color:#3c7ed3;color:#fff;}
 .btn_mintline{border:2px solid #3ca7d3;background-color:#fff;color:#3ca7d3;}
+.btn_mintline:hover{border:2px solid #3ca7d3;background-color:#3ca7d3;color:#fff;}
 
 
 /* Table */
@@ -72,8 +75,9 @@ select::-ms-expand {display:none;}
 .tbl_common tbody tr:hover{background-color:#f3f3f3;}
 .tbl_common th{font-weight:bold;font-size:16px;color:#000;}
 .tbl_common td{font-size:16px;}
-.tbl_common .btn_search{padding:4px 11px;border-radius:3px;font-size:14px;font-weight:bold;background-color:#fff;}
+.tbl_common .btn_search{padding:4px 11px;border-radius:3px;font-size:14px;font-weight:bold;}
 .tbl_common .btn_search::before{display:inline-block;content:'';width:13px;height:17px;margin-right:2px;background:url(../images/ico_search.png)no-repeat;vertical-align:bottom;}
+.tbl_common .btn_search:hover::before{filter:brightness(500%);}
 .tbl_common .btn_skyblueline::before{background-position-y:100%;}
 .tbl_common .btn_mintline::before{background-position-y:0;}
 
