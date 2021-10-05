@@ -75,7 +75,7 @@ select::-ms-expand {display:none;}
 .tbl_common tbody tr:hover{background-color:#f3f3f3;}
 .tbl_common th{font-weight:bold;font-size:16px;color:#000;}
 .tbl_common td{font-size:16px;}
-.tbl_common .btn_search{padding:4px 11px;border-radius:3px;font-size:14px;font-weight:bold;}
+.tbl_common .btn_search{padding:4px 11px;border-radius:3px;font-size:14px;font-weight:bold;line-height:18px;}
 .tbl_common .btn_search::before{display:inline-block;content:'';width:13px;height:17px;margin-right:2px;background:url(../images/ico_search.png)no-repeat;vertical-align:bottom;}
 .tbl_common .btn_search:hover::before{filter:brightness(500%);}
 .tbl_common .btn_skyblueline::before{background-position-y:100%;}
