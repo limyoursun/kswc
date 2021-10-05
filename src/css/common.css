@@ -165,8 +165,6 @@ nav h1{background-color:#000d2a;line-height:127px;text-align:center;}
 .depth2 a{padding:8px 0;font-size:16px;letter-spacing:-1.2px;color:rgba(170, 177, 185, 0.53);}
 .depth2 a.on,.depth2 a:hover{color:#77b2fd;}
 
-/* Footer */
-
 /* ico_fileName Extention */
 .ico_ext{display:inline-block;width:17px;height:18px;background:url(../images/ico_fileExt.png) -223px -82px no-repeat;margin:0 1px;vertical-align:sub;font-size:0;line-height:0;}
 .ext_bmp{background-position:-3px -2px;}
