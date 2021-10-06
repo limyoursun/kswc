@@ -58,6 +58,7 @@
 .tbl_view dt,.tbl_view dd,.tbl_view li, .tbl_view a{font-size:16px;}
 .tbl_view tr{border:1px solid #cdcdcd;border-width:1px 0;}
 .tbl_view th{padding:14px 19px 13px;font-weight:bold;color:#284278;word-spacing:1.4em;vertical-align:top;text-align:center;}
+.tbl_view th label{letter-spacing:5%;}
 .tbl_view th.three{word-spacing:0.1em;}
 .tbl_view th.four{word-spacing:-0.38em;}
 .tbl_view td{padding:11px 10px 13px;line-height:25px;}
