@@ -64,7 +64,6 @@ select::-ms-expand {display:none;}
 .btn_mintline{border:2px solid #3ca7d3;background-color:#fff;color:#3ca7d3;}
 .btn_mintline:hover{border:2px solid #3ca7d3;background-color:#3ca7d3;color:#fff;}
 
-
 /* Table */
 .tbl_top p{margin-bottom:20px;font-size:14px;letter-spacing:.09px;}
 .tbl_top p::before{content:'\e850';margin-right:2px;font-family:'axicon';font-weight:bold;color:#284278;}
@@ -74,12 +73,15 @@ select::-ms-expand {display:none;}
 .tbl_common tbody tr{border-bottom:1px solid #d3d3d3;line-height:45px;}
 .tbl_common tbody tr:hover{background-color:#f3f3f3;}
 .tbl_common th{font-weight:bold;font-size:16px;color:#000;}
-.tbl_common td{font-size:16px;}
-.tbl_common .btn_search{padding:4px 11px;border-radius:3px;font-size:14px;font-weight:bold;}
+.tbl_common td{font-size:16px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.tbl_common .btn_search{padding:4px 11px;border-radius:3px;font-size:14px;font-weight:bold;line-height:18px;}
 .tbl_common .btn_search::before{display:inline-block;content:'';width:13px;height:17px;margin-right:2px;background:url(../images/ico_search.png)no-repeat;vertical-align:bottom;}
 .tbl_common .btn_search:hover::before{filter:brightness(500%);}
 .tbl_common .btn_skyblueline::before{background-position-y:100%;}
 .tbl_common .btn_mintline::before{background-position-y:0;}
+.tbl_common .btn_search:hover::before{background:url(../images/ico_search_wh.png)no-repeat;}
+.tbl_common .btn_skyblueline:hover::before{background-position-y:100%;}
+.tbl_common .btn_mintline:hover::before{background-position-y:0;}
 
 /* input */
 .deco input[type="radio"],
@@ -164,8 +166,6 @@ nav h1{background-color:#000d2a;line-height:127px;text-align:center;}
 .depth2{padding:20px 0 20px 28px;border-bottom:1px solid #2e4057;background-color:#000d2a;line-height:25px;}
 .depth2 a{padding:8px 0;font-size:16px;letter-spacing:-1.2px;color:rgba(170, 177, 185, 0.53);}
 .depth2 a.on,.depth2 a:hover{color:#77b2fd;}
-
-/* Footer */
 
 /* ico_fileName Extention */
 .ico_ext{display:inline-block;width:17px;height:18px;background:url(../images/ico_fileExt.png) -223px -82px no-repeat;margin:0 1px;vertical-align:sub;font-size:0;line-height:0;}
