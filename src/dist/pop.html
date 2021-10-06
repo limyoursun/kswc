@@ -70,9 +70,119 @@
 <!-- // Header -->
     <!-- Contents -->
     <div class="pop_overlay">
-  <div class="pop_wrap p_situation02 p_situation02_1">
+  <div class="pop_wrap p_common02">
     <div class="pop_tit">
-      <h1>내역보기</h1>
+      <h1>권한설정</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_view alignL">
+          <caption>내역보기</caption>
+          <colgroup>
+            <col width='150'>
+            <col width='*'>
+          </colgroup>
+          <tr>
+            <th class="four">권 한 설 정</th>
+            <td>
+              <select name="">
+                <option value="시스템 관리자">시스템 관리자</option>
+                <option value="내부 사용자">내부 사용자</option>
+                <option value="본부 사용자">본부 사용자</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_com btn_gray">변경</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="pop_overlay">
+  <div class="pop_wrap p_common02">
+    <div class="pop_tit">
+      <h1>코드항목 추가</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_view alignL">
+          <caption>내역보기</caption>
+          <colgroup>
+            <col width='150'>
+            <col width='*'>
+          </colgroup>
+          <tr>
+            <th class="four">코 드 그 룹 추 가</th>
+            <td>
+              <input type="text" placeholder="코드그룹">
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_com btn_gray">적용</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="pop_overlay">
+  <div class="pop_wrap p_common02">
+    <div class="pop_tit">
+      <h1>하위코드 추가</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_view alignL">
+          <caption>내역보기</caption>
+          <colgroup>
+            <col width='150'>
+            <col width='*'>
+          </colgroup>
+          <tr>
+            <th class="four">개 별 코 드</th>
+            <td>
+              <input type="text" placeholder="개별코드">
+            </td>
+          </tr>
+          <tr>
+            <th class="four">개 별 코 드 명</th>
+            <td>
+              <input type="text" placeholder="개별코드명">
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_com btn_gray">적용</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="pop_overlay">
+  <div class="pop_wrap p_common02">
+    <div class="pop_tit">
+      <h1>보고서 내역보기</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <img src="http://placehold.it/530x300">
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_com btn_gray">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="pop_overlay">
+  <div class="pop_wrap p_common02">
+    <div class="pop_tit">
+      <h1>주소록 불러오기</h1>
       <button type="button" class="btn_pop_close" closePop></button>
     </div>
     <div class="pop_body">
@@ -84,6 +194,46 @@
             <col width='*'>
           </colgroup>
           <tr>
+            <th>제 목</th>
+            <td><input type="text" value="모의훈련 상황 평가 전달"></td>
+          </tr>
+          <tr>
+            <th class="three">담 당 자</th>
+            <td><input type="text" value="평가 담당자"></td>
+          </tr>
+          <tr>
+            <th>내 용</th>
+            <td>
+              <textarea>모의훈련 평가 등록 영역</textarea>
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignL">
+          <button type="button" class="btn_com btn_blue">등록</button>
+        </div>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_com btn_gray">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="pop_overlay">
+  <div class="pop_wrap p_common02">
+    <div class="pop_tit">
+      <h1>피해접수 등록</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_view alignL">
+          <caption>피해접수 등록</caption>
+          <colgroup>
+            <col width='100'>
+            <col width='*'>
+          </colgroup>
+          <tr>
+<<<<<<< HEAD
             <th><label for="title">제목</label></th>
             <td>대응반 비상소집자 응소</td>
           </tr>
@@ -124,17 +274,275 @@
           </tr>
           <tr>
             <th><label for="file">첨부파일</label></th>
-            <td>
-              <i class="ico_ext ext_hwp"></i>
-              <a href="#" class="font_skyblue">비상소집 집계 보고서.hwp</a>
+=======
+            <th>제 목</th>
+            <td colspan="3"><input type="text" value="항만 통신 장애"></td>
+          </tr>
+          <tr>
+            <th>유 형</th>
+            <td colspan="3">
+              <select name="type">
+                <option value="전체">전체</option>
+                <option value="레이더 장애">레이더 장애</option>
+                <option value="GPS 장애">GPS 장애</option>
+                <option value="항공 관제 장애">항공 관제 장애</option>
+                <option value="통신장애">통신장애</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th class="three">기 관 명</th>
+            <td><input type="text"></td>
+            <th class="three">담 당 자</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>내 용</th>
+            <td colspan="3">
+              <textarea>모의훈련 평가 등록 영역</textarea>
+            </td>
+          </tr>
+          <tr>
+            <th class="four">첨 부 파 일</th>
+            <td colspan="3">
+              <input type="file">
             </td>
           </tr>
         </table>
+        <div class="btn_wrap alignL">
+          <button type="button" class="btn_com btn_blue">등록</button>
+          <button type="button" class="btn_com btn_blue">수정</button>
+          <button type="button" class="btn_com btn_blue">삭제</button>
+        </div>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_com btn_gray">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="pop_overlay">
+  <div class="pop_wrap p_common02">
+    <div class="pop_tit">
+      <h1>피해접수 등록</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_view alignL">
+          <caption>피해접수 등록</caption>
+          <colgroup>
+            <col width='100'>
+            <col width='*'>
+          </colgroup>
+          <tr>
+            <th>제 목</th>
+            <td colspan="3"><input type="text" value="항만 통신 장애"></td>
+          </tr>
+          <tr>
+            <th>유 형</th>
+            <td colspan="3">
+              <select name="type">
+                <option value="전체">전체</option>
+                <option value="레이더 장애">레이더 장애</option>
+                <option value="GPS 장애">GPS 장애</option>
+                <option value="항공 관제 장애">항공 관제 장애</option>
+                <option value="통신장애">통신장애</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th class="three">기 관 명</th>
+            <td><input type="text"></td>
+            <th class="three">담 당 자</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>내 용</th>
+            <td colspan="3">
+              <textarea>모의훈련 평가 등록 영역</textarea>
+            </td>
+          </tr>
+          <tr>
+            <th class="four">첨 부 파 일</th>
+            <td colspan="3">
+              <input type="file">
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignL">
+          <button type="button" class="btn_com btn_blue">등록</button>
+          <button type="button" class="btn_com btn_blue">수정</button>
+          <button type="button" class="btn_com btn_blue">삭제</button>
+        </div>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_com btn_gray">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="pop_overlay">
+  <div class="pop_wrap p_common02">
+    <div class="pop_tit">
+      <h1>피해접수 등록</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_view alignL">
+          <caption>피해접수 등록</caption>
+          <colgroup>
+            <col width='100'>
+            <col width='*'>
+          </colgroup>
+          <tr>
+            <th>제 목</th>
+            <td colspan="3"><input type="text" value="항만 통신 장애"></td>
+          </tr>
+          <tr>
+            <th>유 형</th>
+            <td colspan="3">
+              <select name="type">
+                <option value="전체">전체</option>
+                <option value="레이더 장애">레이더 장애</option>
+                <option value="GPS 장애">GPS 장애</option>
+                <option value="항공 관제 장애">항공 관제 장애</option>
+                <option value="통신장애">통신장애</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th class="three">기 관 명</th>
+            <td><input type="text"></td>
+            <th class="three">담 당 자</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>내 용</th>
+            <td colspan="3">
+              <textarea>모의훈련 평가 등록 영역</textarea>
+            </td>
+          </tr>
+          <tr>
+            <th class="four">첨 부 파 일</th>
+            <td colspan="3">
+              <input type="file">
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignL">
+          <button type="button" class="btn_com btn_blue">등록</button>
+          <button type="button" class="btn_com btn_blue">수정</button>
+          <button type="button" class="btn_com btn_blue">삭제</button>
+        </div>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_com btn_gray">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="pop_overlay">
+  <div class="pop_wrap p_common02">
+    <div class="pop_tit">
+      <h1>피해접수 등록</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_view alignL">
+          <caption>피해접수 등록</caption>
+          <colgroup>
+            <col width='100'>
+            <col width='*'>
+          </colgroup>
+          <tr>
+            <th>제 목</th>
+            <td colspan="3"><input type="text" value="항만 통신 장애"></td>
+          </tr>
+          <tr>
+            <th>유 형</th>
+            <td colspan="3">
+              <select name="type">
+                <option value="전체">전체</option>
+                <option value="레이더 장애">레이더 장애</option>
+                <option value="GPS 장애">GPS 장애</option>
+                <option value="항공 관제 장애">항공 관제 장애</option>
+                <option value="통신장애">통신장애</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th class="three">기 관 명</th>
+            <td><input type="text"></td>
+            <th class="three">담 당 자</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>내 용</th>
+            <td colspan="3">
+              <textarea>모의훈련 평가 등록 영역</textarea>
+            </td>
+          </tr>
+          <tr>
+            <th class="four">첨 부 파 일</th>
+            <td colspan="3">
+              <input type="file">
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignL">
+          <button type="button" class="btn_com btn_blue">등록</button>
+          <button type="button" class="btn_com btn_blue">수정</button>
+          <button type="button" class="btn_com btn_blue">삭제</button>
+        </div>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_com btn_gray">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="pop_overlay">
+  <div class="pop_wrap p_common02">
+    <div class="pop_tit">
+      <h1>위기경보 재난상황 발령&sol;변경</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_view alignL">
+          <caption>위기경보 재난상황 발령&sol;변경</caption>
+          <colgroup>
+            <col width='100'>
+            <col width='*'>
+          </colgroup>
+          <tr>
+            <th class="four">경 보 재 난<br>발 령</th>
+>>>>>>> lim
+            <td>
+              <select name="warning">
+                <option value="선택">선택</option>
+                <option value="해제">해제</option>
+                <option value="관심 발령">관심 발령</option>
+                <option value="주의 발령">주의 발령</option>
+                <option value="경계 발령">경계 발령</option>
+                <option value="심각 발령">심각 발령</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_com btn_blue">발령</button>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
+
+    
     <!-- // Contents -->
   </div>
   <script src="../plugins/jquery/dist/jquery.min.js"></script>
