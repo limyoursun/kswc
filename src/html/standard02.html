@@ -1,0 +1,111 @@
+@@include('inc/top.html')
+
+<body>
+  <div id="wrap">
+    @@include('inc/header.html')
+    <!-- Contents -->
+    <div class="con_wrap standard">
+      <div class="tit_wrap">
+        <h2>행동 메뉴얼 관리</h2>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">재난기준관리</a></li>
+            <li>행동 메뉴얼 관리</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub_wrap standard02">
+        <div class="search_wrap">
+          <ul class="search">
+            <li>
+              <label for="sort" class="dot">유형</label>
+              <select id="sort" title="전체">
+                <option value="전체">전체</option>
+                <option value="상황전파">상황전파</option>
+                <option value="상황발생보고">상황발생보고</option>
+                <option value="상황경과보고">상황경과보고</option>
+                <option value="상황경종료보고">상황경종료보고</option>
+              </select>
+            </li>
+            <li>
+              <label for="searchword" class="dot">검색어</label>
+              <input type="text" id="searchword" placeholder="검색어">
+            </li>
+          </ul>
+          <div class="btn_wrap alignR">
+            <a href="#" class="btn btn_blue">검색</a>
+            <a href="#" class="btn btn_gray">초기화</a>
+          </div>
+        </div>
+        <div class="article">
+          <div class="tbl_wrap">
+            <div class="tbl_top flex_wrap f_sb">
+              <p>총 <b>2</b>건 <b>1</b> &sol; 1페이지</p>
+              <button type="button" class="btn btn_blue">등록</button>
+            </div>
+            <table class="tbl_com">
+              <colgroup>
+                <col width="100">
+                <col width="150">
+                <col width="200">
+                <col width="*">
+                <col width="150">
+                <col width="120">
+                <col width="120">
+                <col width="150">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">NO</th>
+                  <th scope="col">유형</th>
+                  <th scope="col">행동번호</th>
+                  <th scope="col">제목</th>
+                  <th scope="col">등록자</th>
+                  <th scope="col">등록일</th>
+                  <th scope="col">수정일</th>
+                  <th scope="col">파일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2</td>
+                  <td>상황발생보고</td>
+                  <td>행 Ⅱ-9</td>
+                  <td>상황 보고서 작서 및 메모&sol;외부메일 보고</td>
+                  <td>관리자</td>
+                  <td>2021-10-07</td>
+                  <td>2021-10-07</td>
+                  <td><button type="button" class="btn_axi btn_file btn_grayline">파일</button></td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>상황전파</td>
+                  <td>행 Ⅰ-1</td>
+                  <td>대응반 비상소집 응소</td>
+                  <td>관리자</td>
+                  <td>2021-10-07</td>
+                  <td>2021-10-07</td>
+                  <td><button type="button" class="btn_axi btn_file btn_grayline">파일</button></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="paginate">
+              <a href="#" class="first" title="처음">〈〈</a>
+              <a href="#" class="pre" title="이전">〈</a>
+              <span>
+                <a href="#" class="on">1</a>
+              </span>
+              <a href="#" class="next" title="다음">〉</a>
+              <a href="#" class="last" title="마지막">〉〉</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // Contents -->
+  </div>
+  @@include('inc/script.html')
+</body>
+
+</html>

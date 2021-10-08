@@ -1,0 +1,146 @@
+@@include('inc/top.html')
+
+<body>
+  <div id="wrap">
+    @@include('inc/header.html')
+    <!-- Contents -->
+    <div class="con_wrap situation">
+      <div class="tit_wrap">
+        <h2>재난대응 시나리오 관리</h2>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">상황 관리</a></li>
+            <li>재난대응 시나리오 관리</li>
+          </ul>
+        </div>
+      </div> 
+      <div class="sub_wrap situation01">
+        <div class="flex_wrap f_sb">
+          <div class="tasklist_wrap flex_wrap f_sb">
+            <div>
+              <select name="select_task">
+                <option value="재난대응 R/S/G 단계 업무 선택">재난대응 R/S/G 단계 업무 선택</option>
+                <option value="재난대응 R/S/G 3단계 업무구성">재난대응 R/S/G 3단계 업무구성</option>
+                <option value="재난대응 R/S/G 4단계 업무구성">재난대응 R/S/G 4단계 업무구성</option>
+                <option value="재난대응 R/S/G 5단계 업무구성">재난대응 R/S/G 5단계 업무구성</option>
+              </select>
+              <div>
+                <h3>전체 상황 업무 목록</h3>
+                <ul id="sortable1" class="tasklist">
+                  <li class="ui-state-highlight">1. 주관기관 담당자 상황 전파</li>
+                  <li class="ui-state-highlight">2. 주관기관장 상황전파</li>
+                  <li class="ui-state-highlight">3. 주관기관 및 유관기관 상황전파</li>
+                  <li class="ui-state-highlight">4. 언론사 등 방문자 출입 관리</li>
+                  <li class="ui-state-highlight">5. 재난대응 근무표 작성 및 관리</li>
+                  <li class="ui-state-highlight">6. 국회 요구 자료 작성 및 대응</li>
+                  <li class="ui-state-highlight">7. 청사시설 유지관리</li>
+                  <li class="ui-state-highlight">8. 데이터분석/모델운영 점검</li>
+                  <li class="ui-state-highlight">9. 경과보고서 작성</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <select name="all_task">
+                <option value="전체항목">전체항목</option>
+                <option value="상황전파">상황전파</option>
+                <option value="상황발생보고">상황발생보고</option>
+                <option value="상황경과보고">상황경과보고</option>
+                <option value="상황종료보고">상황종료보고</option>
+              </select>
+              <div>
+                <h3>재난대응 세부업무 목록</h3>
+                <ul id="sortable2" class="tasklist">
+                  <li class="ui-state-default">[행 Ⅱ-6] 언론사 취재 지원, 언론 보도 모니터링과 중략 가능한 문구</li>
+                  <li class="ui-state-default">[행 Ⅱ-5] 비상근무 예산집행</li>
+                  <li class="ui-state-default">[행 Ⅱ-4] 청사시설 유지관리</li>
+                  <li class="ui-state-default">[행 Ⅱ-3] 언론사 등 방문자 출입 관리</li>
+                  <li class="ui-state-default">[행 Ⅱ-2] 국회 요구 자료 작성 및 대응</li>
+                  <li class="ui-state-default">[행 Ⅱ-1] 재난대응 근무표 작성 및 관리</li>
+                  <li class="ui-state-default">[행 Ⅰ-4] 주관기관장 상황전파</li>
+                  <li class="ui-state-default">[행 Ⅰ-3] 주관기관 및 유관기관 상황전파</li>
+                  <li class="ui-state-default">[행 Ⅰ-2] 주관기관 담당자 상황 전파</li>
+                  <li class="ui-state-default">[행 Ⅰ-1] 대응반 비상소집 응소</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="taskdetail_wrap">
+            <div>
+              <table>
+                <caption>재난대응 세부업무 옵션</caption>
+                <colgroup>
+                  <col width="100">
+                  <col width="*">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th><label for="template">탬플릿</label></th>
+                    <td>
+                      <select name="template">
+                        <option value="세부업무 템플릿 선택">세부업무 템플릿 선택</option>
+                        <option value="행동메뉴얼 Ⅰ-1 템플릿">행동메뉴얼 Ⅰ-1 템플릿</option>
+                        <option value="행동메뉴얼 Ⅰ-2 템플릿">행동메뉴얼 Ⅰ-2 템플릿</option>
+                        <option value="행동메뉴얼 Ⅰ-4 템플릿">행동메뉴얼 Ⅰ-4 템플릿</option>
+                        <option value="행동메뉴얼 Ⅰ-5 템플릿">행동메뉴얼 Ⅰ-5 템플릿</option>
+                        <option value="행동메뉴얼 Ⅱ-1 템플릿">행동메뉴얼 Ⅱ-1 템플릿</option>
+                        <option value="행동메뉴얼 Ⅱ-2 템플릿">행동메뉴얼 Ⅱ-2 템플릿</option>
+                        <option value="행동메뉴얼 Ⅱ-3 템플릿">행동메뉴얼 Ⅱ-3 템플릿</option>
+                        <option value="행동메뉴얼 Ⅱ-4 템플릿">행동메뉴얼 Ⅱ-4 템플릿</option>
+                        <option value="행동메뉴얼 Ⅱ-5 템플릿">행동메뉴얼 Ⅱ-5 템플릿</option>
+                        <option value="행동메뉴얼 Ⅱ-6 템플릿">행동메뉴얼 Ⅱ-6 템플릿</option>
+                        <option value="행동메뉴얼 Ⅱ-7 템플릿">행동메뉴얼 Ⅱ-7 템플릿</option>
+                        <option value="행동메뉴얼 Ⅱ-8 템플릿">행동메뉴얼 Ⅱ-8 템플릿</option>
+                        <option value="행동메뉴얼 Ⅱ-9 템플릿">행동메뉴얼 Ⅱ-9 템플릿</option>
+                        <option value="행동메뉴얼 Ⅱ-10 템플릿">행동메뉴얼 Ⅱ-10 템플릿</option>
+                        <option value="특이사항 템플릿">특이사항 템플릿</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><label for="representative">담당자</label></th>
+                    <td>
+                      <select name="representative">
+                        <option value="세부업무 담당자 선택">세부업무 담당자 선택</option>
+                        <option value="권XX 주무관">권XX 주무관</option>
+                        <option value="홍XX 주무관">홍XX 주무관</option>
+                        <option value="김XX 주무관">김XX 주무관</option>
+                        <option value="이XX 주무관">이XX 주무관</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><label for="option">옵션선택</label></th>
+                    <td class="alignL">
+                      <input type="checkbox" id="sms">
+                      <label for="sms">SMS/MMS</label>
+                      <input type="checkbox" id="mail">
+                      <label for="mail">E-mail</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="btn_wrap alignC">
+                <button type="button" class="btn_l btn_skyblue">적용하기</button>
+              </div>
+            </div>
+            <div>
+              <h3>재난대응 세부업무 미리보기</h3>
+              <div class="task_preview">
+                <img src="http://placehold.it/526x618">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn_task alignR">
+          <button type="button" class="btn_l btn_blue">저장</button>
+          <button type="button" class="btn_l btn_gray">수정</button>
+        </div>
+      </div>
+    </div>
+    <!-- // Contents -->
+  </div>
+  @@include('inc/script.html')
+</body>
+
+</html>

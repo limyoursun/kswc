@@ -1,0 +1,83 @@
+@@include('inc/top.html')
+
+<body>
+  <div id="wrap">
+    @@include('inc/header.html')
+    <!-- Contents -->
+    <div class="con_wrap standard">
+      <div class="tit_wrap">
+        <h2>행동 메뉴얼 등록</h2>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">재난기준관리</a></li>
+            <li>행동 메뉴얼 관리</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub_wrap standard02_1">
+        <div class="article">
+          <div class="tbl_wrap">
+            <table class="tbl_view">
+              <colgroup>
+                <col width="180">
+                <col width="*">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><label for="title">제목</label></th>
+                  <td>
+                    <p>대응반 비상소집 응소</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th><label for="sort">유형</label></th>
+                  <td>
+                    <p>상황발생보고</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th><label for="content">내용</label></th>
+                  <td>
+                    <p>- 담당자 : 전 직원, 복무담당<br>
+                      - 수행내역<br>
+                      &nbsp;· 우주전파재난 위기경보 상황을 접수한 직원은 재난대응담당에게, 재난대응담당은 기획협력팀장에게, 기획협력팀장은 대응반장에게 유선으로 상황 전파<br>
+                      &nbsp;· 복무담당은 우주전파환경 4단계 이상 경보 또는 우주전파재난 위기경보 문자 수신 시, 전 직원에게 비상소집 문자 발송
+                    </p>
+                    <div class="message_ex">
+                      <p class="font_blue">비상소집 문자(양식)</p>
+                      <div>
+                        (1) 00년 00월 00일 00시00분에<br>
+                        <b>(4/5)단계 (태양흑점폭발/태양입자유입/지자기교란) 경보 상황 발생에 따라 전 직원 센터로 비상소집 응소바람</b>
+                        (2) 00년 00월 00일 00시00분에<br>
+                        <b>우주전파재난 위기경보 발생에 따라 전 직원 센터로 비상소집 응소바람</b>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><label for="file">첨부파일</label></th>
+                  <td>
+                    <i class="ico_ext ext_hwp"></i>
+                    <a href="#" class="font_skyblue">비상소집 집계 보고서.hwp</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="flex_wrap f_sb">
+            <button type="button" class="btn btn_skyblue">목록</button>
+            <div>
+              <button type="button" class="btn btn_blue">수정</button>
+              <button type="button" class="btn btn_gray">삭제</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // Contents -->
+  </div>
+  @@include('inc/script.html')
+</body>
+
+</html>

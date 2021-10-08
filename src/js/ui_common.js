@@ -85,4 +85,11 @@ $(function () {
     });
   }
   gnb();
+  
+  // sortable
+  $(function () {
+    $("#sortable1, #sortable2").sortable({
+      connectWith: ".tasklist"
+    }).disableSelection();
+  });
 })
