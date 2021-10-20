@@ -1,0 +1,74 @@
+@@include('inc/top.html')
+
+<body>
+  <div id="wrap">
+    @@include('inc/header.html')
+    <!-- Contents -->
+    <div class="con_wrap standard">
+      <div class="tit_wrap">
+        <h2>국내 피해 뉴스 등록</h2>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">재난기준관리</a></li>
+            <li><a href="#">보도자료 관리</a></li>
+            <li>국내 피해 뉴스 관리</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub_wrap standard04_1">
+        <div class="article">
+          <div class="tbl_wrap">
+            <table class="tbl_view">
+              <caption>국내 피해 뉴스 관리 등록 테이블</caption>
+              <colgroup>
+                <col width="180">
+                <col width="*">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><label for="title">제목</label></th>
+                  <td><input type="text" id="title" value="현 태양흑점 주기 관측이래 가장 강한 것 중 하나될 수 있어"></td>
+                </tr>
+                <tr>
+                  <th><label for="sort">유형</label></th>
+                  <td>
+                    <select id="sort" title="전체">
+                      <option value="전체">전체</option>
+                      <option>레이더 장애</option>
+                      <option>GPS 장애</option>
+                      <option>항공 관제 장애</option>
+                      <option>통신장애</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th><label for="sitename">출처 사이트명</label></th>
+                  <td><input type="text" id="sitename" value="연합뉴스"></td>
+                </tr>
+                <tr>
+                  <th><label for="url">URL</label></th>
+                  <td><input type="text" id="url" value="https://www.yna.co.kr/view/AKR20201208164800009"></td>
+                </tr>
+                <tr>
+                  <th><label for="content">내용</label></th>
+                  <td>
+                    <textarea id="summernote" title="content" name="editordata"></textarea>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="flex_wrap f_sb">
+            <button type="button" class="btn btn_skyblue">목록</button>
+            <button type="button" class="btn btn_blue">등록</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // Contents -->
+  </div>
+  @@include('inc/script.html')
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>우주전파센터 재난대응 시스템</title>
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../plugins/axicon/axicon.min.css" />
+  <link rel="stylesheet" href="../plugins/jquery-ui/themes/base/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.css" />
+  <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
+  <link rel="stylesheet" href="../plugins/summernote/css/summernote-lite.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/pop.css">
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- Header -->
+<header>
+  <div class="util">
+    <ul class="user_svc">
+      <li><b>관리자</b>님 반갑습니다.</li>
+      <li><button type="button">내정보</button></li>
+      <li><button type="button">로그아웃</button></li>
+      <li><button type="button">상황판 본부용</button></li>
+    </ul>
+  </div>
+  <nav>
+    <h1><a href="#"><img src="../images/img_logo.png" alt="우주전파센터 재난대응 시스템"></a></h1>
+    <ul id="gnb">
+      <li>
+        <a href="#" class="depth1 empty">센터용 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 empty">모의훈련 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 empty">본부용 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 on active">재난 기준 관리</a>
+        <ul class="depth2">
+          <li><a href="#" class="on">실무&sol;표준 매뉴얼 관리</a></li>
+          <li><a href="#">행동 매뉴얼 관리</a></li>
+          <li><a href="#">상황판단회의 보고서 관리</a></li>
+          <li><a href="#">상황대응 보고서 관리</a></li>
+          <li><a href="#">국내 보도자료 관리</a></li>
+          <li><a href="#">해외 보도자료 관리</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="depth1">상황 관리</a>
+        <ul class="depth2">
+          <li><a href="#">재난대응 시나리오 관리</a></li>
+          <li><a href="#">재난&sol;모의 이력관리</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="depth1">공통 관리</a>
+        <ul class="depth2">
+          <li><a href="#">내&sol;외부 주소록관리</a></li>
+          <li><a href="#">그룹 관리</a></li>
+          <li><a href="#">사용자관리</a></li>
+          <li><a href="#">코드 관리</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+<!-- // Header -->
+    <!-- Contents -->
+    <div class="con_wrap common">
+      <div class="tit_wrap">
+        <h2>사용자 관리</h2>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">공통 관리</a></li>
+            <li>사용자 관리</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub_wrap common04">
+        <div class="flex_wrap f_sb">
+          <div class="tbl_wrap">
+            <div class="tbl_top flex_wrap f_sb">
+              <h3>코드 리스트</h3>
+              <button type="button" class="btn btn_blue">항목 추가</button>
+            </div>
+            <table class="tbl_com tbl_tit">
+              <caption>코드 리스트 제목 테이블</caption>
+              <colgroup>
+                <col width="100">
+                <col width="*">
+                <col width="185">
+                <col class="fix_scroll">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">NO</th>
+                  <th scope="col">코드그룹명</th>
+                  <th scope="col">수정</th>
+                  <th>&nbsp;</th>
+                </tr>
+              </thead>
+            </table>
+            <div class="tbl_scroll" style="height:650px">
+              <table class="tbl_com">
+                <caption>코드 리스트 내용 테이블</caption>
+                <colgroup>
+                  <col width="100">
+                  <col width="*">
+                  <col width="185">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>재난대응상황</td>
+                    <td><button type="button" class="btn_axi btn_edit btn_mintline">수정</button></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>사용자유형</td>
+                    <td><button type="button" class="btn_axi btn_edit btn_mintline">수정</button></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>템플릿 관리</td>
+                    <td><button type="button" class="btn_axi btn_edit btn_mintline">수정</button></td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>매뉴얼 관리</td>
+                    <td><button type="button" class="btn_axi btn_edit btn_mintline">수정</button></td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>보도자료 관리</td>
+                    <td><button type="button" class="btn_axi btn_edit btn_mintline">수정</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tbl_wrap">
+            <div class="tbl_top flex_wrap f_sb">
+              <h3>하위 코드 리스트</h3>
+              <button type="button" class="btn btn_blue">항목 추가</button>
+            </div>
+            <table class="tbl_com tbl_tit">
+              <caption>코드 리스트 제목 테이블</caption>
+              <colgroup>
+                <col width="100">
+                <col width="250">
+                <col width="*">
+                <col width="135">
+                <col width="135">
+                <col class="fix_scroll">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">NO</th>
+                  <th scope="col">개별코드</th>
+                  <th scope="col">코드그룹명</th>
+                  <th scope="col">수정</th>
+                  <th scope="col">삭제</th>
+                  <th>&nbsp;</th>
+                </tr>
+              </thead>
+            </table>
+            <div class="tbl_scroll" style="height:650px">
+              <table class="tbl_com">
+                <caption>코드 리스트 내용 테이블</caption>
+                <colgroup>
+                  <col width="100">
+                  <col width="250">
+                  <col width="*">
+                  <col width="135">
+                  <col width="135">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>A001</td>
+                    <td>내부사용자</td>
+                    <td><button type="button" class="btn_axi btn_edit btn_mintline">수정</button></td>
+                    <td><button type="button" class="btn_axi btn_del btn_grayline">삭제</button></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>A002</td>
+                    <td>본부사용자</td>
+                    <td><button type="button" class="btn_axi btn_edit btn_mintline">수정</button></td>
+                    <td><button type="button" class="btn_axi btn_del btn_grayline">삭제</button></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>A003</td>
+                    <td>시스템 관리자</td>
+                    <td><button type="button" class="btn_axi btn_edit btn_mintline">수정</button></td>
+                    <td><button type="button" class="btn_axi btn_del btn_grayline">삭제</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // Contents -->
+  </div>
+  <div class="pop_overlay">
+  <div class="pop_wrap p_common04">
+    <div class="pop_tit">
+      <h1>코드항목 추가</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_view alignL">
+          <caption>코드항목 추가 테이블</caption>
+          <colgroup>
+            <col width='150'>
+            <col width='*'>
+          </colgroup>
+          <tr>
+            <th>
+              <label for="addcode">코드그룹추가</label>
+            </th>
+            <td>
+              <input type="text" id="addcode">
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn btn_blue">적용</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="pop_overlay">
+  <div class="pop_wrap p_common04">
+    <div class="pop_tit">
+      <h1>하위코드 추가</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_view alignL">
+          <caption>하위코드 추가 테이블</caption>
+          <colgroup>
+            <col width='150'>
+            <col width='*'>
+          </colgroup>
+          <tr>
+            <th>
+              <label for="code">개별코드</label>
+            </th>
+            <td>
+              <input type="text" id="code">
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="codename">개별코드명</label>
+            </th>
+            <td>
+              <input type="text" id="codename">
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn btn_blue">적용</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="../plugins/jquery/dist/jquery.min.js"></script>
+<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/i18n/jquery-ui-timepicker-ko.js"></script>
+<script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
+<script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>
+<script src="../plugins/smarteditor2/js/service/HuskyEZCreator.js"></script>
+<script src="../plugins/summernote/js/summernote-lite.js"></script>
+<script src="../plugins/summernote/js/lang/summernote-ko-KR.js"></script>
+<script src="../js/ui_common.js"></script>
+<script src="../js/file_attach.js"></script>
+</body>
+
+</html>

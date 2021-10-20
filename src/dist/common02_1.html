@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>우주전파센터 재난대응 시스템</title>
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../plugins/axicon/axicon.min.css" />
+  <link rel="stylesheet" href="../plugins/jquery-ui/themes/base/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.css" />
+  <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
+  <link rel="stylesheet" href="../plugins/summernote/css/summernote-lite.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/pop.css">
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- Header -->
+<header>
+  <div class="util">
+    <ul class="user_svc">
+      <li><b>관리자</b>님 반갑습니다.</li>
+      <li><button type="button">내정보</button></li>
+      <li><button type="button">로그아웃</button></li>
+      <li><button type="button">상황판 본부용</button></li>
+    </ul>
+  </div>
+  <nav>
+    <h1><a href="#"><img src="../images/img_logo.png" alt="우주전파센터 재난대응 시스템"></a></h1>
+    <ul id="gnb">
+      <li>
+        <a href="#" class="depth1 empty">센터용 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 empty">모의훈련 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 empty">본부용 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 on active">재난 기준 관리</a>
+        <ul class="depth2">
+          <li><a href="#" class="on">실무&sol;표준 매뉴얼 관리</a></li>
+          <li><a href="#">행동 매뉴얼 관리</a></li>
+          <li><a href="#">상황판단회의 보고서 관리</a></li>
+          <li><a href="#">상황대응 보고서 관리</a></li>
+          <li><a href="#">국내 보도자료 관리</a></li>
+          <li><a href="#">해외 보도자료 관리</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="depth1">상황 관리</a>
+        <ul class="depth2">
+          <li><a href="#">재난대응 시나리오 관리</a></li>
+          <li><a href="#">재난&sol;모의 이력관리</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="depth1">공통 관리</a>
+        <ul class="depth2">
+          <li><a href="#">내&sol;외부 주소록관리</a></li>
+          <li><a href="#">그룹 관리</a></li>
+          <li><a href="#">사용자관리</a></li>
+          <li><a href="#">코드 관리</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+<!-- // Header -->
+    <!-- Contents -->
+    <div class="con_wrap common">
+      <div class="tit_wrap">
+        <h2>그룹 등록</h2>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">공통 관리</a></li>
+            <li>그룹 등록</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub_wrap common02">
+        <div class="article">
+          <div class="tbl_wrap">
+            <table class="tbl_view">
+              <caption>그룹 분류 테이블</caption>
+              <colgroup>
+                <col width="180">
+                <col width="*">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="input_necessary">
+                    <label for="sort">그룹종류</label>
+                  </th>
+                  <td style="width:200px;">
+                    <select id="sort" title="전체" style="width:150px;">
+                      <option value="전체">전체</option>
+                      <option value="내부">내부</option>
+                      <option value="외부">외부</option>
+                    </select>
+                  </td>
+                  <th class="input_necessary" style="width:150px;">
+                    <label for="name">그룹명</label>
+                  </th>
+                  <td>
+                    <input type="text" id="name" value="우주전파센터 전 직원">
+                  </td>
+                </tr>
+                <tr>
+                  <th class="input_necessary">
+                    <label for="explanation">그룹설명</label>
+                  </th>
+                  <td colspan="3">
+                    <input type="text" id="explanation" value="우주전파재난 센터내 전 직원">
+                  </td>
+                </tr>
+                <tr>
+                  <th class="input_necessary">
+                    <label for="file">그룹 인원 등록</label>
+                  </th>
+                  <td colspan="5">
+                    <button type="button" class="btn_axi btn_search btn_l btn_skyblueline">주소록 불러오기</button>
+                    <ul class="attendee_wrap">
+                      <li>
+                        <span>1.</span>
+                        <span>김XX</span>
+                        <span>주무관</span>
+                      </li>
+                      <li>
+                        <span>2.</span>
+                        <span>권XX</span>
+                        <span>주무관</span>
+                      </li>
+                      <li>
+                        <span>3.</span>
+                        <span>홍XX</span>
+                        <span>주무관</span>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="flex_wrap f_sb">
+            <button type="button" class="btn btn_skyblue">목록</button>
+            <button type="button" class="btn btn_blue">등록</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // Contents -->
+  </div>
+  <div class="pop_overlay">
+  <div class="pop_wrap p_common02">
+    <div class="pop_tit">
+      <h1>주소록 불러오기</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <div class="search_wrap">
+          <ul class="search">
+            <li>
+              <label for="sort" class="dot">유형</label>
+              <select id="sort" title="전체">
+                <option value="전체">전체</option>
+                <option value="내부">내부</option>
+                <option value="외부">외부</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+        <div class="tbl_com">
+          <table class="tbl_col">
+            <caption>훈련결과 제목 테이블</caption>
+            <colgroup>
+              <col width="50">
+              <col width="80">
+              <col width="100">
+              <col width="*">
+              <col width="150">
+              <col width="150">
+              <col class="fix_scroll">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>선택</th>
+                <th>NO</th>
+                <th>유형</th>
+                <th>직책</th>
+                <th>성함</th>
+                <th>전화번호</th>
+                <th>&nbsp;</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="tbl_scroll" style="height:322px">
+            <table class="tbl_col">
+              <caption>훈련결과 내용 테이블</caption>
+              <colgroup>
+                <col width="50">
+                <col width="80">
+                <col width="100">
+                <col width="*">
+                <col width="150">
+                <col width="150">
+              </colgroup>
+              <tbody class="contactInfo">
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>3</td>
+                  <td>외부</td>
+                  <td>네트워크안전 기획과장</td>
+                  <td>김XX</td>
+                  <td>02-XXXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>2</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="btn_wrap flex_wrap f_sb">
+          <div>
+            <button type="button" class="btn_allSelect btn_l btn_skyblue"
+              style="font-weight:normal;">전체선택&sol;해제</button>
+            <button type="button" class="btn btn_blue">적용</button>
+          </div>
+          <button type="button" class="btn btn_gray">창닫기</button>
+
+          <script>
+            // 버튼을 이용하여 체크하는 기능 작성하기
+
+
+
+
+
+            // 여기여기여기!
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="../plugins/jquery/dist/jquery.min.js"></script>
+<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/i18n/jquery-ui-timepicker-ko.js"></script>
+<script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
+<script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>
+<script src="../plugins/smarteditor2/js/service/HuskyEZCreator.js"></script>
+<script src="../plugins/summernote/js/summernote-lite.js"></script>
+<script src="../plugins/summernote/js/lang/summernote-ko-KR.js"></script>
+<script src="../js/ui_common.js"></script>
+<script src="../js/file_attach.js"></script>
+</body>
+
+</html>

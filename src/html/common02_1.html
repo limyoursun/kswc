@@ -1,0 +1,95 @@
+@@include('inc/top.html')
+
+<body>
+  <div id="wrap">
+    @@include('inc/header.html')
+    <!-- Contents -->
+    <div class="con_wrap common">
+      <div class="tit_wrap">
+        <h2>그룹 등록</h2>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">공통 관리</a></li>
+            <li>그룹 등록</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub_wrap common02">
+        <div class="article">
+          <div class="tbl_wrap">
+            <table class="tbl_view">
+              <caption>그룹 분류 테이블</caption>
+              <colgroup>
+                <col width="180">
+                <col width="*">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="input_necessary">
+                    <label for="sort">그룹종류</label>
+                  </th>
+                  <td style="width:200px;">
+                    <select id="sort" title="전체" style="width:150px;">
+                      <option value="전체">전체</option>
+                      <option value="내부">내부</option>
+                      <option value="외부">외부</option>
+                    </select>
+                  </td>
+                  <th class="input_necessary" style="width:150px;">
+                    <label for="name">그룹명</label>
+                  </th>
+                  <td>
+                    <input type="text" id="name" value="우주전파센터 전 직원">
+                  </td>
+                </tr>
+                <tr>
+                  <th class="input_necessary">
+                    <label for="explanation">그룹설명</label>
+                  </th>
+                  <td colspan="3">
+                    <input type="text" id="explanation" value="우주전파재난 센터내 전 직원">
+                  </td>
+                </tr>
+                <tr>
+                  <th class="input_necessary">
+                    <label for="file">그룹 인원 등록</label>
+                  </th>
+                  <td colspan="5">
+                    <button type="button" class="btn_axi btn_search btn_l btn_skyblueline">주소록 불러오기</button>
+                    <ul class="attendee_wrap">
+                      <li>
+                        <span>1.</span>
+                        <span>김XX</span>
+                        <span>주무관</span>
+                      </li>
+                      <li>
+                        <span>2.</span>
+                        <span>권XX</span>
+                        <span>주무관</span>
+                      </li>
+                      <li>
+                        <span>3.</span>
+                        <span>홍XX</span>
+                        <span>주무관</span>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="flex_wrap f_sb">
+            <button type="button" class="btn btn_skyblue">목록</button>
+            <button type="button" class="btn btn_blue">등록</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // Contents -->
+  </div>
+  @@include('inc/p_common02.html')
+  @@include('inc/script.html')
+</body>
+
+</html>

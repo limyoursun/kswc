@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>우주전파센터 재난대응 시스템</title>
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../plugins/axicon/axicon.min.css" />
+  <link rel="stylesheet" href="../plugins/jquery-ui/themes/base/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.css" />
+  <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
+  <link rel="stylesheet" href="../plugins/summernote/css/summernote-lite.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/pop.css">
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- Header -->
+<header>
+  <div class="util">
+    <ul class="user_svc">
+      <li><b>관리자</b>님 반갑습니다.</li>
+      <li><button type="button">내정보</button></li>
+      <li><button type="button">로그아웃</button></li>
+      <li><button type="button">상황판 본부용</button></li>
+    </ul>
+  </div>
+  <nav>
+    <h1><a href="#"><img src="../images/img_logo.png" alt="우주전파센터 재난대응 시스템"></a></h1>
+    <ul id="gnb">
+      <li>
+        <a href="#" class="depth1 empty">센터용 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 empty">모의훈련 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 empty">본부용 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 on active">재난 기준 관리</a>
+        <ul class="depth2">
+          <li><a href="#" class="on">실무&sol;표준 매뉴얼 관리</a></li>
+          <li><a href="#">행동 매뉴얼 관리</a></li>
+          <li><a href="#">상황판단회의 보고서 관리</a></li>
+          <li><a href="#">상황대응 보고서 관리</a></li>
+          <li><a href="#">국내 보도자료 관리</a></li>
+          <li><a href="#">해외 보도자료 관리</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="depth1">상황 관리</a>
+        <ul class="depth2">
+          <li><a href="#">재난대응 시나리오 관리</a></li>
+          <li><a href="#">재난&sol;모의 이력관리</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="depth1">공통 관리</a>
+        <ul class="depth2">
+          <li><a href="#">내&sol;외부 주소록관리</a></li>
+          <li><a href="#">그룹 관리</a></li>
+          <li><a href="#">사용자관리</a></li>
+          <li><a href="#">코드 관리</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+<!-- // Header -->
+    <!-- Contents -->
+    <div class="con_wrap standard">
+      <div class="tit_wrap">
+        <h2>국내 피해 뉴스 등록 내역</h2>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">재난기준관리</a></li>
+            <li><a href="#">보도자료 관리</a></li>
+            <li>국내 피해 뉴스 관리</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub_wrap standard04_2">
+        <div class="article">
+          <div class="tbl_wrap">
+            <table class="tbl_view">
+              <colgroup>
+                <col width="180">
+                <col width="*">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><label for="title">제목</label></th>
+                  <td>
+                    <p>현 태양흑점 주기 관측이래 가장 강한 것 중 하나될 수 있어</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th><label for="sort">유형</label></th>
+                  <td>
+                    <p>흑점폭발</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th><label for="sitename">출처 사이트명</label></th>
+                  <td>
+                    <p>연합뉴스</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th><label for="url">URL</label></th>
+                  <td>
+                    <a href="https://www.yna.co.kr/view/AKR20201208164800009" target="blank">https://www.yna.co.kr/view/AKR20201208164800009</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th><label for="content">내용</label></th>
+                  <td>
+                    <p>22년 자기 주기 비 정통 이론 기반 예측… 흑점 최대 210~260개 달해</p><br>
+                    <img src="https://img8.yna.co.kr/etc/inner/KR/2020/12/08/AKR20201208164800009_01_i_P4.jpg" style="width:20%;">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="flex_wrap f_sb">
+            <button type="button" class="btn btn_skyblue">목록</button>
+            <div>
+              <button type="button" class="btn btn_blue">수정</button>
+              <button type="button" class="btn btn_gray">삭제</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // Contents -->
+  </div>
+  <script src="../plugins/jquery/dist/jquery.min.js"></script>
+<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/i18n/jquery-ui-timepicker-ko.js"></script>
+<script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
+<script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>
+<script src="../plugins/smarteditor2/js/service/HuskyEZCreator.js"></script>
+<script src="../plugins/summernote/js/summernote-lite.js"></script>
+<script src="../plugins/summernote/js/lang/summernote-ko-KR.js"></script>
+<script src="../js/ui_common.js"></script>
+<script src="../js/file_attach.js"></script>
+</body>
+
+</html>

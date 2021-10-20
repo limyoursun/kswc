@@ -1,0 +1,106 @@
+@@include('inc/top.html')
+
+<body>
+	<div id="wrap">
+		@@include('inc/header.html')
+		<!-- Contents -->
+		<div class="con_wrap common">
+			<div class="tit_wrap">
+				<h2>내&sol;외부 주소록 관리</h2>
+				<div class="breadcrumb">
+					<ul>
+						<li><a href="#">HOME</a></li>
+						<li><a href="#">공통 관리</a></li>
+						<li>내&sol;외부 주소록 관리</li>
+					</ul>
+				</div>
+			</div>
+			<div class="sub_wrap common01 common01_1">
+				<div class="article">
+					<table class="tbl_view">
+						<caption>내&sol;외부 주소록 등록</caption>
+						<tbody>
+							<tr>
+								<th scope="row" class="input_necessary">
+									<label for="name">성함</label>
+								</th>
+								<td>
+									<input id="name" type="text" value="권XX">
+								</td>
+								<th scope="row" class="input_necessary">
+									<label for="affiliation">기관명</label>
+								</th>
+								<td>
+									<input id="affiliation" type="text" value="우주전파센터">
+								</td>
+								<th scope="row" class="input_necessary">
+									<label for="department">부서명</label>
+								</th>
+								<td>
+									<input id="department" type="text" value="기획팀">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" class="input_necessary">
+									<label for="sort">내부&sol;외부</label>
+								</th>
+								<td>
+									<select id="sort">
+										<option value="선택">선택</option>
+										<option value="내부">내부</option>
+										<option value="외부">외부</option>
+									</select>
+								</td>
+								<th scope="row" class="input_necessary">
+									<label for="position">직책</label>
+								</th>
+								<td>
+									<input id="position" type="text" value="주무관">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" class="input_necessary">
+									<label for="number">전화번호</label>
+								</th>
+								<td>
+									<select id="number">
+										<option value="선택">선택</option>
+										<option value="064">064</option>
+									</select>
+									<input type="text" id="number" style="width:70px;" maxlength="3">
+									<input type="text" id="number" style="width:70px;" maxlength="4">
+								</td>
+								<th scope="row">
+									<label for="phonenumber">휴대전화</label>
+								</th>
+								<td>
+									<select id="phonenumber">
+										<option value="선택">선택</option>
+										<option value="010">010</option>
+									</select>
+									<input type="text" id="phonenumber" style="width:70px;" maxlength="4">
+									<input type="text" id="phonenumber" style="width:70px;" maxlength="4">
+								</td>
+								<th scope="row">
+									<label for="email">이메일</label>
+								</th>
+								<td>
+									<input type="text" id="email" style="width:150px;"> @
+									<input type="text" id="email" style="width:150px;">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="flex_wrap f_sb">
+					<button type="button" class="btn btn_skyblue">목록</button>
+					<button type="button" class="btn btn_blue">등록</button>
+				</div>
+			</div>
+		</div>
+		<!-- // Contents -->
+	</div>
+	@@include('inc/script.html')
+</body>
+
+</html>

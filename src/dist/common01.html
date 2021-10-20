@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>우주전파센터 재난대응 시스템</title>
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../plugins/axicon/axicon.min.css" />
+  <link rel="stylesheet" href="../plugins/jquery-ui/themes/base/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.css" />
+  <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
+  <link rel="stylesheet" href="../plugins/summernote/css/summernote-lite.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/pop.css">
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- Header -->
+<header>
+  <div class="util">
+    <ul class="user_svc">
+      <li><b>관리자</b>님 반갑습니다.</li>
+      <li><button type="button">내정보</button></li>
+      <li><button type="button">로그아웃</button></li>
+      <li><button type="button">상황판 본부용</button></li>
+    </ul>
+  </div>
+  <nav>
+    <h1><a href="#"><img src="../images/img_logo.png" alt="우주전파센터 재난대응 시스템"></a></h1>
+    <ul id="gnb">
+      <li>
+        <a href="#" class="depth1 empty">센터용 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 empty">모의훈련 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 empty">본부용 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 on active">재난 기준 관리</a>
+        <ul class="depth2">
+          <li><a href="#" class="on">실무&sol;표준 매뉴얼 관리</a></li>
+          <li><a href="#">행동 매뉴얼 관리</a></li>
+          <li><a href="#">상황판단회의 보고서 관리</a></li>
+          <li><a href="#">상황대응 보고서 관리</a></li>
+          <li><a href="#">국내 보도자료 관리</a></li>
+          <li><a href="#">해외 보도자료 관리</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="depth1">상황 관리</a>
+        <ul class="depth2">
+          <li><a href="#">재난대응 시나리오 관리</a></li>
+          <li><a href="#">재난&sol;모의 이력관리</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="depth1">공통 관리</a>
+        <ul class="depth2">
+          <li><a href="#">내&sol;외부 주소록관리</a></li>
+          <li><a href="#">그룹 관리</a></li>
+          <li><a href="#">사용자관리</a></li>
+          <li><a href="#">코드 관리</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+<!-- // Header -->
+    <!-- Contents -->
+    <div class="con_wrap situation">
+      <div class="tit_wrap">
+        <h2>내&sol;외부 주소록 관리</h2>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">공통 관리</a></li>
+            <li>내&sol;외부 주소록 관리</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub_wrap situation02">
+        <div class="search_wrap">
+          <ul class="search f_s">
+            <li>
+              <label for="sort" class="dot">내&sol;외부 유형</label>
+              <select id="sort" title="전체">
+                <option value="전체">전체</option>
+                <option value="내부">내부</option>
+                <option value="외부">외부</option>
+              </select>
+            </li>
+            <li>
+              <label for="searchword" class="dot">검색어</label>
+              <input type="text" id="searchword" placeholder="검색어">
+            </li>
+          </ul>
+          <div class="btn_wrap alignR">
+            <a href="#" class="btn btn_blue">검색</a>
+            <a href="#" class="btn btn_gray">초기화</a>
+          </div>
+        </div>
+        <div class="article">
+          <div class="tbl_wrap">
+            <div class="tbl_top flex_wrap f_sb">
+              <p>총 <b>99</b>건 <b>1</b> &sol; 10페이지</p>
+              <button type="button" class="btn btn_blue">등록</button>
+            </div>
+            <table class="tbl_com">
+              <colgroup>
+                <col width="100">
+                <col width="185">
+                <col width="*">
+                <col width="180">
+                <col width="200">
+                <col width="200">
+                <col width="230">
+                <col width="230">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">NO</th>
+                  <th scope="col">유형</th>
+                  <th scope="col">직책</th>
+                  <th scope="col">성함</th>
+                  <th scope="col">전화번호</th>
+                  <th scope="col">휴대전화</th>
+                  <th scope="col">등록일</th>
+                  <th scope="col">수정일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2</td>
+                  <td>외부</td>
+                  <td>네트워크안전 기획과장</td>
+                  <td>김XX</td>
+                  <td>02-XXXX-XXXX</td>
+                  <td>010-XXXX-XXXX</td>
+                  <td>2021-06-21</td>
+                  <td>2021-06-21</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>권XX</td>
+                  <td>064-XXXX-XXXX</td>
+                  <td>010-XXXX-XXXX</td>
+                  <td>2021-06-21</td>
+                  <td>2021-06-21</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="paginate">
+              <a href="#" class="first" title="처음">〈〈</a>
+              <a href="#" class="pre" title="이전">〈</a>
+              <span>
+                <a href="#" class="on">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+              </span>
+              <a href="#" class="next" title="다음">〉</a>
+              <a href="#" class="last" title="마지막">〉〉</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // Contents -->
+  </div>
+  <script src="../plugins/jquery/dist/jquery.min.js"></script>
+<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/i18n/jquery-ui-timepicker-ko.js"></script>
+<script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
+<script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>
+<script src="../plugins/smarteditor2/js/service/HuskyEZCreator.js"></script>
+<script src="../plugins/summernote/js/summernote-lite.js"></script>
+<script src="../plugins/summernote/js/lang/summernote-ko-KR.js"></script>
+<script src="../js/ui_common.js"></script>
+<script src="../js/file_attach.js"></script>
+</body>
+
+</html>

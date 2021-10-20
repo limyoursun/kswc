@@ -15,7 +15,7 @@ var fileList = new Array();
 // 파일 사이즈 리스트
 var fileSizeList = new Array();
 // 등록 가능한 파일 사이즈 MB
-var uploadSize = 50;
+var uploadSize = 5;
 // 등록 가능한 총 파일 사이즈 MB
 var maxUploadSize = 500;
 
@@ -106,7 +106,7 @@ function selectFile(fileObject) {
         fileSizeStr = parseInt(fileSize) + " BYTE";
       }
 
-      var notExt = ['exe', 'bat', 'sh', 'java', 'jsp', 'html', 'js', 'css', 'xml'];
+      var notExt = ["ext","bmp","gif","tif","pdf","ai","psd","txt","c","cpp","jav","htm","css","js","log","m4a","swf","au","mid","mod","mp2","mp3","ogg","ra","rm","snd","voc","wav","wma","avi","mov","mpg","mv","asf","asx","qt","rv","wmx","mp4","fla","flv","alz","arj","bzz","egg","gz","jar","rar","tar","tgz","7z","etc","html","wmv","wvz","bzs"];
 
       if ($.inArray(ext, notExt ) >= 0) {
         // 확장자 체크

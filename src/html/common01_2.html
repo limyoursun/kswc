@@ -1,0 +1,99 @@
+@@include('inc/top.html')
+
+<body>
+	<div id="wrap">
+		@@include('inc/header.html')
+		<!-- Contents -->
+		<div class="con_wrap common">
+			<div class="tit_wrap">
+				<h2>내&sol;외부 주소록 관리</h2>
+				<div class="breadcrumb">
+					<ul>
+						<li><a href="#">HOME</a></li>
+						<li><a href="#">공통 관리</a></li>
+						<li>내&sol;외부 주소록 관리</li>
+					</ul>
+				</div>
+			</div>
+			<div class="sub_wrap common02">
+				<div class="article">
+					<table class="tbl_view">
+						<caption>내&sol;외부 주소록 등록</caption>
+						<tbody>
+							<tr>
+								<th scope="row" class="input_necessary">
+									<label for="name">성함</label>
+								</th>
+								<td>
+									<span>권XX</span>
+								</td>
+								<th scope="row" class="input_necessary">
+									<label for="affiliation">기관명</label>
+								</th>
+								<td>
+									<span>우주전파센터</span>
+								</td>
+								<th scope="row" class="input_necessary">
+									<label for="department">부서명</label>
+								</th>
+								<td>
+									<span>기획팀</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" class="input_necessary">
+									<label for="sort">내부&sol;외부</label>
+								</th>
+								<td>
+									<span>내부</span>
+								</td>
+								<th scope="row" class="input_necessary">
+									<label for="position">직책</label>
+								</th>
+								<td>
+									<span>주무관</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" class="input_necessary">
+									<label for="number">전화번호</label>
+								</th>
+								<td>
+									<span class="number_dash">064</span>
+									<span class="number_dash">XXX</span>
+									<span>XXXX</span>
+								</td>
+								<th scope="row">
+									<label for="phonenumber">휴대전화</label>
+								</th>
+								<td>
+									<span class="number_dash">010</span>
+									<span class="number_dash">XXXX</span>
+									<span>XXXX</span>
+								</td>
+								<th scope="row">
+									<label for="email">이메일</label>
+								</th>
+								<td>
+									<span class="at_sign">space</span>
+									<span>korea.co.kr</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="flex_wrap f_sb">
+					<button type="button" class="btn btn_skyblue">목록</button>
+					<div>
+						<button type="button" class="btn btn_blue">수정</button>
+						<button type="button" class="btn btn_gray">삭제</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // Contents -->
+	</div>
+	@@include('inc/script.html')
+</body>
+
+</html>

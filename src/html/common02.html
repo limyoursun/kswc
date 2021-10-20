@@ -1,0 +1,137 @@
+@@include('inc/top.html')
+
+<body>
+  <div id="wrap">
+    @@include('inc/header.html')
+    <!-- Contents -->
+    <div class="con_wrap common">
+      <div class="tit_wrap">
+        <h2>그룹 관리</h2>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">공통 관리</a></li>
+            <li>그룹 관리</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub_wrap common02">
+        <div class="search_wrap">
+          <ul class="search f_s">
+            <li>
+              <label for="sort" class="dot">그룹 종류</label>
+              <select id="sort" title="전체">
+                <option value="전체">전체</option>
+                <option value="내부">내부</option>
+                <option value="외부">외부</option>
+              </select>
+            </li>
+            <li>
+              <label for="name" class="dot">그룹명</label>
+              <select id="name" title="전체">
+                <option value="전체">전체</option>
+                <option value="과기부 본부">과기부 본부</option>
+                <option value="네트워크 기획과">네트워크 기획과</option>
+                <option value="재난상황 5단계 발송그룹">재난상황 5단계 발송그룹</option>
+                <option value="재난상황 4단계 발송그룹">재난상황 4단계 발송그룹</option>
+                <option value="재난상황 3단계 발송그룹">재난상황 3단계 발송그룹</option>
+              </select>
+            </li>
+            <li>
+              <label for="searchword" class="dot">검색어</label>
+              <input type="text" id="searchword" placeholder="검색어">
+            </li>
+          </ul>
+          <div class="btn_wrap alignR">
+            <a href="#" class="btn btn_blue">검색</a>
+            <a href="#" class="btn btn_gray">초기화</a>
+          </div>
+        </div>
+        <div class="article">
+          <div class="tbl_wrap">
+            <div class="tbl_top flex_wrap f_sb">
+              <p>총 <b>99</b>건 <b>1</b> &sol; 10페이지</p>
+              <button type="button" class="btn btn_blue">그룹 등록</button>
+            </div>
+            <table class="tbl_com">
+              <caption>그룹관리 테이블</caption>
+              <colgroup>
+                <col width="100">
+                <col width="150">
+                <col width="300">
+                <col width="*">
+                <col width="150">
+                <col width="200">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">NO</th>
+                  <th scope="col">그룹종류</th>
+                  <th scope="col">그룹명</th>
+                  <th scope="col">그룹설명</th>
+                  <th scope="col">등록수</th>
+                  <th scope="col">생성일자</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>5</td>
+                  <td>외부</td>
+                  <td>과기부 본부</td>
+                  <td>상황발령 본부 전용 그룹</td>
+                  <td>2</td>
+                  <td>2021-06-21</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>외부</td>
+                  <td>네트워크 기획과</td>
+                  <td>상황발령시 네트워크기획과 전파그룹</td>
+                  <td>5</td>
+                  <td>2021-06-21</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>내부</td>
+                  <td>재난 상황 5단계 발송 그룹</td>
+                  <td>재난상황발령 5단계 상황전파용</td>
+                  <td>20</td>
+                  <td>2021-06-21</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>내부</td>
+                  <td>재난 상황 4단계 발송 그룹</td>
+                  <td>재난상황발령 4단계 상황전파용</td>
+                  <td>15</td>
+                  <td>2021-06-21</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>재난 상황 3단계 발송 그룹</td>
+                  <td>재난상황발령 3단계 상황전파용</td>
+                  <td>5</td>
+                  <td>2021-06-21</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="paginate">
+              <a href="#" class="first" title="처음">〈〈</a>
+              <a href="#" class="pre" title="이전">〈</a>
+              <span>
+                <a href="#" class="on">1</a>
+              </span>
+              <a href="#" class="next" title="다음">〉</a>
+              <a href="#" class="last" title="마지막">〉〉</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // Contents -->
+  </div>
+  @@include('inc/script.html')
+</body>
+
+</html>

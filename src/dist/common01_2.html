@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>우주전파센터 재난대응 시스템</title>
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../plugins/axicon/axicon.min.css" />
+  <link rel="stylesheet" href="../plugins/jquery-ui/themes/base/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.css" />
+  <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
+  <link rel="stylesheet" href="../plugins/summernote/css/summernote-lite.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/pop.css">
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- Header -->
+<header>
+  <div class="util">
+    <ul class="user_svc">
+      <li><b>관리자</b>님 반갑습니다.</li>
+      <li><button type="button">내정보</button></li>
+      <li><button type="button">로그아웃</button></li>
+      <li><button type="button">상황판 본부용</button></li>
+    </ul>
+  </div>
+  <nav>
+    <h1><a href="#"><img src="../images/img_logo.png" alt="우주전파센터 재난대응 시스템"></a></h1>
+    <ul id="gnb">
+      <li>
+        <a href="#" class="depth1 empty">센터용 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 empty">모의훈련 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 empty">본부용 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 on active">재난 기준 관리</a>
+        <ul class="depth2">
+          <li><a href="#" class="on">실무&sol;표준 매뉴얼 관리</a></li>
+          <li><a href="#">행동 매뉴얼 관리</a></li>
+          <li><a href="#">상황판단회의 보고서 관리</a></li>
+          <li><a href="#">상황대응 보고서 관리</a></li>
+          <li><a href="#">국내 보도자료 관리</a></li>
+          <li><a href="#">해외 보도자료 관리</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="depth1">상황 관리</a>
+        <ul class="depth2">
+          <li><a href="#">재난대응 시나리오 관리</a></li>
+          <li><a href="#">재난&sol;모의 이력관리</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="depth1">공통 관리</a>
+        <ul class="depth2">
+          <li><a href="#">내&sol;외부 주소록관리</a></li>
+          <li><a href="#">그룹 관리</a></li>
+          <li><a href="#">사용자관리</a></li>
+          <li><a href="#">코드 관리</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+<!-- // Header -->
+		<!-- Contents -->
+		<div class="con_wrap common">
+			<div class="tit_wrap">
+				<h2>내&sol;외부 주소록 관리</h2>
+				<div class="breadcrumb">
+					<ul>
+						<li><a href="#">HOME</a></li>
+						<li><a href="#">공통 관리</a></li>
+						<li>내&sol;외부 주소록 관리</li>
+					</ul>
+				</div>
+			</div>
+			<div class="sub_wrap common02">
+				<div class="article">
+					<table class="tbl_view">
+						<caption>내&sol;외부 주소록 등록</caption>
+						<tbody>
+							<tr>
+								<th scope="row" class="input_necessary">
+									<label for="name">성함</label>
+								</th>
+								<td>
+									<span>권XX</span>
+								</td>
+								<th scope="row" class="input_necessary">
+									<label for="affiliation">기관명</label>
+								</th>
+								<td>
+									<span>우주전파센터</span>
+								</td>
+								<th scope="row" class="input_necessary">
+									<label for="department">부서명</label>
+								</th>
+								<td>
+									<span>기획팀</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" class="input_necessary">
+									<label for="sort">내부&sol;외부</label>
+								</th>
+								<td>
+									<span>내부</span>
+								</td>
+								<th scope="row" class="input_necessary">
+									<label for="position">직책</label>
+								</th>
+								<td>
+									<span>주무관</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" class="input_necessary">
+									<label for="number">전화번호</label>
+								</th>
+								<td>
+									<span class="number_dash">064</span>
+									<span class="number_dash">XXX</span>
+									<span>XXXX</span>
+								</td>
+								<th scope="row">
+									<label for="phonenumber">휴대전화</label>
+								</th>
+								<td>
+									<span class="number_dash">010</span>
+									<span class="number_dash">XXXX</span>
+									<span>XXXX</span>
+								</td>
+								<th scope="row">
+									<label for="email">이메일</label>
+								</th>
+								<td>
+									<span class="at_sign">space</span>
+									<span>korea.co.kr</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="flex_wrap f_sb">
+					<button type="button" class="btn btn_skyblue">목록</button>
+					<div>
+						<button type="button" class="btn btn_blue">수정</button>
+						<button type="button" class="btn btn_gray">삭제</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // Contents -->
+	</div>
+	<script src="../plugins/jquery/dist/jquery.min.js"></script>
+<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/i18n/jquery-ui-timepicker-ko.js"></script>
+<script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
+<script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>
+<script src="../plugins/smarteditor2/js/service/HuskyEZCreator.js"></script>
+<script src="../plugins/summernote/js/summernote-lite.js"></script>
+<script src="../plugins/summernote/js/lang/summernote-ko-KR.js"></script>
+<script src="../js/ui_common.js"></script>
+<script src="../js/file_attach.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+@@include('inc/top.html')
+
+<body>
+  <div id="wrap">
+    @@include('inc/header.html')
+    <!-- Contents -->
+    <div class="con_wrap standard">
+      <div class="tit_wrap">
+        <h2>국내 피해 뉴스 관리</h2>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">재난기준관리</a></li>
+            <li><a href="#">보도자료 관리</a></li>
+            <li>국내 피해 뉴스 관리</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub_wrap standard04">
+        <div class="search_wrap">
+          <ul class="search">
+            <li>
+              <label for="sort" class="dot">유형</label>
+              <select id="sort" title="전체">
+                <option value="전체">전체</option>
+                <option value="레이더 장애">레이더 장애</option>
+                <option value="GPS 장애">GPS 장애</option>
+                <option value="항공 관제 장애">항공 관제 장애</option>
+                <option value="통신장애">통신장애</option>
+              </select>
+            </li>
+            <li>
+              <label for="searchword" class="dot">검색어</label>
+              <input type="text" id="searchword" placeholder="검색어">
+            </li>
+          </ul>
+          <div class="btn_wrap alignR">
+            <a href="#" class="btn btn_blue">검색</a>
+            <a href="#" class="btn btn_gray">초기화</a>
+          </div>
+        </div>
+        <div class="article">
+          <div class="tbl_wrap">
+            <div class="tbl_top flex_wrap f_sb">
+              <p>총 <b>2</b>건 <b>1</b> &sol; 1페이지</p>
+              <button type="button" class="btn btn_blue">등록</button>
+            </div>
+            <table class="tbl_com">
+              <caption>국내 피해 뉴스 관리 리스트 테이블</caption>
+              <colgroup>
+                <col width="100">
+                <col width="250">
+                <col width="*">
+                <col width="200">
+                <col width="200">
+                <col width="120">
+                <col width="120">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">NO</th>
+                  <th scope="col">문구 유형</th>
+                  <th scope="col">제목</th>
+                  <th scope="col">출처 사이트명</th>
+                  <th scope="col">등록자</th>
+                  <th scope="col">등록일</th>
+                  <th scope="col">수정일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2</td>
+                  <td>레이더 장애</td>
+                  <td>우주환경 문제로 인한 지자기 교란으로 항공 레이더 문제</td>
+                  <td>세계일보</td>
+                  <td>담당자</td>
+                  <td>2021-10-07</td>
+                  <td>2021-10-07</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>태양 예측</td>
+                  <td>현 태양흑점 주기 관측이래 가장 강한 것 중 하나될 수 있어</td>
+                  <td>연합뉴스</td>
+                  <td>담당자</td>
+                  <td>2021-10-07</td>
+                  <td>2021-10-07</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="paginate">
+              <a href="#" class="first" title="처음">〈〈</a>
+              <a href="#" class="pre" title="이전">〈</a>
+              <span>
+                <a href="#" class="on">1</a>
+              </span>
+              <a href="#" class="next" title="다음">〉</a>
+              <a href="#" class="last" title="마지막">〉〉</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // Contents -->
+  </div>
+  @@include('inc/script.html')
+</body>
+
+</html>

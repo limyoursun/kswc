@@ -1,0 +1,152 @@
+@@include('inc/top.html')
+
+<body>
+  <div id="wrap">
+    @@include('inc/header.html')
+    <!-- Contents -->
+    <div class="con_wrap common">
+      <div class="tit_wrap">
+        <h2>사용자 관리</h2>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">공통 관리</a></li>
+            <li>사용자 관리</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub_wrap common04">
+        <div class="flex_wrap f_sb">
+          <div class="tbl_wrap">
+            <div class="tbl_top flex_wrap f_sb">
+              <h3>코드 리스트</h3>
+              <button type="button" class="btn btn_blue">항목 추가</button>
+            </div>
+            <table class="tbl_com tbl_tit">
+              <caption>코드 리스트 제목 테이블</caption>
+              <colgroup>
+                <col width="100">
+                <col width="*">
+                <col width="185">
+                <col class="fix_scroll">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">NO</th>
+                  <th scope="col">코드그룹명</th>
+                  <th scope="col">수정</th>
+                  <th>&nbsp;</th>
+                </tr>
+              </thead>
+            </table>
+            <div class="tbl_scroll" style="height:650px">
+              <table class="tbl_com">
+                <caption>코드 리스트 내용 테이블</caption>
+                <colgroup>
+                  <col width="100">
+                  <col width="*">
+                  <col width="185">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>재난대응상황</td>
+                    <td><button type="button" class="btn_axi btn_edit btn_mintline">수정</button></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>사용자유형</td>
+                    <td><button type="button" class="btn_axi btn_edit btn_mintline">수정</button></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>템플릿 관리</td>
+                    <td><button type="button" class="btn_axi btn_edit btn_mintline">수정</button></td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>매뉴얼 관리</td>
+                    <td><button type="button" class="btn_axi btn_edit btn_mintline">수정</button></td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>보도자료 관리</td>
+                    <td><button type="button" class="btn_axi btn_edit btn_mintline">수정</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tbl_wrap">
+            <div class="tbl_top flex_wrap f_sb">
+              <h3>하위 코드 리스트</h3>
+              <button type="button" class="btn btn_blue">항목 추가</button>
+            </div>
+            <table class="tbl_com tbl_tit">
+              <caption>코드 리스트 제목 테이블</caption>
+              <colgroup>
+                <col width="100">
+                <col width="250">
+                <col width="*">
+                <col width="135">
+                <col width="135">
+                <col class="fix_scroll">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">NO</th>
+                  <th scope="col">개별코드</th>
+                  <th scope="col">코드그룹명</th>
+                  <th scope="col">수정</th>
+                  <th scope="col">삭제</th>
+                  <th>&nbsp;</th>
+                </tr>
+              </thead>
+            </table>
+            <div class="tbl_scroll" style="height:650px">
+              <table class="tbl_com">
+                <caption>코드 리스트 내용 테이블</caption>
+                <colgroup>
+                  <col width="100">
+                  <col width="250">
+                  <col width="*">
+                  <col width="135">
+                  <col width="135">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>A001</td>
+                    <td>내부사용자</td>
+                    <td><button type="button" class="btn_axi btn_edit btn_mintline">수정</button></td>
+                    <td><button type="button" class="btn_axi btn_del btn_grayline">삭제</button></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>A002</td>
+                    <td>본부사용자</td>
+                    <td><button type="button" class="btn_axi btn_edit btn_mintline">수정</button></td>
+                    <td><button type="button" class="btn_axi btn_del btn_grayline">삭제</button></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>A003</td>
+                    <td>시스템 관리자</td>
+                    <td><button type="button" class="btn_axi btn_edit btn_mintline">수정</button></td>
+                    <td><button type="button" class="btn_axi btn_del btn_grayline">삭제</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // Contents -->
+  </div>
+  @@include('inc/p_common04_1.html')
+  @@include('inc/p_common04_2.html')
+  @@include('inc/script.html')
+</body>
+
+</html>

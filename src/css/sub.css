@@ -54,7 +54,10 @@
 
 /* standard */
 .standard02 .search input[type = text]{width:300px;}
-.standard02 .tbl_com td:nth-child(4){padding:0 70px;text-align:left;}
+.standard01 .tbl_com td:nth-child(3),
+.standard02 .tbl_com td:nth-child(4),
+.standard03 .tbl_com td:nth-child(3),
+.standard04 .tbl_com td:nth-child(3){padding:0 70px;text-align:left;}
 .manual_attach h3{padding:10px 0;font-size:13px;}
 .btn_upload{cursor:pointer;}
 .manual_attach #dropZone{height:auto;margin-top:10px;padding:10px 0 10px 10px;background-color:#e8e8e8;text-align:left;font-size:14px;}
@@ -67,6 +70,20 @@
 .btn_upload_wrap:hover button{background-color:#3c7ed3;color:#fff;}
 .btn_upload_wrap input[type=file]{position:absolute;z-index:1;left:0;opacity:0;width:100%;height:100%;cursor:pointer;}
 #fileDragDesc{text-align:center}
-.wrap .admin02_write{max-height:1000%;}
-.admin02 .section_l{position:relative;}
-.admin02 .section_l::after{position:absolute;top:50%;right:-70px;content:'\e850';display:block;font-family:'axicon';font-size:35px;color:#ccc;transform:translateX(-50%);}
+
+
+/* common */
+.common01 .tbl_view th{width:10%;padding:10px 20px 10px 0;line-height:50px;text-align:right;}
+.common01 .tbl_view td{width:23%;text-align:left;line-height:50px;}
+.common01 input{width:auto;}
+.common01 select{width:70px;padding-right:0;}
+.common01 .tbl_view span{padding-left:6px;}
+.common02 .search input[type = text]{width:300px;}
+.common02 .tbl_com td:nth-child(4){padding:0 70px;text-align:left;}
+.attendee_wrap{text-align:left;}
+.attendee_wrap li{display:inline-block;background-color:#ddd;margin-top:10px; padding:0 10px;border-radius:3px;}
+.attendee_wrap li::after{content:'\f1b4';font-family:'axicon';vertical-align:middle;cursor:pointer;margin-left:5px;}
+.common04 .flex_wrap .tbl_wrap:first-child{width:35%;}
+.common04 .flex_wrap .tbl_wrap:last-child{width:63%;}
+.common04 h3{font-size:18px;margin-bottom:15px;font-weight:bold;line-height:25px;color:#2e4057;}
+.common04 h3::before{display:inline-block;content:'\f192';font-family:'axicon';margin-right:5px;color:#aaa;}

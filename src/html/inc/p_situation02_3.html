@@ -7,23 +7,31 @@
     <div class="pop_body">
       <div class="pop_cont">
         <table class="tbl_view alignL">
-          <caption>내역보기</caption>
+          <caption>모의훈련 평가 등록 내역 테이블</caption>
           <colgroup>
             <col width='100'>
             <col width='*'>
           </colgroup>
           <tr>
-            <th>제 목</th>
-            <td><input type="text" value="모의훈련 상황 평가 전달" disabled></td>
+            <th>
+              <label for="title">제목</label>
+            </th>
+            <td><input type="text" id="title" value="모의훈련 상황 평가 전달"></td>
           </tr>
           <tr>
-            <th class="three">담 당 자</th>
-            <td><input type="text" value="평가 담당자" disabled></td>
+            <th>
+              <label for="manage">담당자</label>
+            </th>
+            <td><input type="text" id="manage" value="평가 담당자"></td>
           </tr>
           <tr>
-            <th>내 용</th>
+            <th>
+              <label for="content">내용</label>
+            </th>
             <td>
-              <textarea disabled>모의훈련 평가 등록 영역</textarea>
+              <div class="input_content">
+                내용
+              </div>
             </td>
           </tr>
         </table>

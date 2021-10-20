@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../plugins/jquery-ui/themes/base/jquery-ui.min.css" />
   <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.css" />
   <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
+  <link rel="stylesheet" href="../plugins/summernote/css/summernote-lite.css">
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/sub.css">
   <link rel="stylesheet" href="../css/pop.css">
@@ -70,7 +71,7 @@
 <!-- // Header -->
     <!-- Contents -->
     <div class="pop_overlay">
-  <div class="pop_wrap p_common02">
+  <div class="pop_wrap p_common03">
     <div class="pop_tit">
       <h1>권한설정</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -78,15 +79,17 @@
     <div class="pop_body">
       <div class="pop_cont">
         <table class="tbl_view alignL">
-          <caption>내역보기</caption>
+          <caption>권한 설정 테이블</caption>
           <colgroup>
             <col width='150'>
             <col width='*'>
           </colgroup>
           <tr>
-            <th class="four">권 한 설 정</th>
+            <th>
+              <label for="authority">권한설정</label>
+            </th>
             <td>
-              <select name="">
+              <select id="authority">
                 <option value="시스템 관리자">시스템 관리자</option>
                 <option value="내부 사용자">내부 사용자</option>
                 <option value="본부 사용자">본부 사용자</option>
@@ -102,7 +105,7 @@
   </div>
 </div>
     <div class="pop_overlay">
-  <div class="pop_wrap p_common02">
+  <div class="pop_wrap p_common04">
     <div class="pop_tit">
       <h1>코드항목 추가</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -110,27 +113,29 @@
     <div class="pop_body">
       <div class="pop_cont">
         <table class="tbl_view alignL">
-          <caption>내역보기</caption>
+          <caption>코드항목 추가 테이블</caption>
           <colgroup>
             <col width='150'>
             <col width='*'>
           </colgroup>
           <tr>
-            <th class="four">코 드 그 룹 추 가</th>
+            <th>
+              <label for="addcode">코드그룹추가</label>
+            </th>
             <td>
-              <input type="text" placeholder="코드그룹">
+              <input type="text" id="addcode">
             </td>
           </tr>
         </table>
         <div class="btn_wrap alignC">
-          <button type="button" class="btn btn_gray">적용</button>
+          <button type="button" class="btn btn_blue">적용</button>
         </div>
       </div>
     </div>
   </div>
 </div>
     <div class="pop_overlay">
-  <div class="pop_wrap p_common02">
+  <div class="pop_wrap p_common04">
     <div class="pop_tit">
       <h1>하위코드 추가</h1>
       <button type="button" class="btn_pop_close" closePop></button>
@@ -138,40 +143,44 @@
     <div class="pop_body">
       <div class="pop_cont">
         <table class="tbl_view alignL">
-          <caption>내역보기</caption>
+          <caption>하위코드 추가 테이블</caption>
           <colgroup>
             <col width='150'>
             <col width='*'>
           </colgroup>
           <tr>
-            <th class="four">개 별 코 드</th>
+            <th>
+              <label for="code">개별코드</label>
+            </th>
             <td>
-              <input type="text" placeholder="개별코드">
+              <input type="text" id="code">
             </td>
           </tr>
           <tr>
-            <th class="four">개 별 코 드 명</th>
+            <th>
+              <label for="codename">개별코드명</label>
+            </th>
             <td>
-              <input type="text" placeholder="개별코드명">
+              <input type="text" id="codename">
             </td>
           </tr>
         </table>
         <div class="btn_wrap alignC">
-          <button type="button" class="btn btn_gray">적용</button>
+          <button type="button" class="btn btn_blue">적용</button>
         </div>
       </div>
     </div>
   </div>
 </div>
     <div class="pop_overlay">
-  <div class="pop_wrap p_common02">
+  <div class="pop_wrap p_standard03">
     <div class="pop_tit">
       <h1>보고서 내역보기</h1>
       <button type="button" class="btn_pop_close" closePop></button>
     </div>
     <div class="pop_body">
       <div class="pop_cont">
-        <img src="http://placehold.it/530x300">
+        <img src="http://placehold.it/730x500" alt="미리보기 임시 이미지">
         <div class="btn_wrap alignC">
           <button type="button" class="btn btn_gray">닫기</button>
         </div>
@@ -187,32 +196,195 @@
     </div>
     <div class="pop_body">
       <div class="pop_cont">
-        <table class="tbl_view alignL">
-          <caption>내역보기</caption>
-          <colgroup>
-            <col width='100'>
-            <col width='*'>
-          </colgroup>
-          <tr>
-            <th>제 목</th>
-            <td><input type="text" value="모의훈련 상황 평가 전달"></td>
-          </tr>
-          <tr>
-            <th class="three">담 당 자</th>
-            <td><input type="text" value="평가 담당자"></td>
-          </tr>
-          <tr>
-            <th>내 용</th>
-            <td>
-              <textarea>모의훈련 평가 등록 영역</textarea>
-            </td>
-          </tr>
-        </table>
-        <div class="btn_wrap alignL">
-          <button type="button" class="btn btn_blue">등록</button>
+        <div class="search_wrap">
+          <ul class="search">
+            <li>
+              <label for="sort" class="dot">유형</label>
+              <select id="sort" title="전체">
+                <option value="전체">전체</option>
+                <option value="내부">내부</option>
+                <option value="외부">외부</option>
+              </select>
+            </li>
+          </ul>
         </div>
-        <div class="btn_wrap alignC">
-          <button type="button" class="btn btn_gray">닫기</button>
+        <div class="tbl_com">
+          <table class="tbl_col">
+            <caption>훈련결과 제목 테이블</caption>
+            <colgroup>
+              <col width="50">
+              <col width="80">
+              <col width="100">
+              <col width="*">
+              <col width="150">
+              <col width="150">
+              <col class="fix_scroll">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>선택</th>
+                <th>NO</th>
+                <th>유형</th>
+                <th>직책</th>
+                <th>성함</th>
+                <th>전화번호</th>
+                <th>&nbsp;</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="tbl_scroll" style="height:322px">
+            <table class="tbl_col">
+              <caption>훈련결과 내용 테이블</caption>
+              <colgroup>
+                <col width="50">
+                <col width="80">
+                <col width="100">
+                <col width="*">
+                <col width="150">
+                <col width="150">
+              </colgroup>
+              <tbody class="contactInfo">
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>3</td>
+                  <td>외부</td>
+                  <td>네트워크안전 기획과장</td>
+                  <td>김XX</td>
+                  <td>02-XXXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>2</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" title="select" name="contact"></td>
+                  <td>1</td>
+                  <td>내부</td>
+                  <td>주무관</td>
+                  <td>김XX</td>
+                  <td>064-XXX-XXXX</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="btn_wrap flex_wrap f_sb">
+          <div>
+            <button type="button" class="btn_allSelect btn_l btn_skyblue"
+              style="font-weight:normal;">전체선택&sol;해제</button>
+            <button type="button" class="btn btn_blue">적용</button>
+          </div>
+          <button type="button" class="btn btn_gray">창닫기</button>
+
+          <script>
+            // 버튼을 이용하여 체크하는 기능 작성하기
+
+
+
+
+
+            // 여기여기여기!
+          </script>
         </div>
       </div>
     </div>
@@ -227,6 +399,9 @@
 <script src="../plugins/jqueryui-timepicker-addon/dist/i18n/jquery-ui-timepicker-ko.js"></script>
 <script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
 <script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>
+<script src="../plugins/smarteditor2/js/service/HuskyEZCreator.js"></script>
+<script src="../plugins/summernote/js/summernote-lite.js"></script>
+<script src="../plugins/summernote/js/lang/summernote-ko-KR.js"></script>
 <script src="../js/ui_common.js"></script>
 <script src="../js/file_attach.js"></script>
 </body>
