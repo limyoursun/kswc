@@ -95,41 +95,53 @@ $(function () {
 })
 
 // editor(summernote)
-  $('#summernote').summernote({
-    height: 200,
-    width:1400,
-    minHeight: null,
-    maxHeight: null,
-    lang: "ko-KR",
-    focus : true,
-	  toolbar: [
-		    ['fontsize', ['fontsize']],
-		    ['style', ['bold', 'italic', 'underline','strikethrough', 'clear']],
-		    ['color', ['forecolor','color']],
-		    ['table', ['table']],
-		    ['para', ['ul', 'ol', 'paragraph']],
-		    ['height', ['height']],
-		    ['insert',['picture']]
-		  ],
-		fontSizes: ['8','9','10','11','12','14','16','18','20','22','24','28','30','36','50','72']
-  });
+$('#summernote').summernote({
+  height: 200,
+  width: 1400,
+  minHeight: null,
+  maxHeight: null,
+  lang: "ko-KR",
+  focus: true,
+  toolbar: [
+    ['fontsize', ['fontsize']],
+    ['style', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],
+    ['color', ['forecolor', 'color']],
+    ['table', ['table']],
+    ['para', ['ul', 'ol', 'paragraph']],
+    ['height', ['height']],
+    ['insert', ['picture']]
+  ],
+  fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '22', '24', '28', '30', '36', '50', '72']
+});
 
-  // editor(summernote)
-  $('.summernote_pop').summernote({
-    height: 200,
-    width:650,
-    minHeight: null,
-    maxHeight: null,
-    lang: "ko-KR",
-    focus : true,
-	  toolbar: [
-		    ['fontsize', ['fontsize']],
-		    ['style', ['bold', 'italic', 'underline','strikethrough', 'clear']],
-		    ['color', ['forecolor','color']],
-		    ['table', ['table']],
-		    ['para', ['ul', 'ol', 'paragraph']],
-		    ['height', ['height']],
-		    ['insert',['picture']]
-		  ],
-		fontSizes: ['8','9','10','11','12','14','16','18','20','22','24','28','30','36','50','72']
+// editor(summernote)
+$('.summernote_pop').summernote({
+  height: 200,
+  width: 650,
+  minHeight: null,
+  maxHeight: null,
+  lang: "ko-KR",
+  focus: true,
+  toolbar: [
+    ['fontsize', ['fontsize']],
+    ['style', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],
+    ['color', ['forecolor', 'color']],
+    ['table', ['table']],
+    ['para', ['ul', 'ol', 'paragraph']],
+    ['height', ['height']],
+    ['insert', ['picture']]
+  ],
+  fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '22', '24', '28', '30', '36', '50', '72']
+});
+
+// p_common02_1 select
+$(".checkbox_group").on("click", ".contactAll", function () {
+  $(this).parents(".checkbox_group").find('input').prop("checked", $(this).is(":checked"));
+});
+$(".checkbox_group").on("click", ".normal", function () {
+  var is_checked = true;
+  $(".checkbox_group .normal").each(function () {
+    is_checked = is_checked && $(this).is(":checked");
   });
+  $(".contactAll").prop("checked", is_checked);
+});

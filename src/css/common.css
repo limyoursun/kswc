@@ -369,6 +369,7 @@ nav h1{background-color:#000d2a;line-height:127px;text-align:center;}
 .dot::before{position:absolute;top:52%;left:-10px;content:'';display:inline-block;width:5px;height:5px;border-radius:5px;background-color:rgba(40,71,120,.7);transform:translateY(-50%);}
 
 /* summernote */
+.input_content{min-height:200px;padding-left:5px;}
 .note-modal{z-index:9999;}
 .note-modal-backdrop{opacity:.3;}
 .note-modal-content{top:50%;transform:translateY(-50%);margin:0 auto;border-width:0;}
@@ -383,6 +384,3 @@ nav h1{background-color:#000d2a;line-height:127px;text-align:center;}
 .note-modal-body .note-group-select-from-files label{display:block;width: 90px;height:33px;padding:0;padding-left:10px;border:1px solid #284278;background-color:#284278;cursor:pointer;font-size:16px;font-weight:normal;color:#f8f8f8;line-height:30px;}
 .note-modal-body .note-group-select-from-files label:hover,
 .note-modal-body .note-group-select-from-files label:active{background-color:#395fac;border:1px solid #395fac;color:#fff;}
-
-
-.input_content{min-height:200px;padding-left:5px;}
