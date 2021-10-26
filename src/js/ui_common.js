@@ -145,3 +145,67 @@ $(".checkbox_group").on("click", ".normal", function () {
   });
   $(".contactAll").prop("checked", is_checked);
 });
+
+// main board hide/show button
+$('.btn_open').on('click', function () {
+  $(this).toggleClass('on');
+  $(this).parent('.tit').next('.list_depth2').slideToggle();
+})
+
+$('.btn_treeclose').on('click', function () {
+  $(this).parent('.step_top').children('.btn_tree').toggleClass('on');
+  $(this).parent('.step_top').next('.flex_wrap').find('.btn_open').removeClass('on');
+  $(this).parent('.step_top').next('.flex_wrap').find('.tit').next('.list_depth2').slideUp();
+})
+$('.btn_treeopen').on('click', function () {
+  $(this).parent('.step_top').children('.btn_tree').toggleClass('on');
+  $(this).parent('.step_top').next('.flex_wrap').find('.btn_open').addClass('on');
+  $(this).parent('.step_top').next('.flex_wrap').find('.tit').next('.list_depth2').slideDown();
+})
+
+// main board slide
+var banList = $('.board_list'),
+  banW = banList.children('li').outerWidth(),
+  banLength = banList.children('li').length,
+  preB = $('.list_prev'),
+  nxtB = $('.list_next'),
+  presentLoc = 0,
+  itemLengPage = 1,
+  maxNum = banLength / itemLengPage - 1,
+  presentNum = 0;
+  console.log(banLength);
+
+initBan();
+function initBan() {
+  banList.width(banW * banLength);
+  preB.removeClass('on').attr('disabled', true);
+  (banLength <= itemLengPage) ? preB.removeClass('on').attr('disabled', true) : nxtB.addClass('on').attr('disabled', false);
+  presentNum = 0;
+  presentLoc = 0;
+  banList.animate({ left: presentLoc })
+}
+
+preB.on('click', function () {
+  preMove();
+})
+nxtB.on('click', function () {
+  nxtMove();
+})
+
+function preMove() {
+  if (presentNum <= 0) return;
+  nxtB.addClass('on').attr('disabled', false);
+  presentNum -= 1;
+  presentLoc = presentLoc + (banW * itemLengPage);
+  banList.animate({ left: presentLoc });
+  if (presentNum <= 0) preB.removeClass('on').attr('disabled', true);
+}
+function nxtMove() {
+  if (presentNum >= maxNum) return true;
+  preB.addClass('on').attr('disabled', false);
+  presentNum += 1;
+  presentLoc = presentLoc - (banW * itemLengPage);
+  banList.animate({ left: presentLoc });
+  if (presentNum >= maxNum) nxtB.removeClass('on').attr('disabled', true);
+}
+

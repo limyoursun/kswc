@@ -4,704 +4,2489 @@
   <div id="wrap">
     @@include('inc/header.html')
     <!-- Contents -->
-    <div class="con_wrap center">
-      <div class="tit_board flex_wrap">
-        <div class="situation_warp flex_wrap">
-          <h2>실상황</h2>
-          <div class="current_wrap">
-            <p>위기경보재난 관심상황</p>
-            <span>2021-07-01 12:00:00</span>
-            <ul>
-              <li>S0</li>
-              <li>S3</li>
-              <li>관심</li>
-            </ul>
-          </div>
-        </div>
-        <div class="status_warp">
-          <ul class="flex_wrap">
-            <li class="on">
-              <b>관심</b>
-              <p>2021-07-01 12:00</p>
-            </li>
-            <li>
-              <b>주의</b>
-              <p>&nbsp;</p>
-            </li>
-            <li>
-              <b>경계</b>
-              <p>&nbsp;</p>
-            </li>
-            <li>
-              <b>심각</b>
-              <p>&nbsp;</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="flex_wrap f_sb">
-        <div class="con_situation">
-          <div class="flex_wrap f_sb">
-            <div>
-              <select name="prev_sit">
-                <option value="이전 상황 불러오기">이전 상황 불러오기</option>
-              </select>
-              <button type="button">우주전파환경 경보 발령/변경</button>
-              <button type="button">우주전파환경 경보 해제</button>
-            </div>
-            <ul class="legend_wrap">
-              <li>
-                <ul class="legend_time">
-                  <li>수행시간</li>
-                  <li>완료시간</li>
-                  <li>소요시간</li>
+    <div class="con_wrap">
+      <!-- left -->
+      <div class="center flex_wrap f_sb">
+        <!-- 위 div에 classname none을 추가하면
+                경보 상황 없음 상황 css가 적용 됩니다.-->
+        <div class="situation_wrap">
+          <div>
+            <!--list_depth1 > li or list_depth2 > li에
+                classname 'done'를 추가하면
+                배경색상이 '업무완료'인 녹색으로 보여집니다.
+
+                classname 'todo'를 추가하면
+                배경색상이 'TO-DO'인 적색으로 보여집니다.
+
+                classname 'fold'를 추가하면
+                list_depth2가 접힌 상태로 보여집니다. -->
+            <div class="step_cont flex_wrap f_sb">
+              <button class="list_prev"></button>
+              <div class="boardlist_wrap">
+                <ul class="board_list">
+                  <li>
+                    <div class="state_wrap">
+                      <div class="flex_wrap f_sb">
+                        <h2>실상황</h2>
+                        <div>
+                          <h3>우주전파환경 경보 <b>G4</b> 발령</h3>
+                          <p>2021-09-23 15:30:00</p>
+                        </div>
+                        <ul class="flex_wrap">
+                          <li class="done">
+                            <span>01</span>
+                            <p>발생</p>
+                          </li>
+                          <li class="on">
+                            <span>02</span>
+                            <p>전파</p>
+                          </li>
+                          <li class="">
+                            <span>03</span>
+                            <p>경과</p>
+                          </li>
+                          <li class="">
+                            <span>04</span>
+                            <p>종료</p>
+                          </li>
+                        </ul>
+                        <h2>G4</h2>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="live_wrap flex_wrap">
+                        <h3>실시간 경보 상황</h3>
+                        <ul class="flex_wrap">
+                          <li><a href="#">R3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">R0</a></li>
+                          <li class="on"><a href="#">G4</a></li>
+                        </ul>
+                      </div>
+                      <div class="step_top alignR">
+                        <ul>
+                          <li>TO-DO</li>
+                          <li>업무완료</li>
+                        </ul>
+                        <button type="button" class="btn_tree btn_treeclose">전체 숨기기</button>
+                        <button type="button" class="btn_tree on btn_treeopen">전체 펼치기</button>
+                      </div>
+                      <div class="flex_wrap f_sb">
+                        <div class="step step1">
+                          <h3>경보발생</h3>
+                          <ul class="list_depth1">
+                            <li class="done">
+                              <div class="tit">
+                                <p>1. 상황발생 문자 발송</p>
+                                <dl>
+                                  <dt>담당자</dt>
+                                  <dd>소승호</dd>
+                                  <dt>완료시각</dt>
+                                  <dd>2021-09-23 15:30:00</dd>
+                                </dl>
+                              </div>
+                            </li>
+                            <li class="done">
+                              <div class="tit">
+                                <p>2. 비상소집</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>2-2. 항공 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>김창민</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 16:40:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="done">
+                              <div class="tit">
+                                <p>3. 담당자 발생 상황전파</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>3-1. 본부 담당자 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>권은주</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 16:35:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>3-2. 주관기관 및 유관기관 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>기획팀장</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 16:38:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>3-3. 기관장 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>대응반장</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 16:45:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="done">
+                              <div class="tit">
+                                <p>4. 상황 발생 보고</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>4-1. 상황 발생 보고서 작성</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>문준철</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:50:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>4-2. 상황 발생 메모보고/메일 보고</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>김재훈</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>4-3. 상황 발생 보고서 게시 (누리집, SNS 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>홍길동</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="step step2">
+                          <h3>경보경과</h3>
+                          <ul class="list_depth1">
+                            <li class="on">
+                              <div class="tit">
+                                <p>1. 우주전파환경 데이터 수집 및 분석</p>
+                                <button type="button" class="btn_open on">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="todo">
+                                  <div class="tit">
+                                    <p>1-1. 태양흑점폭발 관측데이터 및 모델(위성 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>김재훈</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>1-2. 태양입자유입 관측데이터 및 모델</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>윤종연</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>1-3. 지자기 관측데이터 및 모델(전력 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>조정희</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>1-4. 전리권 관측데이터 및 모델(항법, 항공, 방송통신등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>윤종연</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="on">
+                              <div class="tit">
+                                <p>2. 실무·수요기관 상황 및 피해조사</p>
+                                <button type="button" class="btn_open on">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li>
+                                  <div class="tit">
+                                    <p>2-1. 위성 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>박지웅</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-2. 항공 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>홍석보</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-3. 방송통신 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-4. 항법 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-5. 전력 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-6. 기타 분야(군 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="on">
+                              <div class="tit">
+                                <p>3. 상황 경과 보고</p>
+                                <button type="button" class="btn_open on">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="">
+                                  <div class="tit">
+                                    <p>3-1. 본부 담당자 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>3-2. 주관기관 및 유관기관 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>3-3. 기관장 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="on">
+                              <div class="tit">
+                                <p>4. 본부 요구자료 대응</p>
+                                <button type="button" class="btn_open on">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-1. 상황 발생 보고서 작성</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-2. 상황 발생 메모보고/메일 보고</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <div class="tit">
+                                <p>5. 경과 보도자료 작성 및 송부</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-1. 상황 발생 보고서 작성</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-2. 상황 발생 메모보고/메일 보고</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-3. 상황 발생 보고서 게시 (누리집, SNS 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="step step3">
+                          <h3>경보종료</h3>
+                          <ul class="list_depth1">
+                            <li>
+                              <div class="tit">
+                                <p>1. 우주전파환경 데이터 수집 및 분석</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="todo">
+                                  <div class="tit">
+                                    <p>1-1. 태양흑점폭발 관측데이터 및 모델(위성 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>김재훈</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>1-2. 태양입자유입 관측데이터 및 모델</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>윤종연</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>1-3. 지자기 관측데이터 및 모델(전력 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>조정희</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>1-4. 전리권 관측데이터 및 모델(항법, 항공, 방송통신등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>윤종연</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <div class="tit">
+                                <p>2. 실무·수요기관 상황 및 피해조사</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li>
+                                  <div class="tit">
+                                    <p>2-1. 위성 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>박지웅</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-2. 항공 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>홍석보</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-3. 방송통신 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-4. 항법 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-5. 전력 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-6. 기타 분야(군 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <div class="tit">
+                                <p>3. 상황 종료 보고</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="">
+                                  <div class="tit">
+                                    <p>3-1. 본부 담당자 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>3-2. 주관기관 및 유관기관 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>3-3. 기관장 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <div class="tit">
+                                <p>4. 종료 보도자료 작성 및 송부</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-1. 상황 발생 보고서 작성</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-2. 상황 발생 메모보고/메일 보고</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-3. 상황 발생 보고서 게시 (누리집, SNS 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <div class="tit">
+                                <p>5. 담당자 종료 상황전파</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-1. 상황 발생 보고서 작성</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-2. 상황 발생 메모보고/메일 보고</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-3. 상황 발생 보고서 게시 (누리집, SNS 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <div class="tit">
+                                <p>6. 우주전파재난 대응 종합 보고서</p>
+                                <dl>
+                                  <dt>담당자</dt>
+                                  <dd>소승호</dd>
+                                  <dt>완료시각</dt>
+                                  <dd>2021-09-23 15:30:00</dd>
+                                </dl>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="state_wrap">
+                      <div class="flex_wrap f_sb">
+                        <h2>실상황</h2>
+                        <div>
+                          <h3>우주전파환경 경보 <b>G4</b> 발령</h3>
+                          <p>2021-09-23 15:30:00</p>
+                        </div>
+                        <ul class="flex_wrap">
+                          <li class="done">
+                            <span>01</span>
+                            <p>발생</p>
+                          </li>
+                          <li class="done">
+                            <span>02</span>
+                            <p>전파</p>
+                          </li>
+                          <li class="on">
+                            <span>03</span>
+                            <p>경과</p>
+                          </li>
+                          <li class="">
+                            <span>04</span>
+                            <p>종료</p>
+                          </li>
+                        </ul>
+                        <h2>G4</h2>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="live_wrap flex_wrap">
+                        <h3>실시간 경보 상황</h3>
+                        <ul class="flex_wrap">
+                          <li><a href="#">R3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">R0</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">R0</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">R0</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">R0</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">R0</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">R0</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">R0</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">R0</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">R0</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">R0</a></li>
+                          <li class="on"><a href="#">G4</a></li>
+                        </ul>
+                      </div>
+                      <div class="step_top alignR">
+                        <ul>
+                          <li>TO-DO</li>
+                          <li>업무완료</li>
+                        </ul>
+                        <button type="button" class="btn_tree btn_treeclose">전체 숨기기</button>
+                        <button type="button" class="btn_tree on btn_treeopen">전체 펼치기</button>
+                      </div>
+                      <div class="flex_wrap f_sb">
+                        <div class="step step1">
+                          <h3>경보발생</h3>
+                          <ul class="list_depth1">
+                            <li class="done">
+                              <div class="tit">
+                                <p>1. 상황발생 문자 발송</p>
+                                <dl>
+                                  <dt>담당자</dt>
+                                  <dd>소승호</dd>
+                                  <dt>완료시각</dt>
+                                  <dd>2021-09-23 15:30:00</dd>
+                                </dl>
+                              </div>
+                            </li>
+                            <li class="done">
+                              <div class="tit">
+                                <p>2. 비상소집</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>2-2. 항공 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>김창민</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 16:40:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="done">
+                              <div class="tit">
+                                <p>3. 담당자 발생 상황전파</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>3-1. 본부 담당자 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>권은주</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 16:35:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>3-2. 주관기관 및 유관기관 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>기획팀장</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 16:38:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>3-3. 기관장 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>대응반장</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 16:45:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="done">
+                              <div class="tit">
+                                <p>4. 상황 발생 보고</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>4-1. 상황 발생 보고서 작성</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>문준철</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:50:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>4-2. 상황 발생 메모보고/메일 보고</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>김재훈</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>4-3. 상황 발생 보고서 게시 (누리집, SNS 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>홍길동</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="step step2">
+                          <h3>경보경과</h3>
+                          <ul class="list_depth1">
+                            <li class="on">
+                              <div class="tit">
+                                <p>1. 우주전파환경 데이터 수집 및 분석</p>
+                                <button type="button" class="btn_open on">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="todo">
+                                  <div class="tit">
+                                    <p>1-1. 태양흑점폭발 관측데이터 및 모델(위성 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>김재훈</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>1-2. 태양입자유입 관측데이터 및 모델</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>윤종연</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>1-3. 지자기 관측데이터 및 모델(전력 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>조정희</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>1-4. 전리권 관측데이터 및 모델(항법, 항공, 방송통신등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>윤종연</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="on">
+                              <div class="tit">
+                                <p>2. 실무·수요기관 상황 및 피해조사</p>
+                                <button type="button" class="btn_open on">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li>
+                                  <div class="tit">
+                                    <p>2-1. 위성 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>박지웅</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-2. 항공 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>홍석보</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-3. 방송통신 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-4. 항법 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-5. 전력 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-6. 기타 분야(군 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="on">
+                              <div class="tit">
+                                <p>3. 상황 경과 보고</p>
+                                <button type="button" class="btn_open on">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="">
+                                  <div class="tit">
+                                    <p>3-1. 본부 담당자 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>3-2. 주관기관 및 유관기관 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>3-3. 기관장 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="on">
+                              <div class="tit">
+                                <p>4. 본부 요구자료 대응</p>
+                                <button type="button" class="btn_open on">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-1. 상황 발생 보고서 작성</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-2. 상황 발생 메모보고/메일 보고</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <div class="tit">
+                                <p>5. 경과 보도자료 작성 및 송부</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-1. 상황 발생 보고서 작성</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-2. 상황 발생 메모보고/메일 보고</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-3. 상황 발생 보고서 게시 (누리집, SNS 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="step step3">
+                          <h3>경보종료</h3>
+                          <ul class="list_depth1">
+                            <li>
+                              <div class="tit">
+                                <p>1. 우주전파환경 데이터 수집 및 분석</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="todo">
+                                  <div class="tit">
+                                    <p>1-1. 태양흑점폭발 관측데이터 및 모델(위성 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>김재훈</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>1-2. 태양입자유입 관측데이터 및 모델</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>윤종연</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>1-3. 지자기 관측데이터 및 모델(전력 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>조정희</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>1-4. 전리권 관측데이터 및 모델(항법, 항공, 방송통신등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>윤종연</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <div class="tit">
+                                <p>2. 실무·수요기관 상황 및 피해조사</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li>
+                                  <div class="tit">
+                                    <p>2-1. 위성 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>박지웅</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-2. 항공 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>홍석보</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-3. 방송통신 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-4. 항법 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-5. 전력 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-6. 기타 분야(군 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <div class="tit">
+                                <p>3. 상황 종료 보고</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="">
+                                  <div class="tit">
+                                    <p>3-1. 본부 담당자 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>3-2. 주관기관 및 유관기관 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>3-3. 기관장 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <div class="tit">
+                                <p>4. 종료 보도자료 작성 및 송부</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-1. 상황 발생 보고서 작성</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-2. 상황 발생 메모보고/메일 보고</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-3. 상황 발생 보고서 게시 (누리집, SNS 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <div class="tit">
+                                <p>5. 담당자 종료 상황전파</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-1. 상황 발생 보고서 작성</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-2. 상황 발생 메모보고/메일 보고</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-3. 상황 발생 보고서 게시 (누리집, SNS 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <div class="tit">
+                                <p>6. 우주전파재난 대응 종합 보고서</p>
+                                <dl>
+                                  <dt>담당자</dt>
+                                  <dd>소승호</dd>
+                                  <dt>완료시각</dt>
+                                  <dd>2021-09-23 15:30:00</dd>
+                                </dl>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="state_wrap">
+                      <div class="flex_wrap f_sb">
+                        <h2>실상황</h2>
+                        <div>
+                          <h3>우주전파환경 경보 <b>G4</b> 발령</h3>
+                          <p>2021-09-23 15:30:00</p>
+                        </div>
+                        <ul class="flex_wrap">
+                          <li class="done">
+                            <span>01</span>
+                            <p>발생</p>
+                          </li>
+                          <li class="done">
+                            <span>02</span>
+                            <p>전파</p>
+                          </li>
+                          <li class="done">
+                            <span>03</span>
+                            <p>경과</p>
+                          </li>
+                          <li class="on">
+                            <span>04</span>
+                            <p>종료</p>
+                          </li>
+                        </ul>
+                        <h2>G4</h2>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="live_wrap flex_wrap">
+                        <h3>실시간 경보 상황</h3>
+                        <ul class="flex_wrap">
+                          <li><a href="#">R3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">G3</a></li>
+                          <li><a href="#">R0</a></li>
+                          <li class="on"><a href="#">G4</a></li>
+                        </ul>
+                      </div>
+                      <div class="step_top alignR">
+                        <ul>
+                          <li>TO-DO</li>
+                          <li>업무완료</li>
+                        </ul>
+                        <button type="button" class="btn_tree btn_treeclose">전체 숨기기</button>
+                        <button type="button" class="btn_tree on btn_treeopen">전체 펼치기</button>
+                      </div>
+                      <div class="flex_wrap f_sb">
+                        <div class="step step1">
+                          <h3>경보발생</h3>
+                          <ul class="list_depth1">
+                            <li class="done">
+                              <div class="tit">
+                                <p>1. 상황발생 문자 발송</p>
+                                <dl>
+                                  <dt>담당자</dt>
+                                  <dd>소승호</dd>
+                                  <dt>완료시각</dt>
+                                  <dd>2021-09-23 15:30:00</dd>
+                                </dl>
+                              </div>
+                            </li>
+                            <li class="done">
+                              <div class="tit">
+                                <p>2. 비상소집</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>2-2. 항공 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>김창민</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 16:40:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="done">
+                              <div class="tit">
+                                <p>3. 담당자 발생 상황전파</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>3-1. 본부 담당자 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>권은주</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 16:35:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>3-2. 주관기관 및 유관기관 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>기획팀장</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 16:38:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>3-3. 기관장 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>대응반장</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 16:45:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="done">
+                              <div class="tit">
+                                <p>4. 상황 발생 보고</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>4-1. 상황 발생 보고서 작성</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>문준철</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:50:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>4-2. 상황 발생 메모보고/메일 보고</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>김재훈</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                                <li class="done">
+                                  <div class="tit">
+                                    <p>4-3. 상황 발생 보고서 게시 (누리집, SNS 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>홍길동</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="step step2">
+                          <h3>경보경과</h3>
+                          <ul class="list_depth1">
+                            <li class="on">
+                              <div class="tit">
+                                <p>1. 우주전파환경 데이터 수집 및 분석</p>
+                                <button type="button" class="btn_open on">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="todo">
+                                  <div class="tit">
+                                    <p>1-1. 태양흑점폭발 관측데이터 및 모델(위성 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>김재훈</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>1-2. 태양입자유입 관측데이터 및 모델</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>윤종연</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>1-3. 지자기 관측데이터 및 모델(전력 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>조정희</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>1-4. 전리권 관측데이터 및 모델(항법, 항공, 방송통신등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>윤종연</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="on">
+                              <div class="tit">
+                                <p>2. 실무·수요기관 상황 및 피해조사</p>
+                                <button type="button" class="btn_open on">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li>
+                                  <div class="tit">
+                                    <p>2-1. 위성 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>박지웅</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-2. 항공 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>홍석보</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-3. 방송통신 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-4. 항법 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-5. 전력 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-6. 기타 분야(군 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="on">
+                              <div class="tit">
+                                <p>3. 상황 경과 보고</p>
+                                <button type="button" class="btn_open on">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="">
+                                  <div class="tit">
+                                    <p>3-1. 본부 담당자 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>3-2. 주관기관 및 유관기관 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>3-3. 기관장 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="on">
+                              <div class="tit">
+                                <p>4. 본부 요구자료 대응</p>
+                                <button type="button" class="btn_open on">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-1. 상황 발생 보고서 작성</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-2. 상황 발생 메모보고/메일 보고</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <div class="tit">
+                                <p>5. 경과 보도자료 작성 및 송부</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-1. 상황 발생 보고서 작성</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-2. 상황 발생 메모보고/메일 보고</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-3. 상황 발생 보고서 게시 (누리집, SNS 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="step step3">
+                          <h3>경보종료</h3>
+                          <ul class="list_depth1">
+                            <li>
+                              <div class="tit">
+                                <p>1. 우주전파환경 데이터 수집 및 분석</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="todo">
+                                  <div class="tit">
+                                    <p>1-1. 태양흑점폭발 관측데이터 및 모델(위성 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>김재훈</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>1-2. 태양입자유입 관측데이터 및 모델</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>윤종연</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>1-3. 지자기 관측데이터 및 모델(전력 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>조정희</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>1-4. 전리권 관측데이터 및 모델(항법, 항공, 방송통신등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>윤종연</dd>
+                                      <dt>완료시각</dt>
+                                      <dd>2021-09-23 17:00:00</dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <div class="tit">
+                                <p>2. 실무·수요기관 상황 및 피해조사</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li>
+                                  <div class="tit">
+                                    <p>2-1. 위성 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>박지웅</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-2. 항공 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>홍석보</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-3. 방송통신 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-4. 항법 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-5. 전력 분야</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="tit">
+                                    <p>2-6. 기타 분야(군 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd>서진혁</dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <div class="tit">
+                                <p>3. 상황 종료 보고</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="">
+                                  <div class="tit">
+                                    <p>3-1. 본부 담당자 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>3-2. 주관기관 및 유관기관 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>3-3. 기관장 상황전파</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <div class="tit">
+                                <p>4. 종료 보도자료 작성 및 송부</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-1. 상황 발생 보고서 작성</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-2. 상황 발생 메모보고/메일 보고</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-3. 상황 발생 보고서 게시 (누리집, SNS 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <div class="tit">
+                                <p>5. 담당자 종료 상황전파</p>
+                                <button type="button" class="btn_open">
+                                  <span class="btn_plus"></span>
+                                </button>
+                              </div>
+                              <ul class="list_depth2">
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-1. 상황 발생 보고서 작성</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-2. 상황 발생 메모보고/메일 보고</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="tit">
+                                    <p>4-3. 상황 발생 보고서 게시 (누리집, SNS 등)</p>
+                                    <dl>
+                                      <dt>담당자</dt>
+                                      <dd></dd>
+                                      <dt>완료시각</dt>
+                                      <dd></dd>
+                                    </dl>
+                                    <span class="count">1</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <div class="tit">
+                                <p>6. 우주전파재난 대응 종합 보고서</p>
+                                <dl>
+                                  <dt>담당자</dt>
+                                  <dd>소승호</dd>
+                                  <dt>완료시각</dt>
+                                  <dd>2021-09-23 15:30:00</dd>
+                                </dl>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
-              </li>
-              <li>
-                <ul class="legend_fulfill">
-                  <li>수행이전</li>
-                  <li>수행중</li>
-                  <li>수행완료</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <ul class="con_list flex_wrap f_sb">
-            <li>
-              <h3>상황전파</h3>
-              <ul>
-                <li>
-                  <p>1. 상황발생 SMS 문자 발송</p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-
-                    <span class="fulfill_f"></span>
-                  </div>
-                </li>
-                <li>
-                  <p>2. 대응반 비상소집 문자 발송</p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_w"></span>
-                  </div>
-                </li>
-                <li>
-                  <p>3. 우주전파재난 비상소집 SMS 상황<br>전파 발송 후 개인자리로 이동 확인
-                    <span class="more">more</span>
-                  </p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_b"></span>
-                  </div>
-                  <ul>
-                    <li>
-                      <p>3-1. 위성, 항공 상황전파</p>
-                      <div class="time_wrap">
-                        <ul>
-                          <li>07-12 12:00</li>
-                          <li>07-12 12:30</li>
-                          <li>30분 00초</li>
-                        </ul>
-                        <span class="fulfill_b"></span>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <p>4. 대응반 비상소집 문자 발송</p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_f"></span>
-                  </div>
-                </li>
-                <li>
-                  <p>5. 대응반 비상소집 문자 발송</p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_w"></span>
-                  </div>
-                </li>
-                <li>
-                  <p>6. 대응반 비상소집 문자 발송</p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_w"></span>
-                  </div>
-                </li>
-                <li>
-                  <p>7. 상황발생 SMS 문자 발송
-                    <span class="more">more</span>
-                  </p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_b"></span>
-                  </div>
-                  <ul>
-                    <li>
-                      <p>7-1. 위성, 항공 상황전파</p>
-                      <div class="time_wrap">
-                        <ul>
-                          <li>07-12 12:00</li>
-                          <li>07-12 12:30</li>
-                          <li>30분 00초</li>
-                        </ul>
-                        <span class="fulfill_b"></span>
-                      </div>
-                    </li>
-                    <li>
-                      <p>7-2. 상황발생 SMS 문자 발송</p>
-                      <div class="time_wrap">
-                        <ul>
-                          <li>07-12 12:00</li>
-                          <li>07-12 12:30</li>
-                          <li>30분 00초</li>
-                        </ul>
-                        <span class="fulfill_b"></span>
-                      </div>
-                    </li>
-                    <li>
-                      <p>7-3. 상황발생 SMS 문자 발송</p>
-                      <div class="time_wrap">
-                        <ul>
-                          <li>07-12 12:00</li>
-                          <li>07-12 12:30</li>
-                          <li>30분 00초</li>
-                        </ul>
-                        <span class="fulfill_b"></span>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <h3>상황발생</h3>
-              <ul>
-                <li>
-                  <p>1. 상황발생 SMS 문자 발송</p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_f"></span>
-                  </div>
-                </li>
-                <li>
-                  <p>2. 대응반 비상소집 문자 발송</p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_w"></span>
-                  </div>
-                </li>
-                <li>
-                  <p>3. 우주전파재난 비상소집 SMS 상황<br>전파 발송 후 개인자리로 이동 확인
-                    <span class="more">more</span>
-                  </p>
-
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_b"></span>
-                  </div>
-                  <ul>
-                    <li>
-                      <p>3-1. 위성, 항공 상황전파</p>
-                      <div class="time_wrap">
-                        <ul>
-                          <li>07-12 12:00</li>
-                          <li>07-12 12:30</li>
-                          <li>30분 00초</li>
-                        </ul>
-                        <span class="fulfill_b"></span>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <p>4. 대응반 비상소집 문자 발송</p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_f"></span>
-                  </div>
-                </li>
-                <li>
-                  <p>5. 대응반 비상소집 문자 발송</p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_w"></span>
-                  </div>
-                </li>
-                <li>
-                  <p>6. 대응반 비상소집 문자 발송</p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_w"></span>
-                  </div>
-                </li>
-                <li>
-                  <p>7. 상황발생 SMS 문자 발송
-                    <span class="more">more</span>
-                  </p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_b"></span>
-                  </div>
-                  <ul>
-                    <li>
-                      <p>7-1. 위성, 항공 상황전파</p>
-                      <div class="time_wrap">
-                        <ul>
-                          <li>07-12 12:00</li>
-                          <li>07-12 12:30</li>
-                          <li>30분 00초</li>
-                        </ul>
-                        <span class="fulfill_b"></span>
-                      </div>
-                    </li>
-                    <li>
-                      <p>7-2. 상황발생 SMS 문자 발송</p>
-                      <div class="time_wrap">
-                        <ul>
-                          <li>07-12 12:00</li>
-                          <li>07-12 12:30</li>
-                          <li>30분 00초</li>
-                        </ul>
-                        <span class="fulfill_b"></span>
-                      </div>
-                    </li>
-                    <li>
-                      <p>7-3. 상황발생 SMS 문자 발송</p>
-                      <div class="time_wrap">
-                        <ul>
-                          <li>07-12 12:00</li>
-                          <li>07-12 12:30</li>
-                          <li>30분 00초</li>
-                        </ul>
-                        <span class="fulfill_b"></span>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <h3>상황경과</h3>
-              <ul>
-                <li>
-                  <p>1. 상황발생 SMS 문자 발송</p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_f"></span>
-                  </div>
-                </li>
-                <li>
-                  <p>2. 대응반 비상소집 문자 발송</p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_w"></span>
-                  </div>
-                </li>
-                <li>
-                  <p>3. 우주전파재난 비상소집 SMS 상황<br>전파 발송 후 개인자리로 이동 확인
-                    <span class="more">more</span>
-                  </p>
-
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_b"></span>
-                  </div>
-                  <ul>
-                    <li>
-                      <p>3-1. 위성, 항공 상황전파</p>
-                      <div class="time_wrap">
-                        <ul>
-                          <li>07-12 12:00</li>
-                          <li>07-12 12:30</li>
-                          <li>30분 00초</li>
-                        </ul>
-                        <span class="fulfill_b"></span>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <p>4. 대응반 비상소집 문자 발송</p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_f"></span>
-                  </div>
-                </li>
-                <li class="on">
-                  <p>5. 대응반 비상소집 문자 발송</p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_w"></span>
-                  </div>
-                </li>
-                <li>
-                  <p>6. 대응반 비상소집 문자 발송</p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_w"></span>
-                  </div>
-                </li>
-                <li>
-                  <p>7. 상황발생 SMS 문자 발송
-                    <span class="more">more</span>
-                  </p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_b"></span>
-                  </div>
-                  <ul>
-                    <li>
-                      <p>7-1. 위성, 항공 상황전파</p>
-                      <div class="time_wrap">
-                        <ul>
-                          <li>07-12 12:00</li>
-                          <li>07-12 12:30</li>
-                          <li>30분 00초</li>
-                        </ul>
-                        <span class="fulfill_b"></span>
-                      </div>
-                    </li>
-                    <li>
-                      <p>7-2. 상황발생 SMS 문자 발송</p>
-                      <div class="time_wrap">
-                        <ul>
-                          <li>07-12 12:00</li>
-                          <li>07-12 12:30</li>
-                          <li>30분 00초</li>
-                        </ul>
-                        <span class="fulfill_b"></span>
-                      </div>
-                    </li>
-                    <li>
-                      <p>7-3. 상황발생 SMS 문자 발송</p>
-                      <div class="time_wrap">
-                        <ul>
-                          <li>07-12 12:00</li>
-                          <li>07-12 12:30</li>
-                          <li>30분 00초</li>
-                        </ul>
-                        <span class="fulfill_b"></span>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <h3>상황종료</h3>
-              <ul>
-                <li>
-                  <p>1. 상황발생 SMS 문자 발송</p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_f"></span>
-                  </div>
-                </li>
-                <li>
-                  <p>2. 대응반 비상소집 문자 발송</p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_w"></span>
-                  </div>
-                </li>
-                <li>
-                  <p>3. 우주전파재난 비상소집 SMS 상황<br>전파 발송 후 개인자리로 이동 확인
-                    <span class="more">more</span>
-                  </p>
-
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_b"></span>
-                  </div>
-                  <ul>
-                    <li>
-                      <p>3-1. 위성, 항공 상황전파</p>
-                      <div class="time_wrap">
-                        <ul>
-                          <li>07-12 12:00</li>
-                          <li>07-12 12:30</li>
-                          <li>30분 00초</li>
-                        </ul>
-                        <span class="fulfill_b"></span>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li class="on">
-                  <p>4. 대응반 비상소집 문자 발송</p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_f"></span>
-                  </div>
-                </li>
-                <li>
-                  <p>5. 대응반 비상소집 문자 발송</p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_w"></span>
-                  </div>
-                </li>
-                <li>
-                  <p>6. 대응반 비상소집 문자 발송</p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_w"></span>
-                  </div>
-                </li>
-                <li>
-                  <p>7. 상황발생 SMS 문자 발송
-                    <span class="more">more</span>
-                  </p>
-                  <div class="time_wrap">
-                    <ul>
-                      <li>07-12 12:00</li>
-                      <li>07-12 12:30</li>
-                      <li>30분 00초</li>
-                    </ul>
-                    <span class="fulfill_b"></span>
-                  </div>
-                  <ul>
-                    <li>
-                      <p>7-1. 위성, 항공 상황전파</p>
-                      <div class="time_wrap">
-                        <ul>
-                          <li>07-12 12:00</li>
-                          <li>07-12 12:30</li>
-                          <li>30분 00초</li>
-                        </ul>
-                        <span class="fulfill_b"></span>
-                      </div>
-                    </li>
-                    <li>
-                      <p>7-2. 상황발생 SMS 문자 발송</p>
-                      <div class="time_wrap">
-                        <ul>
-                          <li>07-12 12:00</li>
-                          <li>07-12 12:30</li>
-                          <li>30분 00초</li>
-                        </ul>
-                        <span class="fulfill_b"></span>
-                      </div>
-                    </li>
-                    <li>
-                      <p>7-3. 상황발생 SMS 문자 발송</p>
-                      <div class="time_wrap">
-                        <ul>
-                          <li>07-12 12:00</li>
-                          <li>07-12 12:30</li>
-                          <li>30분 00초</li>
-                        </ul>
-                        <span class="fulfill_b"></span>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="con_board">
-          <ul>
-            <li>
-              <h3>예경보 시스템</h3>
-              <a href="#" class="more">more</a>
-              <div class="chart">
-                <img src="http://placehold.it/296x260">
               </div>
-            </li>
-            <li>
-              <h3>유관기관 피해 현황</h3>
-              <a href="#" class="more">more</a>
-              <ul class="con_notice">
-                <li>
-                  <a href="#">
-                    <span>A 유관기관 피해 현황</span>
-                    <span>2021.09.07</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span>A 유관기관 피해 현황</span>
-                    <span>2021.09.07</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span>A 유관기관 피해 현황</span>
-                    <span>2021.09.07</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <h3>국내 피해 뉴스</h3>
-              <a href="#" class="more">more</a>
-              <ul class="con_notice">
-                <li>
-                  <a href="#">
-                    <span>A 국내 피해 뉴스</span>
-                    <span>2021.09.07</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span>A 국내 피해 뉴스</span>
-                    <span>2021.09.07</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span>A 국내 피해 뉴스</span>
-                    <span>2021.09.07</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <h3>해외 피해 뉴스</h3>
-              <a href="#" class="more">more</a>
-              <ul class="con_notice">
-                <li>
-                  <a href="#">
-                    <span>A 해외 피해 뉴스</span>
-                    <span>2021.09.07</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span>A 해외 피해 뉴스</span>
-                    <span>2021.09.07</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span>A 해외 피해 뉴스</span>
-                    <span>2021.09.07</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="con_quickview">
-            <li><a href="#">재난대응 모의훈련 전환</a></li>
-            <li><a href="#">MDMS 연결</a></li>
-            <li><a href="#">개인임무카드</a></li>
-          </ul>
+              <button class="list_next"></button>
+            </div>
+          </div>
+        </div>
+        <div class="manage_wrap">
+          <div class="phase_wrap">
+            <ul>
+              <li class="on">
+                <b>관심</b>
+                <p>2021-07-01 16:30:00</p>
+              </li>
+              <li class="on">
+                <b>주의</b>
+                <p>2021-07-01 16:30:00</p>
+              </li>
+              <li class="on">
+                <b>경계</b>
+                <p>2021-07-01 16:30:00</p>
+              </li>
+              <li class="on">
+                <b>심각</b>
+                <p>2021-07-01 16:30:00</p>
+              </li>
+            </ul>
+          </div>
+          <div class="alert_wrap flex_wrap f_sb">
+            <h3>G4 상황경과</h3>
+            <div class="bounce">
+              <p>4-2. 보도자료 송부(본원, 본부 등)</p>
+            </div>
+            <span class="axi axi-bell2"></span>
+          </div>
+          <div class="step task">
+            <h3>상시 업무 관리</h3>
+            <ul class="list_depth1">
+              <li>
+                <div class="tit">
+                  <p>1. 재난 대응 근무표 작성</p>
+                  <dl>
+                    <dt>담당자</dt>
+                    <dd>소승호</dd>
+                    <dt>완료시각</dt>
+                    <dd></dd>
+                  </dl>
+                  <span class="count">1</span>
+                </div>
+              </li>
+              <li>
+                <div class="tit">
+                  <p>2. 국가지도통신망 장애 관리</p>
+                  <dl>
+                    <dt>담당자</dt>
+                    <dd>소승호</dd>
+                    <dt>완료시각</dt>
+                    <dd></dd>
+                  </dl>
+                  <span class="count">1</span>
+                </div>
+              </li>
+              <li>
+                <div class="tit">
+                  <p>3. 청사시설 유지관리</p>
+                  <dl>
+                    <dt>담당자</dt>
+                    <dd>소승호</dd>
+                    <dt>완료시각</dt>
+                    <dd></dd>
+                  </dl>
+                  <span class="count">1</span>
+                </div>
+              </li>
+              <li>
+                <div class="tit">
+                  <p>4. 예·경보 시스템 운용 점검
+                  </p>
+                  <dl>
+                    <dt>담당자</dt>
+                    <dd>소승호</dd>
+                    <dt>완료시각</dt>
+                    <dd></dd>
+                  </dl>
+                  <span class="count">1</span>
+                </div>
+              </li>
+              <li>
+                <div class="tit">
+                  <p>5. 관측시스템 상태 및 운용 점검
+                  </p>
+                  <dl>
+                    <dt>담당자</dt>
+                    <dd>소승호</dd>
+                    <dt>완료시각</dt>
+                    <dd></dd>
+                  </dl>
+                  <span class="count">1</span>
+                </div>
+              </li>
+              <li>
+                <div class="tit">
+                  <p>6. 방문자 출입 관리(언론사 등)
+                  </p>
+                  <dl>
+                    <dt>담당자</dt>
+                    <dd>소승호</dd>
+                    <dt>완료시각</dt>
+                    <dd></dd>
+                  </dl>
+                  <span class="count">1</span>
+                </div>
+              </li>
+              <li>
+                <div class="tit">
+                  <p>7. 언론사 취재 지원 및 언론 대응
+                  </p>
+                  <dl>
+                    <dt>담당자</dt>
+                    <dd>소승호</dd>
+                    <dt>완료시각</dt>
+                    <dd></dd>
+                  </dl>
+                  <span class="count">1</span>
+                </div>
+              </li>
+              <li>
+                <div class="tit">
+                  <p>8. 문서 수·발신 관리(전자문서, 대표메일, 팩스 등)
+                  </p>
+                  <dl>
+                    <dt>담당자</dt>
+                    <dd>소승호</dd>
+                    <dt>완료시각</dt>
+                    <dd></dd>
+                  </dl>
+                  <span class="count">1</span>
+                </div>
+              </li>
+              <li>
+                <div class="tit">
+                  <p>9. 국제 우주전파재난 대응 협력
+                  </p>
+                  <dl>
+                    <dt>담당자</dt>
+                    <dd>소승호</dd>
+                    <dt>완료시각</dt>
+                    <dd></dd>
+                  </dl>
+                  <span class="count">1</span>
+                </div>
+              </li>
+              <li>
+                <div class="tit">
+                  <p>10. 비상근무 예산 집행
+                  </p>
+                  <dl>
+                    <dt>담당자</dt>
+                    <dd>소승호</dd>
+                    <dt>완료시각</dt>
+                    <dd></dd>
+                  </dl>
+                  <span class="count">1</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="link_wrap">
+            <ul>
+              <li><a href="#">재난대응 모의훈련 전환</a></li>
+              <li><a href="#">MDMS 연결</a></li>
+              <li><a href="#">개인임무카드</a></li>
+            </ul>
+          </div>
+          <div class="alarm_wrap">
+            <ul class="flex_wrap f_sb">
+              <li><a href="#">우주전파환경<br>경보 발령&sol;변경</a></li>
+              <li><a href="#">우주전파환경<br>경보 해제</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
     <!-- // Contents -->
   </div>
   @@include('inc/script.html')
-  @@include('inc/p_center01.html')
+  <!--@@include('inc/p_center01.html')-->
 </body>
+
 </html>
