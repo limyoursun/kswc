@@ -111,7 +111,7 @@ $('#summernote').summernote({
     ['height', ['height']],
     ['insert', ['picture']]
   ],
-  fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '22', '24', '28', '30', '36', '50', '72']
+  fontSizes: ['9', '10','12', '14', '16', '18', '20', '30', '32']
 });
 
 // editor(summernote)
@@ -125,13 +125,13 @@ $('.summernote_pop').summernote({
   toolbar: [
     ['fontsize', ['fontsize']],
     ['style', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],
-    ['color', ['forecolor', 'color']],
+    ['color', ['color']],
     ['table', ['table']],
     ['para', ['ul', 'ol', 'paragraph']],
     ['height', ['height']],
     ['insert', ['picture']]
   ],
-  fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '22', '24', '28', '30', '36', '50', '72']
+  fontSizes: ['9', '10','12', '14', '16', '18', '20', '30', '32']
 });
 
 // p_common02_1 select
@@ -173,7 +173,7 @@ var banList = $('.board_list'),
   itemLengPage = 1,
   maxNum = banLength / itemLengPage - 1,
   presentNum = 0;
-  console.log(banLength);
+console.log(banLength);
 
 initBan();
 function initBan() {
@@ -208,4 +208,3 @@ function nxtMove() {
   banList.animate({ left: presentLoc });
   if (presentNum >= maxNum) nxtB.removeClass('on').attr('disabled', true);
 }
-

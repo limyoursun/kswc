@@ -143,7 +143,7 @@
 .tit_wrap{padding:41px 32px 14px;box-shadow:1px 1.6px 5px rgba(0, 0, 0, 0.1);}
 .tit_wrap h2::before{display:inline-block;content:'';width:29px;height:32px;margin-right:15px;background:url(../images/ico_sub.png);vertical-align:bottom;}
 .tit_wrap h2{font-size:26px;font-weight:bold;color:#000;letter-spacing:-1.3px;}
-.sub_wrap{position:relative;margin-top:16px;}
+.sub_wrap{position:relative;margin-top:16px;padding:30px;}
 .sub_wrap::before{position:absolute;z-index:-1;top:-16px;left:0;display:block;content:'';width:100%;height:14px;background-color:#efefef;}
 
 /* situation */

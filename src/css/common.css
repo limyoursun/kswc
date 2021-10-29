@@ -42,6 +42,7 @@ select::-ms-expand {display:none;}
 
 /* Btn */
 .btn{width:90px;height:33px;font-size:16px;color:#f8f8f8;line-height:30px;text-align:center;}
+.btn_s{height:25px;padding:0 5px;font-size:13px;color:#f8f8f8;line-height:20px;text-align:center;}
 .btn_m{height:33px;padding:0 10px;font-size:16px;color:#f8f8f8;line-height:30px;text-align:center;}
 .btn_l{height:33px;padding:0 24px;font-weight:bold;line-height:32px;font-size:16px;}
 .btn_gray{border:1px solid #8694a3;background-color:#8694a3;color:#f8f8f8;}
@@ -74,7 +75,7 @@ select::-ms-expand {display:none;}
 .tbl_view input,.tbl_view p,.tbl_view th,.tbl_view td,.tbl_view textarea, .tbl_view select,.tbl_view dt,.tbl_view dd,.tbl_view li, .tbl_view a{font-size:16px;}
 .tbl_view>tbody>tr{border:1px solid #cdcdcd;border-width:1px 0;}
 .tbl_view th{font-weight:bold;color:#284278;vertical-align:top;text-align:center;}
-.tbl_view td{text-align-last:left;}
+.tbl_view td{text-align:left;}
 .tbl_view th label{letter-spacing:5%;}
 .tbl_view input, .tbl_view textarea{width:100%;padding-left:5px;}
 .tbl_view select{padding-right:50px;}
