@@ -1,0 +1,204 @@
+<div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_700">
+      <div class="pop_tit">
+        <h1>ㅣ경보발생ㅣ상황 발생 보고서 외부메일 보고</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <div>
+              <div class="tbl_pop">
+                <div class="tbl_top flex_wrap f_sb">
+                  <h3>전송 메세지</h3>
+                </div>
+                <table class="tbl_view th_20">
+                  <caption>전송 메시지</caption>
+                  <colgroup>
+                    <col width="10">
+                    <col width="500">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>내용</th>
+                      <td>
+                        <textarea name="situation">- 전리층 교란으로 단파통신 장애 발생 가능
+- 극항로를 운항하는 항공기의 단파통신 및 GPS 항법 장애 발생 가능
+※ 자세한 사항은 추후 상황 경과보고서로 보고 드리겠습니다.</textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>파일 첨부</th>
+                      <td>
+                        <div class="filebox bs3-primary">
+                          <input class="upload-name" value="파일 첨부" disabled="disabled">
+                          <label for="ex_filename" class="btn_l btn_skyblue">업로드</label>
+                          <input type="file" id="ex_filename" class="upload-hidden">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div>
+                <div class="tbl_pop">
+                  <div class="tbl_top flex_wrap f_sb">
+                    <h3>받는 분</h3>
+                    <button type="button" class="btn btn_blue">주소록</button>
+                  </div>
+                  <table class="tbl_com">
+                    <colgroup>
+                      <col width="80">
+                      <col width="150">
+                      <col width="*">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">
+                          <input type="checkbox" onclick='selectAll(this)'>
+                        </th>
+                        <th scope="col">NO</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">소속기관</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><input type="checkbox" name="check"></td>
+                        <td>2</td>
+                        <td>2021-09-23 15:01:00</td>
+                        <td>G4</td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" name="check"></td>
+                        <td>2</td>
+                        <td>2021-09-23 15:01:00</td>
+                        <td>G4</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div>
+                <div class="tbl_pop">
+                  <div class="tbl_top flex_wrap f_sb">
+                    <h3>발송 유형</h3>
+                  </div>
+                  <div class="send_type flex_wrap f_sb">
+                    <div>
+                      <input type="checkbox" name="send" id="send_type1">
+                      <label for="send_type1">즉시발송</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" name="send" id="send_type2">
+                      <label for="send_type2">예약발송</label>
+                      <input type="text" class="datepicker" id="date6" name="date" placeholder="YYYY-MM-DD" readonly
+                        dataformat="datepic" title="날짜 선택" value="2021-01-01">
+                      <input type="time" value="11:00">
+                    </div>
+                  </div>
+                </div>
+                <div class="btn_wrap flex_wrap f_sb">
+                  <button type="button" class="btn_l btn_skyblue">보고서 미리보기</button>
+                  <button type="button" class="btn_l btn_mintline">메일 전송 완료</button>
+                </div>
+              </div>
+              <div>
+                <div class="tbl_pop">
+                  <div class="tbl_top flex_wrap f_sb">
+                    <h3>전송 내역</h3>
+                  </div>
+                  <table class="tbl_com">
+                    <colgroup>
+                      <col width="200">
+                      <col width="*">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">이름</th>
+                        <th scope="col">소속기관</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>2021-09-23 15:01:00</td>
+                        <td>G4</td>
+                      </tr>
+                      <tr>
+                        <td>2021-09-23 15:01:00</td>
+                        <td>G4</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="paginate">
+                  <a href="#" class="first" title="처음">〈〈</a>
+                  <a href="#" class="pre" title="이전">〈</a>
+                  <span>
+                    <a href="#" class="on">1</a>
+                  </span>
+                  <a href="#" class="next" title="다음">〉</a>
+                  <a href="#" class="last" title="마지막">〉〉</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="workwhether_wrap">
+          <div>
+            <h3>업무 수행 여부</h3>
+            <ul>
+              <li>
+                <input type="radio" id="done4" name="taskdone">
+                <label for="done4">완료</label>
+              </li>
+              <li>
+                <input type="radio" id="incomplete4" name="taskdone">
+                <label for="incomplete4">미완료</label>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <button type="button" class="btn_l btn_blue">완료</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<script>
+  function selectAll(selectAll) {
+    const checkboxes
+      = document.getElementsByName('check');
+
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = selectAll.checked;
+    })
+  }
+
+  $(function () {
+    $("#send_type2").click(function () {
+      var chk = $(this).is(':checked');
+      if (chk) {
+        $("#send_type1").attr('disabled', true);
+      }
+      else {
+        $("#send_type1").attr('disabled', false);
+      }
+    });
+
+    $("#send_type1").click(function () {
+      var chk = $(this).is(':checked');
+      if (chk) {
+        $("#send_type2").attr('disabled', true);
+      }
+      else {
+        $("#send_type2").attr('disabled', false);
+      }
+    });
+  });
+</script>

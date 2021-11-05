@@ -136,8 +136,6 @@
 .none .board_list>li>div:last-child>div:last-child img{display:block;width:20px;height:20px;margin-bottom:10px;align-self:center;}
 .none .board_list>li>div:last-child>div:last-child span{display:block; align-self:center;font-size:18px;}
 .none .list_next{background-position: top right;}
-.none .step_top button{}
-
 
 /* common */
 .tit_wrap{padding:41px 32px 14px;box-shadow:1px 1.6px 5px rgba(0, 0, 0, 0.1);}

@@ -111,7 +111,7 @@ $('#summernote').summernote({
     ['height', ['height']],
     ['insert', ['picture']]
   ],
-  fontSizes: ['9', '10','12', '14', '16', '18', '20', '30', '32']
+  fontSizes: ['9', '10', '12', '14', '16', '18', '20', '30', '32']
 });
 
 // editor(summernote)
@@ -131,7 +131,7 @@ $('.summernote_pop').summernote({
     ['height', ['height']],
     ['insert', ['picture']]
   ],
-  fontSizes: ['9', '10','12', '14', '16', '18', '20', '30', '32']
+  fontSizes: ['9', '10', '12', '14', '16', '18', '20', '30', '32']
 });
 
 // p_common02_1 select

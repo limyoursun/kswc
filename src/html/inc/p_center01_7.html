@@ -1,0 +1,98 @@
+<div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_700">
+      <div class="pop_tit">
+        <h1>경보 상황 발령/변경 (수동)</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <div>
+              <div class="tbl_pop">
+                <div class="tbl_wrap">
+                  <div class="tbl_top flex_wrap f_sb">
+                    <h3>우주전파환경 수동 경보 발령 및 내역</h3>
+                  </div>
+                  <table class="tbl_com">
+                    <colgroup>
+                      <col width="150">
+                      <col width="*">
+                      <col width="60">
+                      <col width="80">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">구분</th>
+                        <th scope="col">발령일시</th>
+                        <th scope="col">등급</th>
+                        <th scope="col">적용</th>
+                      </tr>
+                    </thead>
+                  </table>
+                  <div style="height:230px;">
+                    <table class="tbl_com send_type">
+                      <colgroup>
+                        <col width="150">
+                        <col width="*">
+                        <col width="60">
+                        <col width="80">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <select name="type">
+                              <option value="R">R</option>
+                            </select>
+                          </td>
+                          <td>
+                            <input type="text" class="datepicker" id="date" name="date" placeholder="YYYY-MM-DD"
+                              readonly dataformat="datepic" title="날짜 선택" value="2021-09-23" disabled>
+                            <input type="time" value="11:00" disabled>
+                          </td>
+                          <td>3</td>
+                          <td><button type="button" class="btn_s btn_blue">저장</button></td>
+                        </tr>
+                        <tr>
+                          <td>지자기교란(G)</td>
+                          <td> <input type="text" class="datepicker" id="date1" name="date" placeholder="YYYY-MM-DD"
+                              readonly dataformat="datepic" title="날짜 선택" value="2021-09-23" disabled>
+                            <input type="time" value="15:30" disabled>
+                          </td>
+                          <td>G4</td>
+                          <td><button type="button" class="btn_s btn_skyblue">편집</button></td>
+                        </tr>
+                        <tr>
+                          <td>태양흑점폭발(R)</td>
+                          <td> <input type="text" class="datepicker" id="date2" name="date" placeholder="YYYY-MM-DD"
+                              readonly dataformat="datepic" title="날짜 선택" value="2021-09-23" disabled>
+                            <input type="time" value="13:15" disabled>
+                          </td>
+                          <td>R0</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>지자기교란(G)</td>
+                          <td> <input type="text" class="datepicker" id="date3" name="date" placeholder="YYYY-MM-DD"
+                              readonly dataformat="datepic" title="날짜 선택" value="2021-09-23" disabled>
+                            <input type="time" value="12:00" disabled>
+                          </td>
+                          <td>G3</td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="btn_wrap alignC">
+                  <button type="button" class="btn_l btn_gray">닫기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,139 @@
+<div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_700">
+      <div class="pop_tit">
+        <h1>ㅣ경보경과ㅣ 위성분야 피해 접수 등록</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <h2>위성 분야 피해 접수 작성 &sol; 내역</h2>
+            <div>
+              <div class="tbl_pop">
+                <table class="tbl_view th_25">
+                  <caption>위성 분야 피해 접수 작성 &sol; 내역</caption>
+                  <colgroup>
+                    <col width="10">
+                    <col width="500">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="name">제목</label>
+                      </th>
+                      <td colspan="3">
+                        <input id="name" type="text">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="type">유형</label>
+                      </th>
+                      <td>
+                        <select title="type">
+                          <option value="전체">전체</option>
+                        </select>
+                      </td>
+                      <th scope="row">
+                        <label for="department">기관명(부서)</label>
+                      </th>
+                      <td>
+                        <input id="department" type="text">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="date">일자</label>
+                      </th>
+                      <td colspan="3">
+                        <input type="text" class="datepicker" id="date5" name="date" placeholder="YYYY-MM-DD" readonly
+                          dataformat="datepic" title="날짜 선택" value="2021-01-01">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="place">지역(장소)</label>
+                      </th>
+                      <td colspan="3">
+                        <textarea name="place"></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="damage">피해(장애) 내역</label>
+                      </th>
+                      <td colspan="3">
+                        <textarea name="damage"></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="action">주요 조치사항</label>
+                      </th>
+                      <td colspan="3">
+                        <textarea name="action"></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="specialnote">특이사항</label>
+                      </th>
+                      <td colspan="3">
+                        <textarea name="specialnote"></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="file">첨부파일</label>
+                      </th>
+                      <td colspan="3">
+                        <div class="filebox bs3-primary">
+                          <input class="upload-name" value="파일 첨부" disabled="disabled">
+
+                          <label for="ex_filename" class="btn_l btn_skyblue">업로드</label>
+                          <input type="file" id="ex_filename" class="upload-hidden">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="workwhether_wrap">
+              <div>
+                <h3>업무 수행 여부</h3>
+                <ul>
+                  <li>
+                    <input type="radio" id="done8" name="taskdone">
+                    <label for="done8">완료</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="incomplete8" name="taskdone">
+                    <label for="incomplete8">미완료</label>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <button type="button" class="btn_l btn_blue">완료</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+  var fileTarget = $('.filebox .upload-hidden');
+  fileTarget.on('change', function () {
+    if (window.FileReader) {
+      var filename = $(this)[0].files[0].name;
+    } else {
+      var filename = $(this).val().split('/').pop().split('\\').pop();
+    }
+
+    $(this).siblings('.upload-name').val(filename);
+  });
+</script>

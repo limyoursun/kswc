@@ -72,7 +72,115 @@
     <!-- Contents -->
     <div class="pop_overlay">
   <div class="pop_area">
-    <div class="pop_wrap p_common02">
+    <div class="pop_wrap w_400">
+      <div class="pop_tit">
+        <h1>권한설정</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <table class="tbl_view alignL">
+            <caption>권한 설정 테이블</caption>
+            <colgroup>
+              <col width='150'>
+              <col width='*'>
+            </colgroup>
+            <tr>
+              <th>
+                <label for="authority">권한설정</label>
+              </th>
+              <td>
+                <select id="authority">
+                  <option value="시스템 관리자">시스템 관리자</option>
+                  <option value="내부 사용자">내부 사용자</option>
+                  <option value="본부 사용자">본부 사용자</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+          <div class="btn_wrap alignC">
+            <button type="button" class="btn btn_gray">변경</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="pop_overlay">
+  <div class="pop_area">
+  <div class="pop_wrap w_400">
+    <div class="pop_tit">
+      <h1>코드항목 추가</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_view alignL">
+          <caption>코드항목 추가 테이블</caption>
+          <colgroup>
+            <col width='150'>
+            <col width='*'>
+          </colgroup>
+          <tr>
+            <th>
+              <label for="addcode">코드그룹추가</label>
+            </th>
+            <td>
+              <input type="text" id="addcode">
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn btn_blue">적용</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+    <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_400">
+      <div class="pop_tit">
+        <h1>하위코드 추가</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <table class="tbl_view alignL">
+            <caption>하위코드 추가 테이블</caption>
+            <colgroup>
+              <col width='150'>
+              <col width='*'>
+            </colgroup>
+            <tr>
+              <th>
+                <label for="code">개별코드</label>
+              </th>
+              <td>
+                <input type="text" id="code">
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label for="codename">개별코드명</label>
+              </th>
+              <td>
+                <input type="text" id="codename">
+              </td>
+            </tr>
+          </table>
+          <div class="btn_wrap alignC">
+            <button type="button" class="btn btn_blue">적용</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_850">
       <div class="pop_tit">
         <h1>주소록 불러오기</h1>
         <button type="button" class="btn_pop_close" closePop></button>
@@ -264,115 +372,7 @@
 </div>
     <div class="pop_overlay">
   <div class="pop_area">
-    <div class="pop_wrap p_common03">
-      <div class="pop_tit">
-        <h1>권한설정</h1>
-        <button type="button" class="btn_pop_close" closePop></button>
-      </div>
-      <div class="pop_body">
-        <div class="pop_cont">
-          <table class="tbl_view alignL">
-            <caption>권한 설정 테이블</caption>
-            <colgroup>
-              <col width='150'>
-              <col width='*'>
-            </colgroup>
-            <tr>
-              <th>
-                <label for="authority">권한설정</label>
-              </th>
-              <td>
-                <select id="authority">
-                  <option value="시스템 관리자">시스템 관리자</option>
-                  <option value="내부 사용자">내부 사용자</option>
-                  <option value="본부 사용자">본부 사용자</option>
-                </select>
-              </td>
-            </tr>
-          </table>
-          <div class="btn_wrap alignC">
-            <button type="button" class="btn btn_gray">변경</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    <div class="pop_overlay">
-  <div class="pop_area">
-  <div class="pop_wrap p_common04">
-    <div class="pop_tit">
-      <h1>코드항목 추가</h1>
-      <button type="button" class="btn_pop_close" closePop></button>
-    </div>
-    <div class="pop_body">
-      <div class="pop_cont">
-        <table class="tbl_view alignL">
-          <caption>코드항목 추가 테이블</caption>
-          <colgroup>
-            <col width='150'>
-            <col width='*'>
-          </colgroup>
-          <tr>
-            <th>
-              <label for="addcode">코드그룹추가</label>
-            </th>
-            <td>
-              <input type="text" id="addcode">
-            </td>
-          </tr>
-        </table>
-        <div class="btn_wrap alignC">
-          <button type="button" class="btn btn_blue">적용</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-</div>
-    <div class="pop_overlay">
-  <div class="pop_area">
-    <div class="pop_wrap p_common04">
-      <div class="pop_tit">
-        <h1>하위코드 추가</h1>
-        <button type="button" class="btn_pop_close" closePop></button>
-      </div>
-      <div class="pop_body">
-        <div class="pop_cont">
-          <table class="tbl_view alignL">
-            <caption>하위코드 추가 테이블</caption>
-            <colgroup>
-              <col width='150'>
-              <col width='*'>
-            </colgroup>
-            <tr>
-              <th>
-                <label for="code">개별코드</label>
-              </th>
-              <td>
-                <input type="text" id="code">
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <label for="codename">개별코드명</label>
-              </th>
-              <td>
-                <input type="text" id="codename">
-              </td>
-            </tr>
-          </table>
-          <div class="btn_wrap alignC">
-            <button type="button" class="btn btn_blue">적용</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    <div class="pop_overlay">
-  <div class="pop_area">
-    <div class="pop_wrap p_situation02 p_situation02_1">
+    <div class="pop_wrap w_800">
       <div class="pop_tit">
         <h1>내역보기</h1>
         <button type="button" class="btn_pop_close" closePop></button>
@@ -433,7 +433,7 @@
 </div>
     <div class="pop_overlay">
   <div class="pop_area">
-    <div class="pop_wrap p_situation02 p_situation02_2">
+    <div class="pop_wrap w_850">
       <div class="pop_tit">
         <h1>조치사항 등록</h1>
         <button type="button" class="btn_pop_close" closePop></button>
@@ -483,7 +483,7 @@
 </div>
     <div class="pop_overlay">
   <div class="pop_area">
-    <div class="pop_wrap p_situation02 p_situation02_2">
+    <div class="pop_wrap w_850">
       <div class="pop_tit">
         <h1>모의훈련 평가 등록 내역</h1>
         <button type="button" class="btn_pop_close" closePop></button>
@@ -533,7 +533,7 @@
 </div>
     <div class="pop_overlay">
   <div class="pop_area">
-    <div class="pop_wrap p_situation02 p_situation02_4">
+    <div class="pop_wrap w_850">
       <div class="pop_tit">
         <h1>모의훈련 평가 등록</h1>
         <button type="button" class="btn_pop_close" closePop></button>
@@ -582,7 +582,7 @@
 </div>
     <div class="pop_overlay">
   <div class="pop_area">
-    <div class="pop_wrap p_standard03">
+    <div class="pop_wrap w_800">
       <div class="pop_tit">
         <h1>보고서 내역보기</h1>
         <button type="button" class="btn_pop_close" closePop></button>

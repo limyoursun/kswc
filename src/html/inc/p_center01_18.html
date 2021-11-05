@@ -1,0 +1,164 @@
+<div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_700">
+      <div class="pop_tit">
+        <h1>ㅣ경보경과ㅣ태양흑점폭발 관측데이터 및 모델(위성 등)</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <h2>태양흑점폭발 관측데이터 및 모델 보고서 작성</h2>
+            <div>
+              <div class="tbl_pop">
+                <table class="tbl_view th_20">
+                  <h3>위성관측자료</h3>
+                  <caption>상황판단회의 보고서 작성</caption>
+                  <colgroup>
+                    <col width="10">
+                    <col width="500">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="file">그림1</label>
+                      </th>
+                      <td colspan="3">
+                        <div class="filebox bs3-primary">
+                          <input class="upload-name" value="파일 첨부" disabled="disabled">
+
+                          <label for="ex_filename1" class="btn_l btn_skyblue">업로드</label>
+                          <input type="file" id="ex_filename1" class="upload-hidden">
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="explanation1">그림1 설명</label>
+                      </th>
+                      <td colspan="3">
+                        <input id="explanation1" type="text">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="file">그림2</label>
+                      </th>
+                      <td colspan="3">
+                        <div class="filebox bs3-primary">
+                          <input class="upload-name" value="파일 첨부" disabled="disabled">
+                          <label for="ex_filename2" class="btn_l btn_skyblue">업로드</label>
+                          <input type="file" id="ex_filename2" class="upload-hidden">
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="explanation2">그림2 설명</label>
+                      </th>
+                      <td colspan="3">
+                        <input id="explanation2" type="text" value="">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="explanation2">기타사항</label>
+                      </th>
+                      <td colspan="3">
+                        <input id="explanation2" type="text" value="">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="btn_wrap alignR">
+                  <button type="button" class="btn_l btn_gray">삭제</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="tbl_pop">
+                <table class="tbl_view th_20">
+                  <h3>위성관측자료</h3>
+                  <caption>상황판단회의 보고서 작성</caption>
+                  <colgroup>
+                    <col width="10">
+                    <col width="500">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="file">그림1</label>
+                      </th>
+                      <td colspan="3">
+                        <div class="filebox bs3-primary">
+                          <input class="upload-name" value="파일 첨부" disabled="disabled">
+
+                          <label for="ex_filename3" class="btn_l btn_skyblue">업로드</label>
+                          <input type="file" id="ex_filename3" class="upload-hidden">
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="explanation1">그림1 설명</label>
+                      </th>
+                      <td colspan="3">
+                        <input id="explanation1" type="text">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="explanation2">기타사항</label>
+                      </th>
+                      <td colspan="3">
+                        <input id="explanation2" type="text" value="">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="btn_wrap flex_wrap f_sb">
+                  <div>
+                    <button type="button" class="btn_l btn_skyblue">보고서 미리보기</button>
+                    <button type="button" class="btn_l btn_blue">추가</button>
+                  </div>
+                  <button type="button" class="btn_l btn_gray">삭제</button>
+                </div>
+              </div>
+            </div>
+            <div class="workwhether_wrap">
+              <div>
+                <h3>업무 수행 여부</h3>
+                <ul>
+                  <li>
+                    <input type="radio" id="done6" name="taskdone">
+                    <label for="done6">완료</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="incomplete6" name="taskdone">
+                    <label for="incomplete6">미완료</label>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <button type="button" class="btn_l btn_blue">완료</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+  var fileTarget = $('.filebox .upload-hidden');
+  fileTarget.on('change', function () {
+    if (window.FileReader) {
+      var filename = $(this)[0].files[0].name;
+    } else {
+      var filename = $(this).val().split('/').pop().split('\\').pop();
+    }
+
+    $(this).siblings('.upload-name').val(filename);
+  });
+</script>

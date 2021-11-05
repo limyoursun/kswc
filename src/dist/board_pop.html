@@ -1,0 +1,2423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>우주전파센터 재난대응 시스템</title>
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../plugins/axicon/axicon.min.css" />
+  <link rel="stylesheet" href="../plugins/jquery-ui/themes/base/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.css" />
+  <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
+  <link rel="stylesheet" href="../plugins/summernote/css/summernote-lite.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/pop.css">
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- Header -->
+<header>
+  <div class="util">
+    <ul class="user_svc">
+      <li><b>관리자</b>님 반갑습니다.</li>
+      <li><button type="button">내정보</button></li>
+      <li><button type="button">로그아웃</button></li>
+      <li><button type="button">상황판 본부용</button></li>
+    </ul>
+  </div>
+  <nav>
+    <h1><a href="#"><img src="../images/img_logo.png" alt="우주전파센터 재난대응 시스템"></a></h1>
+    <ul id="gnb">
+      <li>
+        <a href="#" class="depth1 empty">센터용 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 empty">모의훈련 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 empty">본부용 상황판</a>
+      </li>
+      <li>
+        <a href="#" class="depth1 on active">재난 기준 관리</a>
+        <ul class="depth2">
+          <li><a href="#" class="on">실무&sol;표준 매뉴얼 관리</a></li>
+          <li><a href="#">행동 매뉴얼 관리</a></li>
+          <li><a href="#">상황판단회의 보고서 관리</a></li>
+          <li><a href="#">상황대응 보고서 관리</a></li>
+          <li><a href="#">국내 보도자료 관리</a></li>
+          <li><a href="#">해외 보도자료 관리</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="depth1">상황 관리</a>
+        <ul class="depth2">
+          <li><a href="#">재난대응 시나리오 관리</a></li>
+          <li><a href="#">재난&sol;모의 이력관리</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="depth1">공통 관리</a>
+        <ul class="depth2">
+          <li><a href="#">내&sol;외부 주소록관리</a></li>
+          <li><a href="#">그룹 관리</a></li>
+          <li><a href="#">사용자관리</a></li>
+          <li><a href="#">코드 관리</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+<!-- // Header -->
+    <!-- Contents -->
+    <!-- // Contents -->
+  </div>
+  <script src="../plugins/jquery/dist/jquery.min.js"></script>
+<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/i18n/jquery-ui-timepicker-ko.js"></script>
+<script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
+<script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>
+<script src="../plugins/smarteditor2/js/service/HuskyEZCreator.js"></script>
+<script src="../plugins/summernote/js/summernote-lite.js"></script>
+<script src="../plugins/summernote/js/lang/summernote-ko-KR.js"></script>
+<script src="../js/ui_common.js"></script>
+<script src="../js/file_attach.js"></script>
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap">
+    <div class="pop_tit">
+      <h1>우주전파재난 경보 발령</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <div class="p_center01">
+          <table class="tbl_view alignL">
+          <caption>권한 설정 테이블</caption>
+          <colgroup>
+            <col width='150'>
+            <col width='*'>
+          </colgroup>
+          <tr>
+            <th>
+              <label for="situation">상황발령</label>
+            </th>
+            <td>
+              <select id="situation" title="전체">
+                <option value="전체">전체</option>
+                <option value="태양흑점폭발 3단계">태양흑점폭발 3단계</option>
+                <option value="태양흑점폭발 4단계">태양흑점폭발 4단계</option>
+                <option value="태양흑점폭발 5단계">태양흑점폭발 5단계</option>
+                <option value="태양입자유입 3단계">태양입자유입 3단계</option>
+                <option value="태양입자유입 4단계">태양입자유입 4단계</option>
+                <option value="태양입자유입 5단계">태양입자유입 5단계</option>
+                <option value="지자기교란 3단계">지자기교란 3단계</option>
+                <option value="지자기교란 4단계">지자기교란 4단계</option>
+                <option value="지자기교란 5단계">지자기교란 5단계</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        </div>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn btn_gray">변경</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div> <!-- 우주전파재난 경보 발령 -->
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap">
+      <div class="pop_tit">
+        <h1>ㅣ세부업무ㅣ 주관기관장 상황전파</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01 p_center01_2">
+            <h2>Ⅰ- 4. 주관기관장 상황전파</h2>
+            <div>
+              <dl>
+                <dt class="dot dl_inline">담당자</dt>
+                <dd class="dl_inline">: 대응반장</dd>
+                <dt class="dot">수행내역</dt>
+                <dd>담당자는 재난 대응 주관기관장에게 SMS로 상황전파</dd>
+              </dl>
+              <div class="tbl_pop">
+                <div class="tbl_wrap">
+                  <div class="tbl_top flex_wrap f_sb">
+                    <p>총 <b>2</b>건 <b>1</b> &sol; 1페이지</p>
+                    <button type="button" class="btn btn_blue">등록</button>
+                  </div>
+                  <table class="tbl_com">
+                    <colgroup>
+                      <col width="100">
+                      <col width="*">
+                      <col width="120">
+                      <col width="120">
+                      <col width="120">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">NO</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">등록자</th>
+                        <th scope="col">등록일</th>
+                        <th scope="col">수정일</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>2</td>
+                        <td>재난대응 표준 메뉴얼</td>
+                        <td>관리자</td>
+                        <td>2021-10-07</td>
+                        <td>2021-10-07</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>우주전파재난대응 실무 매뉴얼</td>
+                        <td>관리자</td>
+                        <td>2021-10-07</td>
+                        <td>2021-10-07</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>우주전파재난대응 실무 매뉴얼</td>
+                        <td>관리자</td>
+                        <td>2021-10-07</td>
+                        <td>2021-10-07</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>우주전파재난대응 실무 매뉴얼</td>
+                        <td>관리자</td>
+                        <td>2021-10-07</td>
+                        <td>2021-10-07</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>우주전파재난대응 실무 매뉴얼</td>
+                        <td>관리자</td>
+                        <td>2021-10-07</td>
+                        <td>2021-10-07</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="paginate">
+                    <a href="#" class="first" title="처음">〈〈</a>
+                    <a href="#" class="pre" title="이전">〈</a>
+                    <span>
+                      <a href="#" class="on">1</a>
+                    </span>
+                    <a href="#" class="next" title="다음">〉</a>
+                    <a href="#" class="last" title="마지막">〉〉</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_l btn_skyblue">최종 보고 완료</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div> <!-- ㅣ세부업무ㅣ 주관기관장 상황전파 -->
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_700">
+      <div class="pop_tit">
+        <h1>ㅣ상시업무ㅣ청사시설 유지관리</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <h2>Ⅱ-4. 청사시설 유지관리</h2>
+            <div>
+              <dl>
+                <dt class="dot dl_inline">담당자</dt>
+                <dd class="dl_inline">송OO(정)</dd>
+                <dd class="dl_inline">한OO(부)</dd>
+                <dt class="dot">수행내역</dt>
+                <dd>담당자는 재난 대응 시 필요한 청사 시설을 점검하고 관리하며 특이사항 발생 시 운영지원팀장과 대응반장에게 보고</dd>
+              </dl>
+              <div class="tbl_pop">
+                <div class="tbl_top flex_wrap f_sb">
+                  <h3>특이 사항 작성</h3>
+                </div>
+                <table class="tbl_view th_20">
+                  <caption>특이 사항 작성</caption>
+                  <colgroup>
+                    <col width="10">
+                    <col width="500">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>내용</th>
+                      <td>
+                        <textarea name="situation" placeholder="내용을 입력하여 주세요."></textarea>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="btn_wrap flex_wrap f_sb">
+                  <button type="button" class="btn_l btn_skyblue">수정</button>
+                  <button type="button" class="btn_l btn_blue">저장</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="workwhether_wrap">
+          <div>
+            <h3>업무 수행 여부</h3>
+            <ul>
+              <li>
+                <input type="radio" id="done1" name="taskdone">
+                <label for="done1">완료</label>
+              </li>
+              <li>
+                <input type="radio" id="incomplete1" name="taskdone">
+                <label for="incomplete1">미완료</label>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <button type="button" class="btn_l btn_blue">완료</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<script>
+  function selectAll(selectAll) {
+    const checkboxes
+      = document.getElementsByName('check');
+
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = selectAll.checked;
+    })
+  }
+
+  $(function () {
+    $("#send_type2").click(function () {
+      var chk = $(this).is(':checked');
+      if (chk) {
+        $("#send_type1").attr('disabled', true);
+      }
+      else {
+        $("#send_type1").attr('disabled', false);
+      }
+    });
+
+    $("#send_type1").click(function () {
+      var chk = $(this).is(':checked');
+      if (chk) {
+        $("#send_type2").attr('disabled', true);
+      }
+      else {
+        $("#send_type2").attr('disabled', false);
+      }
+    });
+  });
+</script> <!-- ㅣ상시업무ㅣ청사시설 유지관리 -->
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap">
+      <div class="pop_tit">
+        <h1>ㅣ세부업무ㅣ 상황경과보고서 작성&sol;등록</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01 p_center01_2">
+            <h2>Ⅰ- 4. 주관기관장 상황전파</h2>
+            <div>
+              <dl>
+                <dt class="dot dl_inline">담당자</dt>
+                <dd class="dl_inline">: 문OO</dd>
+                <dt class="dot">수행내역</dt>
+                <dd>담당자는 상황 발생 보고서를 작성하고 예보관측팀장과 대응반장에게 보고 실시</dd>
+              </dl>
+              <div class="tbl_pop">
+                <div class="tbl_wrap">
+                  <div class="tbl_top flex_wrap f_sb">
+                    <p>총 <b>2</b>건 <b>1</b> &sol; 1페이지</p>
+                    <button type="button" class="btn btn_blue">등록</button>
+                  </div>
+                  <table class="tbl_com">
+                    <colgroup>
+                      <col width="100">
+                      <col width="*">
+                      <col width="120">
+                      <col width="120">
+                      <col width="120">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">NO</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">등록자</th>
+                        <th scope="col">등록일</th>
+                        <th scope="col">수정일</th>
+                      </tr>
+                    </thead>
+                  </table>
+                  <div style="height:230px;">
+                    <table class="tbl_com">
+                    <colgroup>
+                      <col width="100">
+                      <col width="*">
+                      <col width="120">
+                      <col width="120">
+                      <col width="120">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <td>2</td>
+                        <td>1차 상황경과보고서</td>
+                        <td>관리자</td>
+                        <td>2021-10-07</td>
+                        <td>2021-10-07</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>1차 상황경과보고서</td>
+                        <td>관리자</td>
+                        <td>2021-10-07</td>
+                        <td>2021-10-07</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                  <div class="paginate">
+                    <a href="#" class="first" title="처음">〈〈</a>
+                    <a href="#" class="pre" title="이전">〈</a>
+                    <span>
+                      <a href="#" class="on">1</a>
+                    </span>
+                    <a href="#" class="next" title="다음">〉</a>
+                    <a href="#" class="last" title="마지막">〉〉</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_l btn_skyblue">최종 보고 완료</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div> <!-- ㅣ세부업무ㅣ 상황경과보고서 작성/등록 -->
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap">
+      <div class="pop_tit">
+        <h1>ㅣ세부업무ㅣ 상황경과보고서 작성&sol;등록</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01 p_center01_2">
+            <h2>Ⅰ- 4. 주관기관장 상황전파</h2>
+            <div>
+              <dl>
+                <dt class="dot dl_inline">담당자</dt>
+                <dd class="dl_inline">: 문OO</dd>
+                <dt class="dot">수행내역</dt>
+                <dd>담당자는 상황 발생 보고서를 작성하고 예보관측팀장과 대응반장에게 보고 실시</dd>
+              </dl>
+              <div class="tbl_pop">
+                <table class="tbl_view">
+                  <caption>내&sol;외부 주소록 등록</caption>
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="input_necessary">
+                        <label for="name">조치현황 및 피해현황</label>
+                      </th>
+                      <td>
+                        <input id="name" type="text" value="권XX">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="input_necessary">
+                        <label for="name">항공</label>
+                      </th>
+                      <td>
+                        <input id="name" type="text" value="권XX">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="input_necessary">
+                        <label for="name">방송통신</label>
+                      </th>
+                      <td>
+                        <input id="name" type="text" value="권XX">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="input_necessary">
+                        <label for="name">항법</label>
+                      </th>
+                      <td>
+                        <input id="name" type="text" value="권XX">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="input_necessary">
+                        <label for="name">향후 전망 및 계획</label>
+                      </th>
+                      <td>
+                        <input id="name" type="text" value="권XX">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_l btn_skyblue">최종 보고 완료</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div> <!-- ㅣ세부업무ㅣ 상황경과보고서 작성/등록 -->
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_800">
+      <div class="pop_tit">
+        <h1>개인임무카드 불러오기</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <h2>담당자 검색</h2>
+            <div>
+              <div class="search_wrap">
+                <ul class="search f_sb">
+                  <li>
+                    <label for="sort" class="dot">팀 구분</label>
+                    <select id="sort" title="전체">
+                      <option value="전체">전체</option>
+                    </select>
+                  </li>
+                  <li>
+                    <label for="searchword" class="dot">담당자 검색어</label>
+                    <input type="text" id="searchword" placeholder="검색어">
+                  </li>
+                  <li>
+                    <a href="#" class="btn btn_blue">검색</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tbl_pop">
+                <div class="tbl_wrap">
+                  <table class="tbl_com">
+                    <colgroup>
+                      <col width="100">
+                      <col width="*">
+                      <col width="140">
+                      <col width="140">
+                      <col width="140">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">NO</th>
+                        <th scope="col">팀 구분</th>
+                        <th scope="col">직책</th>
+                        <th scope="col">성함</th>
+                        <th scope="col">임무카드 보기</th>
+                      </tr>
+                    </thead>
+                  </table>
+                  <div style="height:230px;">
+                    <table class="tbl_com">
+                      <colgroup>
+                        <col width="100">
+                        <col width="*">
+                        <col width="140">
+                        <col width="140">
+                        <col width="140">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td>3</td>
+                          <td>예보관측팀</td>
+                          <td>연구사</td>
+                          <td>김OO</td>
+                          <td><a href="#">
+                              <button class="btn_search btn_skyblueline">보기</button>
+                            </a></td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>예보관측팀</td>
+                          <td>연구사</td>
+                          <td>김OO</td>
+                          <td><a href="#">
+                              <button class="btn_search btn_skyblueline">보기</button>
+                            </a></td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>예보관측팀</td>
+                          <td>주무관</td>
+                          <td>김OO</td>
+                          <td><a href="#">
+                              <button class="btn_search btn_skyblueline">보기</button>
+                            </a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="paginate">
+                    <a href="#" class="first" title="처음">〈〈</a>
+                    <a href="#" class="pre" title="이전">〈</a>
+                    <span>
+                      <a href="#" class="on">1</a>
+                    </span>
+                    <a href="#" class="next" title="다음">〉</a>
+                    <a href="#" class="last" title="마지막">〉〉</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- 개인임무카드 불러오기 -->
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_700">
+      <div class="pop_tit">
+        <h1>경보 상황 발령/변경 (수동)</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <div>
+              <div class="tbl_pop">
+                <div class="tbl_wrap">
+                  <div class="tbl_top flex_wrap f_sb">
+                    <h3>우주전파환경 수동 경보 발령 및 내역</h3>
+                  </div>
+                  <table class="tbl_com">
+                    <colgroup>
+                      <col width="150">
+                      <col width="*">
+                      <col width="60">
+                      <col width="80">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">구분</th>
+                        <th scope="col">발령일시</th>
+                        <th scope="col">등급</th>
+                        <th scope="col">적용</th>
+                      </tr>
+                    </thead>
+                  </table>
+                  <div style="height:230px;">
+                    <table class="tbl_com send_type">
+                      <colgroup>
+                        <col width="150">
+                        <col width="*">
+                        <col width="60">
+                        <col width="80">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <select name="type">
+                              <option value="R">R</option>
+                            </select>
+                          </td>
+                          <td>
+                            <input type="text" class="datepicker" id="date" name="date" placeholder="YYYY-MM-DD"
+                              readonly dataformat="datepic" title="날짜 선택" value="2021-09-23" disabled>
+                            <input type="time" value="11:00" disabled>
+                          </td>
+                          <td>3</td>
+                          <td><button type="button" class="btn_s btn_blue">저장</button></td>
+                        </tr>
+                        <tr>
+                          <td>지자기교란(G)</td>
+                          <td> <input type="text" class="datepicker" id="date1" name="date" placeholder="YYYY-MM-DD"
+                              readonly dataformat="datepic" title="날짜 선택" value="2021-09-23" disabled>
+                            <input type="time" value="15:30" disabled>
+                          </td>
+                          <td>G4</td>
+                          <td><button type="button" class="btn_s btn_skyblue">편집</button></td>
+                        </tr>
+                        <tr>
+                          <td>태양흑점폭발(R)</td>
+                          <td> <input type="text" class="datepicker" id="date2" name="date" placeholder="YYYY-MM-DD"
+                              readonly dataformat="datepic" title="날짜 선택" value="2021-09-23" disabled>
+                            <input type="time" value="13:15" disabled>
+                          </td>
+                          <td>R0</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>지자기교란(G)</td>
+                          <td> <input type="text" class="datepicker" id="date3" name="date" placeholder="YYYY-MM-DD"
+                              readonly dataformat="datepic" title="날짜 선택" value="2021-09-23" disabled>
+                            <input type="time" value="12:00" disabled>
+                          </td>
+                          <td>G3</td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="btn_wrap alignC">
+                  <button type="button" class="btn_l btn_gray">닫기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div> <!-- 경보 상황 발령/변경 (수동) -->
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_850">
+      <div class="pop_tit">
+        <h1>ㅣ경보발생ㅣ 1. 상황발생 문자 발송</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <h2>1. 상황발생 문자 발송</h2>
+            <div>
+              <dl>
+                <dt class="dot dl_inline">담당자</dt>
+                <dd class="dl_inline">시스템 (예·경보)</dd>
+                <dt class="dot">수행내역</dt>
+                <dd>우주전파환경 경보 발생 문자 발송</dd>
+              </dl>
+              <div class="tbl_pop">
+                <div class="tbl_wrap">
+                  <table class="tbl_com">
+                    <colgroup>
+                      <col width="80">
+                      <col width="*">
+                      <col width="100">
+                      <col width="150">
+                      <col width="100">
+                      <col width="100">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col" rowspan="2">NO</th>
+                        <th scope="col" rowspan="2">날짜</th>
+                        <th scope="col" rowspan="2">구분</th>
+                        <th scope="col" colspan="2">발송횟수</th>
+                        <th scope="col" rowspan="2">전송여부</th>
+                      </tr>
+                      <tr>
+                        <th scope="col">SMS 성공</th>
+                        <th scope="col">SMS 실패</th>
+                      </tr>
+                    </thead>
+                  </table>
+                  <div style="height:230px;">
+                    <table class="tbl_com">
+                      <colgroup>
+                        <col width="80">
+                        <col width="*">
+                        <col width="100">
+                        <col width="150">
+                        <col width="100">
+                        <col width="100">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td>2</td>
+                          <td>2021-09-23 15:01:00</td>
+                          <td>G4</td>
+                          <td>90</td>
+                          <td>90</td>
+                          <td>완료</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="paginate">
+                    <a href="#" class="first" title="처음">〈〈</a>
+                    <a href="#" class="pre" title="이전">〈</a>
+                    <span>
+                      <a href="#" class="on">1</a>
+                    </span>
+                    <a href="#" class="next" title="다음">〉</a>
+                    <a href="#" class="last" title="마지막">〉〉</a>
+                  </div>
+                  <div class="btn_wrap alignR">
+                    <button type="button" class="btn_l btn_skyblue">예 · 경보 문자 이력 연결</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn_l btn_gray">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div> <!-- ㅣ경보발생ㅣ 1. 상황발생 문자 발송 -->
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_850">
+      <div class="pop_tit">
+        <h1>ㅣ경보발생ㅣ 1. 각 담당자 발생 문자 발송</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <h2>1. 상황발생 문자 발송</h2>
+            <div>
+              <dl>
+                <dt class="dot dl_inline">담당자</dt>
+                <dd class="dl_inline">분석 담당자 (재난대응)</dd>
+                <dt class="dot">수행내역</dt>
+                <dd>우주전파환경 경보 발생 상황 각 담당자 문자 발송 (각 팀장 보고 후 전송</dd>
+              </dl>
+              <div class="btn_wrap alignC">
+                <button type="button" class="btn_axi btn_send btn_mintline">문자 전송하기</button>
+              </div>
+              <div class="tbl_pop">
+                <div class="tbl_wrap">
+                  <div class="tbl_top flex_wrap f_sb">
+                    <p><b>전송 내역</b></p>
+                  </div>
+                  <table class="tbl_com">
+                    <colgroup>
+                      <col width="80">
+                      <col width="*">
+                      <col width="130">
+                      <col width="210">
+                      <col width="80">
+                      <col width="80">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">NO</th>
+                        <th scope="col">날짜</th>
+                        <th scope="col">수신인</th>
+                        <th scope="col">소속</th>
+                        <th scope="col">전송여부</th>
+                        <th scope="col">재전송</th>
+                      </tr>
+                    </thead>
+                  </table>
+                  <div style="height:230px;">
+                    <table class="tbl_com">
+                      <colgroup>
+                        <col width="80">
+                        <col width="*">
+                        <col width="130">
+                        <col width="210">
+                        <col width="80">
+                        <col width="80">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>2021-09-23 15:01:00</td>
+                          <td>김OO 사무관</td>
+                          <td>정보보호네트워크정책관</td>
+                          <td>완료</td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="paginate">
+                    <a href="#" class="first" title="처음">〈〈</a>
+                    <a href="#" class="pre" title="이전">〈</a>
+                    <span>
+                      <a href="#" class="on">1</a>
+                      <a href="#">2</a>
+                      <a href="#">3</a>
+                      <a href="#">4</a>
+                      <a href="#">5</a>
+                      <a href="#">6</a>
+                      <a href="#">7</a>
+                      <a href="#">8</a>
+                      <a href="#">9</a>
+                      <a href="#">10</a>
+                    </span>
+                    <a href="#" class="next" title="다음">〉</a>
+                    <a href="#" class="last" title="마지막">〉〉</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="workwhether_wrap">
+          <div>
+            <h3>업무 수행 여부</h3>
+            <ul>
+              <li>
+                <input type="radio" id="done2" name="taskdone">
+                <label for="done2">완료</label>
+              </li>
+              <li>
+                <input type="radio" id="incomplete2" name="taskdone">
+                <label for="incomplete2">미완료</label>
+              </li>
+            </ul>
+            <button type="button" class="btn_m btn_blue">완료</button>
+          </div>
+          <div>
+            <button type="button" class="btn_l btn_skyblue">수동 문자 발송</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div> <!-- ㅣ경보발생ㅣ 1. 각 담당자 발생 문자 발송 -->
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_600">
+      <div class="pop_tit">
+        <h1>ㅣ세부업무ㅣ 주관기관장 상황전파</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <div class="send_wrap">
+              <ul class="flex_wrap f_sb">
+                <li class="sms_templete">
+                  <select name="sms_select">
+                    <option value="SMS 템플릿 선택">SMS 템플릿 선택</option>
+                  </select>
+                  <div>
+                    <p>발송내용</p>
+                    <textarea id="sms_templete" name="sms_templete" style="resize:none;border:none;"
+                      onkeyup="fn_checkByte(this)">00년 00월 00일 00시00분에 (4/5단계) (태양흑점폭발 상황 발생에 따라 우주전파재난)</textarea>
+                    <p class="alignR"><span id="nowByte">80</span>/90 bytes</p>
+                  </div>
+                  <script>
+                    function fn_checkByte(obj) {
+                      const maxByte = 90; //최대 90바이트
+                      const text_val = obj.value; //입력한 문자
+                      const text_len = text_val.length; //입력한 문자수
+
+                      let totalByte = 0;
+                      for (let i = 0; i < text_len; i++) {
+                        const each_char = text_val.charAt(i);
+                        const uni_char = escape(each_char) //유니코드 형식으로 변환
+                        if (uni_char.length > 4) {
+                          // 한글 : 2Byte
+                          totalByte += 2;
+                        } else {
+                          // 영문,숫자,특수문자 : 1Byte
+                          totalByte += 1;
+                        }
+                      }
+
+                      if (totalByte > maxByte) {
+                        alert('최대 90Byte까지만 입력가능합니다.');
+                        document.getElementById("nowByte").innerText = totalByte;
+                        document.getElementById("nowByte").style.color = "red";
+                      } else {
+                        document.getElementById("nowByte").innerText = totalByte;
+                        document.getElementById("nowByte").style.color = "#3c7ed3";
+                      }
+                    }
+                  </script>
+                </li>
+                <li class="send_group">
+                  <select name="sms_select">
+                    <option value="발송 그룹 선택">발송 그룹 선택</option>
+                  </select>
+                  <div class="container">
+                    <table>
+                      <caption>발송 그룹 선택</caption>
+                      <thead>
+                        <tr>
+                          <th>선택</th>
+                          <th>발송대상목록</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><input type="checkbox" name="selectInput" id="option1"></td>
+                          <td><label for="option1">정보보호네트워크정책관</label></td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox" name="selectInput" id="option2"></td>
+                          <td><label for="option2">국립전파연구원장</label></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="btn_wrap">
+                      <button type="button" class="btn_s selectBtn btn_grayline">전체선택</button>
+                      <button type="button" class="btn_s unSelectBtn btn_grayline">전체해제</button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div>
+                <span>연락처 추가</span>
+                <input type="text">
+                <button type="button" class="btn_m btn_blue">전송</button>
+              </div>
+            </div>
+            <div class="tbl_pop">
+              <div class="tbl_wrap">
+                <div class="tbl_top flex_wrap f_sb">
+                  <p><b>전송 내역</b></p>
+                </div>
+                <table class="tbl_com">
+                  <colgroup>
+                    <col width="80">
+                    <col width="*">
+                    <col width="180">
+                    <col width="80">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">NO</th>
+                      <th scope="col">날짜</th>
+                      <th scope="col">수신인</th>
+                      <th scope="col">전송여부</th>
+                    </tr>
+                  </thead>
+                </table>
+                <div style="height:100px;">
+                  <table class="tbl_com">
+                    <colgroup>
+                      <col width="80">
+                      <col width="*">
+                      <col width="180">
+                      <col width="80">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>2021-09-23 15:01:00</td>
+                        <td>김OO 사무관</td>
+                        <td>완료</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn_wrap alignC">
+            <button type="button" class="btn_l btn_blue">완료</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('.selectBtn').on('click', function () {
+    $(':checkbox').prop('checked', true);
+  })
+  $('.unSelectBtn').on('click', function () {
+    $(':checkbox').prop('checked', false);
+  })
+</script> <!-- ㅣ세부업무ㅣ 주관기관장 상황전파 -->
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_800">
+      <div class="pop_tit">
+        <h1>ㅣ경보발생ㅣ 상황발생 보고서 작성</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <h2>Ⅱ-9. 상황 보고서 작성</h2>
+            <div>
+              <dl>
+                <dt class="dot dl_inline">담당자</dt>
+                <dd class="dl_inline">문OO(정)</dd>
+                <dd class="dl_inline">김OO(부)</dd>
+                <dt class="dot">수행내역</dt>
+                <dd>담당자는 상황 발생 보고서를 작성하고 예보관측팀장과 대응반장에게 보고 실시</dd>
+              </dl>
+              <div class="tbl_pop">
+                <div class="tbl_wrap">
+                  <div class="tbl_top flex_wrap f_sb">
+                    <p>총 <b>2</b>건 <b>1</b> &sol; 1페이지</p>
+                    <button type="button" class="btn btn_blue">등록</button>
+                  </div>
+                  <table class="tbl_com">
+                    <colgroup>
+                      <col width="100">
+                      <col width="*">
+                      <col width="120">
+                      <col width="120">
+                      <col width="120">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">NO</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">등록자</th>
+                        <th scope="col">수행여부</th>
+                        <th scope="col">수정일</th>
+                      </tr>
+                    </thead>
+                  </table>
+                  <div style="height:230px;">
+                    <table class="tbl_com">
+                    <colgroup>
+                      <col width="100">
+                      <col width="*">
+                      <col width="120">
+                      <col width="120">
+                      <col width="120">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <td>2</td>
+                        <td class="alignL">상황 발생 보고서</td>
+                        <td>관리자</td>
+                        <td>Y</td>
+                        <td>2021-10-07</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                  <div class="paginate">
+                    <a href="#" class="first" title="처음">〈〈</a>
+                    <a href="#" class="pre" title="이전">〈</a>
+                    <span>
+                      <a href="#" class="on">1</a>
+                    </span>
+                    <a href="#" class="next" title="다음">〉</a>
+                    <a href="#" class="last" title="마지막">〉〉</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div> <!-- ㅣ경보발생ㅣ 상황발생 보고서 작성 -->
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_800">
+      <div class="pop_tit">
+        <h1>ㅣ경보경과ㅣ상황판단회의 보고서 작성</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <h2>상황판단회의 보고서 작성</h2>
+            <div>
+              <div class="tbl_pop">
+                <table class="tbl_view th_20">
+                  <caption>상황판단회의 보고서 작성</caption>
+                  <colgroup>
+                    <col width="10">
+                    <col width="500">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td colspan="2">
+                        <textarea name="" placeholder="제목을 입력하세요">태양흑점폭발 4단계 상황 발생 보고
+OOOO-OO-OO-OO:OO-R4(발령)</textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">
+                        <input type="text" value="국립전파연구원 우주전파센터 예보관측팀(OOOO.OO.OO OO:OO (☎064-797-0000)">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="reason">발생 시각</label>
+                      </th>
+                      <td>
+                        <input type="text" id="reason" value="OOOO년 OO월 OO일(O) OO:OO (국내시각)">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="analysis">상황 등급</label>
+                      </th>
+                      <td>
+                        <textarea name="analysis">태양흑점폭발 4단계 상황(R4)
+(OO.OO일 OO:OO 1단계(R1) -> OO.OO일 OO:OO 2단계(R2) -> OO.OO일 OO:OO 4계(R4) 상황 진행 중)</textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="analysis">상황 원인</label>
+                      </th>
+                      <td>
+                        <textarea
+                          name="analysis">OO.OO일(요일) OO:OO분에 흑점 OOOO이 폭발하여 OO.OO일(요일) OO:OO분경 태양흑점폭발 4단계 상황 발생</textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="situation">발생 가능 피해</label>
+                      </th>
+                      <td>
+                        <textarea name="situation">- 전리층 교란으로 단파통신 장애 발생 가능
+- 극항로를 운항하는 항공기의 단파통신 및 GPS 항법 장애 발생 가능
+※ 자세한 사항은 추후 상황 경과보고서로 보고 드리겠습니다.</textarea>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="btn_wrap alignL">
+                  <button type="button" class="btn_l btn_skyblue">보고서 미리보기</button>
+                </div>
+              </div>
+            </div>
+            <div class="workwhether_wrap">
+              <div>
+                <h3>업무 수행 여부</h3>
+                <ul>
+                  <li>
+                    <input type="radio" id="done3" name="taskdone">
+                    <label for="done3">완료</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="incomplete3" name="taskdone">
+                    <label for="incomplete3">미완료</label>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <button type="button" class="btn_l btn_blue">완료</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- ㅣ경보경과ㅣ상황판단회의 보고서 작성 -->
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_800">
+      <div class="pop_tit">
+        <h1>ㅣ경보발생ㅣ 상황 발생 보고서 외부메일 보고</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <h2>Ⅱ-9. 상황 보고서 외부메일 보고</h2>
+            <div>
+              <dl>
+                <dt class="dot dl_inline">담당자</dt>
+                <dd class="dl_inline">문OO(정)</dd>
+                <dd class="dl_inline">김OO(부)</dd>
+                <dt class="dot">수행내역</dt>
+                <dd>담당자는 상황 발생 보고서 확인후 우주전파재난 비상연락망을 참조하여 메모 보고 실시</dd>
+              </dl>
+              <div class="tbl_pop">
+                <div class="tbl_wrap">
+                  <h3>발생 보고서 등록 내역</h3>
+                  <div class="tbl_top flex_wrap f_sb">
+                    <p>총 <b>2</b>건 <b>1</b> &sol; 1페이지</p>
+                    <button type="button" class="btn btn_blue">등록</button>
+                  </div>
+                  <table class="tbl_com">
+                    <colgroup>
+                      <col width="100">
+                      <col width="*">
+                      <col width="120">
+                      <col width="120">
+                      <col width="120">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">NO</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">등록자</th>
+                        <th scope="col">수행여부</th>
+                        <th scope="col">수정일</th>
+                      </tr>
+                    </thead>
+                  </table>
+                  <div style="height:230px;">
+                    <table class="tbl_com">
+                      <colgroup>
+                        <col width="100">
+                        <col width="*">
+                        <col width="120">
+                        <col width="120">
+                        <col width="120">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td>2</td>
+                          <td class="alignL">상황 발생 보고서</td>
+                          <td>관리자</td>
+                          <td>Y</td>
+                          <td>2021-10-07</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="paginate">
+                    <a href="#" class="first" title="처음">〈〈</a>
+                    <a href="#" class="pre" title="이전">〈</a>
+                    <span>
+                      <a href="#" class="on">1</a>
+                    </span>
+                    <a href="#" class="next" title="다음">〉</a>
+                    <a href="#" class="last" title="마지막">〉〉</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div> <!-- ㅣ경보발생ㅣ 상황 발생 보고서 외부메일 보고 -->
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_700">
+      <div class="pop_tit">
+        <h1>ㅣ경보발생ㅣ상황 발생 보고서 외부메일 보고</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <div>
+              <div class="tbl_pop">
+                <div class="tbl_top flex_wrap f_sb">
+                  <h3>전송 메세지</h3>
+                </div>
+                <table class="tbl_view th_20">
+                  <caption>전송 메시지</caption>
+                  <colgroup>
+                    <col width="10">
+                    <col width="500">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>내용</th>
+                      <td>
+                        <textarea name="situation">- 전리층 교란으로 단파통신 장애 발생 가능
+- 극항로를 운항하는 항공기의 단파통신 및 GPS 항법 장애 발생 가능
+※ 자세한 사항은 추후 상황 경과보고서로 보고 드리겠습니다.</textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>파일 첨부</th>
+                      <td>
+                        <div class="filebox bs3-primary">
+                          <input class="upload-name" value="파일 첨부" disabled="disabled">
+                          <label for="ex_filename" class="btn_l btn_skyblue">업로드</label>
+                          <input type="file" id="ex_filename" class="upload-hidden">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div>
+                <div class="tbl_pop">
+                  <div class="tbl_top flex_wrap f_sb">
+                    <h3>받는 분</h3>
+                    <button type="button" class="btn btn_blue">주소록</button>
+                  </div>
+                  <table class="tbl_com">
+                    <colgroup>
+                      <col width="80">
+                      <col width="150">
+                      <col width="*">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">
+                          <input type="checkbox" onclick='selectAll(this)'>
+                        </th>
+                        <th scope="col">NO</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">소속기관</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><input type="checkbox" name="check"></td>
+                        <td>2</td>
+                        <td>2021-09-23 15:01:00</td>
+                        <td>G4</td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" name="check"></td>
+                        <td>2</td>
+                        <td>2021-09-23 15:01:00</td>
+                        <td>G4</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div>
+                <div class="tbl_pop">
+                  <div class="tbl_top flex_wrap f_sb">
+                    <h3>발송 유형</h3>
+                  </div>
+                  <div class="send_type flex_wrap f_sb">
+                    <div>
+                      <input type="checkbox" name="send" id="send_type1">
+                      <label for="send_type1">즉시발송</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" name="send" id="send_type2">
+                      <label for="send_type2">예약발송</label>
+                      <input type="text" class="datepicker" id="date6" name="date" placeholder="YYYY-MM-DD" readonly
+                        dataformat="datepic" title="날짜 선택" value="2021-01-01">
+                      <input type="time" value="11:00">
+                    </div>
+                  </div>
+                </div>
+                <div class="btn_wrap flex_wrap f_sb">
+                  <button type="button" class="btn_l btn_skyblue">보고서 미리보기</button>
+                  <button type="button" class="btn_l btn_mintline">메일 전송 완료</button>
+                </div>
+              </div>
+              <div>
+                <div class="tbl_pop">
+                  <div class="tbl_top flex_wrap f_sb">
+                    <h3>전송 내역</h3>
+                  </div>
+                  <table class="tbl_com">
+                    <colgroup>
+                      <col width="200">
+                      <col width="*">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">이름</th>
+                        <th scope="col">소속기관</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>2021-09-23 15:01:00</td>
+                        <td>G4</td>
+                      </tr>
+                      <tr>
+                        <td>2021-09-23 15:01:00</td>
+                        <td>G4</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="paginate">
+                  <a href="#" class="first" title="처음">〈〈</a>
+                  <a href="#" class="pre" title="이전">〈</a>
+                  <span>
+                    <a href="#" class="on">1</a>
+                  </span>
+                  <a href="#" class="next" title="다음">〉</a>
+                  <a href="#" class="last" title="마지막">〉〉</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="workwhether_wrap">
+          <div>
+            <h3>업무 수행 여부</h3>
+            <ul>
+              <li>
+                <input type="radio" id="done4" name="taskdone">
+                <label for="done4">완료</label>
+              </li>
+              <li>
+                <input type="radio" id="incomplete4" name="taskdone">
+                <label for="incomplete4">미완료</label>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <button type="button" class="btn_l btn_blue">완료</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<script>
+  function selectAll(selectAll) {
+    const checkboxes
+      = document.getElementsByName('check');
+
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = selectAll.checked;
+    })
+  }
+
+  $(function () {
+    $("#send_type2").click(function () {
+      var chk = $(this).is(':checked');
+      if (chk) {
+        $("#send_type1").attr('disabled', true);
+      }
+      else {
+        $("#send_type1").attr('disabled', false);
+      }
+    });
+
+    $("#send_type1").click(function () {
+      var chk = $(this).is(':checked');
+      if (chk) {
+        $("#send_type2").attr('disabled', true);
+      }
+      else {
+        $("#send_type2").attr('disabled', false);
+      }
+    });
+  });
+</script> <!-- ㅣ경보발생ㅣ상황 발생 보고서 외부메일 보고 -->
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_800">
+      <div class="pop_tit">
+        <h1>주소록 불러오기</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <h2>소속기관</h2>
+            <div>
+              <div class="search_wrap">
+                <ul class="search f_sb">
+                  <li>
+                    <label for="sort" class="dot">팀 구분</label>
+                    <select id="sort" title="전체">
+                      <option value="전체">전체</option>
+                    </select>
+                  </li>
+                  <li>
+                    <label for="searchword" class="dot">검색어</label>
+                    <input type="text" id="searchword" placeholder="검색어">
+                  </li>
+                  <li>
+                    <a href="#" class="btn btn_blue">검색</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tbl_pop">
+                <div class="tbl_wrap">
+                  <table class="tbl_com">
+                    <colgroup>
+                      <col width="100">
+                      <col width="*">
+                      <col width="140">
+                      <col width="140">
+                      <col width="140">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col"><span>선택</span></th>
+                        <th scope="col">NO</th>
+                        <th scope="col">팀 구분</th>
+                        <th scope="col">직책</th>
+                        <th scope="col">성함</th>
+                        <th scope="col">이메일 주소</th>
+                      </tr>
+                    </thead>
+                  </table>
+                  <div style="height:230px;">
+                    <table class="tbl_com">
+                      <colgroup>
+                        <col width="100">
+                        <col width="*">
+                        <col width="140">
+                        <col width="140">
+                        <col width="140">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>3</td>
+                          <td>예보관측팀</td>
+                          <td>연구사</td>
+                          <td>김OO</td>
+                          <td><a href="#">
+                              <button class="btn_search btn_skyblueline">보기</button>
+                            </a></td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>2</td>
+                          <td>예보관측팀</td>
+                          <td>연구사</td>
+                          <td>김OO</td>
+                          <td><a href="#">
+                              <button class="btn_search btn_skyblueline">보기</button>
+                            </a></td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>1</td>
+                          <td>예보관측팀</td>
+                          <td>주무관</td>
+                          <td>김OO</td>
+                          <td><a href="#">
+                              <button class="btn_search btn_skyblueline">보기</button>
+                            </a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="btn_wrap">
+                    <button type="button" class="btn selectBtn btn_grayline">전체선택</button>
+                    <button type="button" class="btn unSelectBtn btn_grayline">전체해제</button>
+                  </div>
+                  <div class="paginate">
+                    <a href="#" class="first" title="처음">〈〈</a>
+                    <a href="#" class="pre" title="이전">〈</a>
+                    <span>
+                      <a href="#" class="on">1</a>
+                    </span>
+                    <a href="#" class="next" title="다음">〉</a>
+                    <a href="#" class="last" title="마지막">〉〉</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('.selectBtn').on('click', function () {
+    $(':checkbox').prop('checked', true);
+  })
+  $('.unSelectBtn').on('click', function () {
+    $(':checkbox').prop('checked', false);
+  })
+</script> <!-- 주소록 불러오기 -->
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_700">
+      <div class="pop_tit">
+        <h1>ㅣ경보발생ㅣ상황 발생 보고서 메모 보고</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <h2>Ⅱ-9. 상황 보고서 메모 보고</h2>
+            <div>
+              <dl>
+                <dt class="dot dl_inline">담당자</dt>
+                <dd class="dl_inline">김OO(정)</dd>
+                <dd class="dl_inline">조OO(부)</dd>
+                <dt class="dot">수행내역</dt>
+                <dd>담당자는 상황 발생 보고서 확인후 우주전파재난 비상연락망을 참조하여 메모 보고 실시</dd>
+              </dl>
+              <div class="tbl_pop">
+                <div class="tbl_top flex_wrap f_sb">
+                  <h3>특이 사항 작성</h3>
+                </div>
+                <table class="tbl_view th_20">
+                  <caption>특이 사항 작성</caption>
+                  <colgroup>
+                    <col width="10">
+                    <col width="500">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>내용</th>
+                      <td>
+                        <textarea name="situation" placeholder="내용을 입력하여 주세요."></textarea>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="btn_wrap flex_wrap f_sb">
+                  <button type="button" class="btn_l btn_skyblue">수정</button>
+                  <button type="button" class="btn_l btn_blue">저장</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="workwhether_wrap">
+          <div>
+            <h3>업무 수행 여부</h3>
+            <ul>
+              <li>
+                <input type="radio" id="done5" name="taskdone">
+                <label for="done5">완료</label>
+              </li>
+              <li>
+                <input type="radio" id="incomplete5" name="taskdone">
+                <label for="incomplete5">미완료</label>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <button type="button" class="btn_l btn_blue">완료</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<script>
+  function selectAll(selectAll) {
+    const checkboxes
+      = document.getElementsByName('check');
+
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = selectAll.checked;
+    })
+  }
+
+  $(function () {
+    $("#send_type2").click(function () {
+      var chk = $(this).is(':checked');
+      if (chk) {
+        $("#send_type1").attr('disabled', true);
+      }
+      else {
+        $("#send_type1").attr('disabled', false);
+      }
+    });
+
+    $("#send_type1").click(function () {
+      var chk = $(this).is(':checked');
+      if (chk) {
+        $("#send_type2").attr('disabled', true);
+      }
+      else {
+        $("#send_type2").attr('disabled', false);
+      }
+    });
+  });
+</script> <!-- ㅣ경보발생ㅣ상황 발생 보고서 메모 보고 -->
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_800">
+      <div class="pop_tit">
+        <h1>ㅣ경보경과ㅣ 태양흑점폭발 관측데이터 및 모델(위성 등)</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <h2>Ⅱ-8. 우주전파환경 데이터 수집 및 분석</h2>
+            <div>
+              <dl>
+                <dt class="dot dl_inline">담당자</dt>
+                <dd class="dl_inline">김OO(정)</dd>
+                <dd class="dl_inline">조OO(부)</dd>
+                <dt class="dot">수행내역</dt>
+                <dd>담당자는 예경보시스템 등을 통해 우주환경 데이터를 수집하고 데이터 수집 보고서를 작성하여 상황분석 담당에게 전송</dd>
+              </dl>
+              <div class="tbl_pop">
+                <div class="tbl_wrap">
+                  <h2>보고서 등록 내역</h2>
+                  <div class="tbl_top flex_wrap f_sb">
+                    <p>총 <b>2</b>건 <b>1</b> &sol; 1페이지</p>
+                    <button type="button" class="btn btn_blue">등록</button>
+                  </div>
+                  <table class="tbl_com">
+                    <colgroup>
+                      <col width="100">
+                      <col width="*">
+                      <col width="100">
+                      <col width="100">
+                      <col width="120">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">NO</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">등록자</th>
+                        <th scope="col">수행여부</th>
+                        <th scope="col">수정일</th>
+                      </tr>
+                    </thead>
+                  </table>
+                  <div style="height:230px;">
+                    <table class="tbl_com">
+                      <colgroup>
+                        <col width="100">
+                        <col width="*">
+                        <col width="100">
+                        <col width="100">
+                        <col width="120">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td class="alignL">태양흑점폭발 관측데이터 및 모델 분석 보고서</td>
+                          <td>서ㅇㅇ</td>
+                          <td>Y</td>
+                          <td>2021-10-07</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="paginate">
+                    <a href="#" class="first" title="처음">〈〈</a>
+                    <a href="#" class="pre" title="이전">〈</a>
+                    <span>
+                      <a href="#" class="on">1</a>
+                    </span>
+                    <a href="#" class="next" title="다음">〉</a>
+                    <a href="#" class="last" title="마지막">〉〉</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div> <!-- ㅣ경보경과ㅣ 태양흑점폭발 관측데이터 및 모델(위성 등) -->
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_700">
+      <div class="pop_tit">
+        <h1>ㅣ경보경과ㅣ태양흑점폭발 관측데이터 및 모델(위성 등)</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <h2>태양흑점폭발 관측데이터 및 모델 보고서 작성</h2>
+            <div>
+              <div class="tbl_pop">
+                <table class="tbl_view th_20">
+                  <h3>위성관측자료</h3>
+                  <caption>상황판단회의 보고서 작성</caption>
+                  <colgroup>
+                    <col width="10">
+                    <col width="500">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="file">그림1</label>
+                      </th>
+                      <td colspan="3">
+                        <div class="filebox bs3-primary">
+                          <input class="upload-name" value="파일 첨부" disabled="disabled">
+
+                          <label for="ex_filename1" class="btn_l btn_skyblue">업로드</label>
+                          <input type="file" id="ex_filename1" class="upload-hidden">
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="explanation1">그림1 설명</label>
+                      </th>
+                      <td colspan="3">
+                        <input id="explanation1" type="text">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="file">그림2</label>
+                      </th>
+                      <td colspan="3">
+                        <div class="filebox bs3-primary">
+                          <input class="upload-name" value="파일 첨부" disabled="disabled">
+                          <label for="ex_filename2" class="btn_l btn_skyblue">업로드</label>
+                          <input type="file" id="ex_filename2" class="upload-hidden">
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="explanation2">그림2 설명</label>
+                      </th>
+                      <td colspan="3">
+                        <input id="explanation2" type="text" value="">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="explanation2">기타사항</label>
+                      </th>
+                      <td colspan="3">
+                        <input id="explanation2" type="text" value="">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="btn_wrap alignR">
+                  <button type="button" class="btn_l btn_gray">삭제</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="tbl_pop">
+                <table class="tbl_view th_20">
+                  <h3>위성관측자료</h3>
+                  <caption>상황판단회의 보고서 작성</caption>
+                  <colgroup>
+                    <col width="10">
+                    <col width="500">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="file">그림1</label>
+                      </th>
+                      <td colspan="3">
+                        <div class="filebox bs3-primary">
+                          <input class="upload-name" value="파일 첨부" disabled="disabled">
+
+                          <label for="ex_filename3" class="btn_l btn_skyblue">업로드</label>
+                          <input type="file" id="ex_filename3" class="upload-hidden">
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="explanation1">그림1 설명</label>
+                      </th>
+                      <td colspan="3">
+                        <input id="explanation1" type="text">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="explanation2">기타사항</label>
+                      </th>
+                      <td colspan="3">
+                        <input id="explanation2" type="text" value="">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="btn_wrap flex_wrap f_sb">
+                  <div>
+                    <button type="button" class="btn_l btn_skyblue">보고서 미리보기</button>
+                    <button type="button" class="btn_l btn_blue">추가</button>
+                  </div>
+                  <button type="button" class="btn_l btn_gray">삭제</button>
+                </div>
+              </div>
+            </div>
+            <div class="workwhether_wrap">
+              <div>
+                <h3>업무 수행 여부</h3>
+                <ul>
+                  <li>
+                    <input type="radio" id="done6" name="taskdone">
+                    <label for="done6">완료</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="incomplete6" name="taskdone">
+                    <label for="incomplete6">미완료</label>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <button type="button" class="btn_l btn_blue">완료</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+  var fileTarget = $('.filebox .upload-hidden');
+  fileTarget.on('change', function () {
+    if (window.FileReader) {
+      var filename = $(this)[0].files[0].name;
+    } else {
+      var filename = $(this).val().split('/').pop().split('\\').pop();
+    }
+
+    $(this).siblings('.upload-name').val(filename);
+  });
+</script> <!-- ㅣ경보경과ㅣ태양흑점폭발 관측데이터 및 모델(위성 등) -->
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_800">
+      <div class="pop_tit">
+        <h1>ㅣ경보경과ㅣ상황판단회의 보고서 작성</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <h2>상황판단회의 보고서 작성</h2>
+            <div>
+              <div class="tbl_pop">
+                <table class="tbl_view th_20">
+                  <caption>상황판단회의 보고서 작성</caption>
+                  <colgroup>
+                    <col width="10">
+                    <col width="500">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="date">일시</label>
+                      </th>
+                      <td>
+                        <input type="text" class="datepicker" id="date4" name="date" placeholder="YYYY-MM-DD" readonly
+                          dataformat="datepic" title="날짜 선택" value="2021-01-01">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="reason">상황 결정</label>
+                      </th>
+                      <td class="td_select">
+                        <ul>
+                          <li>
+                            <input type="radio" name="stage" id="stage1">
+                            <label for="stage1">해제</label>
+                          </li>
+                          <li><input type="radio" name="stage" id="stage2">
+                            <label for="stage2">관심</label>
+                          </li>
+                          <li><input type="radio" name="stage" id="stage3">
+                            <label for="stage3">주의</label>
+                          </li>
+                          <li><input type="radio" name="stage" id="stage4">
+                            <label for="stage4">경계</label>
+                          </li>
+                          <li><input type="radio" name="stage" id="stage5">
+                            <label for="stage5">심각</label>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="reason">피해 가능 분야</label>
+                      </th>
+                      <td>
+                        <table class="tbl_com">
+                          <caption>피해 가능 분야 테이블</caption>
+                          <thead>
+                            <tr>
+                              <th>위성</th>
+                              <th>항공</th>
+                              <th>항법</th>
+                              <th>전력</th>
+                              <th>통신</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><input type="text"></td>
+                              <td><input type="text"></td>
+                              <td><input type="text"></td>
+                              <td><input type="text"></td>
+                              <td><input type="text"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="reason">판정 사유</label>
+                      </th>
+                      <td>
+                        <input type="text" id="reason">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="analysis">상황 분석</label>
+                      </th>
+                      <td>
+                        <textarea name="analysis"></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="situation">조치 현황</label>
+                      </th>
+                      <td>
+                        <textarea name="situation"></textarea>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="btn_wrap flex_wrap f_sb">
+                  <button type="button" class="btn_l btn_skyblue">보고서 미리보기</button>
+                  <button type="button" class="btn_l btn_blue">NDMS 연결</button>
+                </div>
+              </div>
+            </div>
+            <div class="workwhether_wrap">
+              <div>
+                <h3>업무 수행 여부</h3>
+                <ul>
+                  <li>
+                    <input type="radio" id="done7" name="taskdone">
+                    <label for="done7">완료</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="incomplete7" name="taskdone">
+                    <label for="incomplete7">미완료</label>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <button type="button" class="btn_l btn_blue">완료</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+  var fileTarget = $('.filebox .upload-hidden');
+  fileTarget.on('change', function () {
+    if (window.FileReader) {
+      var filename = $(this)[0].files[0].name;
+    } else {
+      var filename = $(this).val().split('/').pop().split('\\').pop();
+    }
+
+    $(this).siblings('.upload-name').val(filename);
+  });
+</script> <!-- ㅣ경보경과ㅣ상황판단회의 보고서 작성 -->
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_700">
+      <div class="pop_tit">
+        <h1>ㅣ경보경과ㅣ 위성분야 피해 접수 등록</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <h2>위성 분야 피해 접수 작성 &sol; 내역</h2>
+            <div>
+              <div class="tbl_pop">
+                <table class="tbl_view th_25">
+                  <caption>위성 분야 피해 접수 작성 &sol; 내역</caption>
+                  <colgroup>
+                    <col width="10">
+                    <col width="500">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="name">제목</label>
+                      </th>
+                      <td colspan="3">
+                        <input id="name" type="text">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="type">유형</label>
+                      </th>
+                      <td>
+                        <select title="type">
+                          <option value="전체">전체</option>
+                        </select>
+                      </td>
+                      <th scope="row">
+                        <label for="department">기관명(부서)</label>
+                      </th>
+                      <td>
+                        <input id="department" type="text">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="date">일자</label>
+                      </th>
+                      <td colspan="3">
+                        <input type="text" class="datepicker" id="date5" name="date" placeholder="YYYY-MM-DD" readonly
+                          dataformat="datepic" title="날짜 선택" value="2021-01-01">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="place">지역(장소)</label>
+                      </th>
+                      <td colspan="3">
+                        <textarea name="place"></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="damage">피해(장애) 내역</label>
+                      </th>
+                      <td colspan="3">
+                        <textarea name="damage"></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="action">주요 조치사항</label>
+                      </th>
+                      <td colspan="3">
+                        <textarea name="action"></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="specialnote">특이사항</label>
+                      </th>
+                      <td colspan="3">
+                        <textarea name="specialnote"></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="file">첨부파일</label>
+                      </th>
+                      <td colspan="3">
+                        <div class="filebox bs3-primary">
+                          <input class="upload-name" value="파일 첨부" disabled="disabled">
+
+                          <label for="ex_filename" class="btn_l btn_skyblue">업로드</label>
+                          <input type="file" id="ex_filename" class="upload-hidden">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="workwhether_wrap">
+              <div>
+                <h3>업무 수행 여부</h3>
+                <ul>
+                  <li>
+                    <input type="radio" id="done8" name="taskdone">
+                    <label for="done8">완료</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="incomplete8" name="taskdone">
+                    <label for="incomplete8">미완료</label>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <button type="button" class="btn_l btn_blue">완료</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+  var fileTarget = $('.filebox .upload-hidden');
+  fileTarget.on('change', function () {
+    if (window.FileReader) {
+      var filename = $(this)[0].files[0].name;
+    } else {
+      var filename = $(this).val().split('/').pop().split('\\').pop();
+    }
+
+    $(this).siblings('.upload-name').val(filename);
+  });
+</script> <!-- ㅣ경보경과ㅣ 위성분야 피해 접수 등록 -->
+  <div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_700">
+      <div class="pop_tit">
+        <h1>ㅣ경보경과ㅣ 경과 보도자료 등록</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <h2>보도자료 작성 &sol; 내역</h2>
+            <div>
+              <div class="tbl_pop">
+                <table class="tbl_view th_25">
+                  <caption>보도자료 작성 &sol; 내역</caption>
+                  <colgroup>
+                    <col width="10">
+                    <col width="500">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="report">보도일시</label>
+                      </th>
+                      <td colspan="3">
+                        <span>0000. 0. 00.(ㅇ)</span><b class="font_red"> 배포시점</b>부터 보도해 주시기 바랍니다.
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="date">일자</label>
+                      </th>
+                      <td>
+                        <span>0000. 0. 00.(ㅇ)</span>
+                      </td>
+                      <th scope="row">
+                        <label for="department1">담당부서</label>
+                      </th>
+                      <td>
+                        <span>네트워크안전기획과</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="department2">담당과장</label>
+                      </th>
+                      <td>
+                        <select title="department2">
+                          <option value="전체">전체</option>
+                        </select>
+                      </td>
+                      <th scope="row">
+                        <label for="department3">담당자</label>
+                      </th>
+                      <td>
+                        <input id="department3" type="text">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="name">제목</label>
+                      </th>
+                      <td colspan="3">
+                        <textarea name="name">우주전파재난“관심”위기경보 발령
+- 0월 0일 00시 00분 강력한 태양흑점폭발 발생에 따라
+관련분야 피해 최소화를 위한 비상체제 돌입 - </textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="content">피해(장애) 내역</label>
+                      </th>
+                      <td colspan="3">
+                        <textarea name="content" style="min-height:200px;">□ 과학기술정보통신부(장관 임혜숙, 이하 ‘과기정통부’)는 0월 00일 00시 00분, 강력한 태양흑점폭발이 발생함에 따라 우주전파재난 “관심” 위기경보를 발령하였다고 밝혔다.
+ㅇ 우주전파재난 “관심” 위기경보는 태양 전면에서 관측된 흑점 0000에서 규모00 수준의 태양흑점이 폭발함에 따라 발생된 태양전파들이 지구에 도달하여 지구대기권이 교란되어 발령되었다.
+□ 과학기술정보통신부는 상황매뉴얼의 비상체계에 따라 우주전파재난 대응팀을 구성·운영하면서,
+ㅇ 위성·방송통신(과기정통부), 항공ㆍ항법(국토교통부), 전력(산업통상자원부) 등 각 산업 분야의 소관 부처와 함께 우주전파재난 발생에 따른 피해 발생에 대비하고 있다.
+□ 과기정통부 정보보호네트워크정책관 ㅇㅇㅇ은 태양</textarea>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="workwhether_wrap">
+              <div>
+                <h3>업무 수행 여부</h3>
+                <ul>
+                  <li>
+                    <input type="radio" id="done9" name="taskdone">
+                    <label for="done9">완료</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="incomplete9" name="taskdone">
+                    <label for="incomplete9">미완료</label>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <button type="button" class="btn_l btn_blue">완료</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+  var fileTarget = $('.filebox .upload-hidden');
+  fileTarget.on('change', function () {
+    if (window.FileReader) {
+      var filename = $(this)[0].files[0].name;
+    } else {
+      var filename = $(this).val().split('/').pop().split('\\').pop();
+    }
+
+    $(this).siblings('.upload-name').val(filename);
+  });
+</script> <!-- ㅣ경보경과ㅣ 경과 보도자료 등록 -->
+
+  
+</body>
+
+</html>
+
+
+
+
+

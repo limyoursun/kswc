@@ -1,0 +1,151 @@
+<div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_800">
+      <div class="pop_tit">
+        <h1>ㅣ경보경과ㅣ상황판단회의 보고서 작성</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <h2>상황판단회의 보고서 작성</h2>
+            <div>
+              <div class="tbl_pop">
+                <table class="tbl_view th_20">
+                  <caption>상황판단회의 보고서 작성</caption>
+                  <colgroup>
+                    <col width="10">
+                    <col width="500">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="date">일시</label>
+                      </th>
+                      <td>
+                        <input type="text" class="datepicker" id="date4" name="date" placeholder="YYYY-MM-DD" readonly
+                          dataformat="datepic" title="날짜 선택" value="2021-01-01">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="reason">상황 결정</label>
+                      </th>
+                      <td class="td_select">
+                        <ul>
+                          <li>
+                            <input type="radio" name="stage" id="stage1">
+                            <label for="stage1">해제</label>
+                          </li>
+                          <li><input type="radio" name="stage" id="stage2">
+                            <label for="stage2">관심</label>
+                          </li>
+                          <li><input type="radio" name="stage" id="stage3">
+                            <label for="stage3">주의</label>
+                          </li>
+                          <li><input type="radio" name="stage" id="stage4">
+                            <label for="stage4">경계</label>
+                          </li>
+                          <li><input type="radio" name="stage" id="stage5">
+                            <label for="stage5">심각</label>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="reason">피해 가능 분야</label>
+                      </th>
+                      <td>
+                        <table class="tbl_com">
+                          <caption>피해 가능 분야 테이블</caption>
+                          <thead>
+                            <tr>
+                              <th>위성</th>
+                              <th>항공</th>
+                              <th>항법</th>
+                              <th>전력</th>
+                              <th>통신</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><input type="text"></td>
+                              <td><input type="text"></td>
+                              <td><input type="text"></td>
+                              <td><input type="text"></td>
+                              <td><input type="text"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="reason">판정 사유</label>
+                      </th>
+                      <td>
+                        <input type="text" id="reason">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="analysis">상황 분석</label>
+                      </th>
+                      <td>
+                        <textarea name="analysis"></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="situation">조치 현황</label>
+                      </th>
+                      <td>
+                        <textarea name="situation"></textarea>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="btn_wrap flex_wrap f_sb">
+                  <button type="button" class="btn_l btn_skyblue">보고서 미리보기</button>
+                  <button type="button" class="btn_l btn_blue">NDMS 연결</button>
+                </div>
+              </div>
+            </div>
+            <div class="workwhether_wrap">
+              <div>
+                <h3>업무 수행 여부</h3>
+                <ul>
+                  <li>
+                    <input type="radio" id="done7" name="taskdone">
+                    <label for="done7">완료</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="incomplete7" name="taskdone">
+                    <label for="incomplete7">미완료</label>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <button type="button" class="btn_l btn_blue">완료</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+  var fileTarget = $('.filebox .upload-hidden');
+  fileTarget.on('change', function () {
+    if (window.FileReader) {
+      var filename = $(this)[0].files[0].name;
+    } else {
+      var filename = $(this).val().split('/').pop().split('\\').pop();
+    }
+
+    $(this).siblings('.upload-name').val(filename);
+  });
+</script>
