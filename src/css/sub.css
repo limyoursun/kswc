@@ -224,3 +224,27 @@
 .common04 .flex_wrap .tbl_wrap:last-child{width:63%;}
 .common04 h3{font-size:18px;margin-bottom:15px;font-weight:bold;line-height:25px;color:#2e4057;}
 .common04 h3::before{display:inline-block;content:'\f192';font-family:'axicon';margin-right:5px;color:#aaa;}
+
+/* 본부용 상황판 */
+.situationinfo_wrap{width:500px;}
+.notice_wrap{width:471px;}
+.synthesis_wrap{width:570px;}
+
+.head .boardlist_wrap,
+.head .board_list,
+.head .board_list>li,
+.head .situation_wrap{width:100% !important;}
+.head_con{padding:30px;}
+.head .state_wrap{height:90px;margin:0;padding:10px 30px;border-bottom:20px solid #efefef;box-sizing:content-box;}
+.head .state_wrap h2:last-child{width:20px;}
+.situationinfo_wrap.step>h3{background-color:#00367c;}
+.situationinfo_wrap .list_depth1>li>.tit{padding:18px 16px 18px;background:#cccfdd url(../images/img_headlist.png)no-repeat 5px 0;padding-left:65px;}
+.situationinfo_wrap .list_depth1>li>.tit p{font-size:18px;color:#000;}
+.situationinfo_wrap.step .tit dl{display:flex;justify-content:space-between;}
+.situationinfo_wrap.step .tit dt,
+.situationinfo_wrap.step .tit dd{font-size:16px;color:#000;}
+.situationinfo_wrap .list_depth1 .tit button{width:60px;}
+.situationinfo_wrap .list_depth1 .tit button span{position:relative;display:block;width:60px;height:60px;}
+.situationinfo_wrap.step .tit button span::before{position:absolute; display:block;content:'';width:60px;height:60px;background-image:url(../images/img_headlist.png);background-position:0 50%;}
+.situationinfo_wrap.step .tit button.on span::before{background-position:100% 100%;}
+.situationinfo_wrap .list_depth2 .tit{padding:18px 16px 18px;background-color:#fff;}
