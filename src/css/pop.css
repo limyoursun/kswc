@@ -47,7 +47,7 @@ dl>.dl_inline::before{content:',';margin-right:5px;}
 .pop_wrap .tbl_view input[type=text]{line-height:32px;height:32px;}
 .pop_wrap .tbl_view select{width:100%;height:32px;}
 .pop_wrap .tbl_view input.datepicker{width:100px;margin-right:10px;}
-.pop_wrap .tbl_view textarea{width:100%;min-height:90px;}
+.pop_wrap .tbl_view textarea{width:100%;}
 .pop_wrap .tbl_view td span,
 .pop_wrap .tbl_view td ul{line-height:32px;}
 .pop_wrap .tbl_com thead{height:40px;font-size:15px;}
@@ -79,7 +79,7 @@ dl>.dl_inline::before{content:',';margin-right:5px;}
 
 /* center(상황판 팝업 : 수정 예정) */
 .send_wrap select{width:100%;padding-left:13px;font-size:15px;height:34px;margin-bottom:2px;border:1px solid #cdcdcd;}
-.send_wrap textarea{width:100%;height:160px;padding:20px;font-size:14px;line-height:22px;}
+.send_wrap textarea{width:100%;height:160px !important;padding:20px;font-size:14px;line-height:22px;resize:none !important;border:none;}
 .send_wrap span{color:#3c7ed3;}
 .sms_templete{width:220px;}
 .sms_templete p:last-child{padding-right:10px;font-size:14px;color:#939393;}
@@ -103,3 +103,12 @@ dl>.dl_inline::before{content:',';margin-right:5px;}
 .p_center01 .tbl_pop tbody{min-height:200px;}
 .p_center01 .tbl_view{border:none;border-width:0;}
 .p_center01 .tbl_view th{width:40%;}
+
+/* 업무 수행 여부 */
+.issued_wrap{margin-top:20px;padding-top:20px; border-top:2px solid #284278;}
+.issued_wrap>div:first-child{display:flex;justify-content:space-between;}
+.issued_wrap h3::before{display:inline-block;content:'';width:3px;height:12px;background-color:#284778;margin-right:10px;}
+.issued_wrap h3{display:block;margin-right:10px;font-size:16px;font-weight:bold;line-height:30px;color:#284778;}
+.issued_wrap ul{margin-bottom:20px;}
+.issued_wrap li{display:inline-block;font-size:16px;line-height:33px;margin-right:5px;}
+.issued_wrap ul{margin-right:10px;}

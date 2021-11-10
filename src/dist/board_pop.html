@@ -299,10 +299,15 @@
     </div>
   </div>
 </div>
-</div>
-</div>
 
 <script>
+  $('textarea').each(function () {
+    this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
+  }).on('input', function () {
+    this.style.height = 'auto';
+    this.style.height = (this.scrollHeight) + 'px';
+  });
+
   function selectAll(selectAll) {
     const checkboxes
       = document.getElementsByName('check');
@@ -909,7 +914,6 @@
       </div>
     </div>
   </div>
-</div>
 </div> <!-- ㅣ경보발생ㅣ 1. 각 담당자 발생 문자 발송 -->
   <div class="pop_overlay">
   <div class="pop_area">
@@ -929,7 +933,7 @@
                   </select>
                   <div>
                     <p>발송내용</p>
-                    <textarea id="sms_templete" name="sms_templete" style="resize:none;border:none;"
+                    <textarea id="sms_templete" name="sms_templete"
                       onkeyup="fn_checkByte(this)">00년 00월 00일 00시00분에 (4/5단계) (태양흑점폭발 상황 발생에 따라 우주전파재난)</textarea>
                     <p class="alignR"><span id="nowByte">80</span>/90 bytes</p>
                   </div>
@@ -2140,6 +2144,13 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
 </div>
 </div>
 <script>
+$('textarea').each(function () {
+  this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
+}).on('input', function () {
+  this.style.height = 'auto';
+  this.style.height = (this.scrollHeight) + 'px';
+});
+
   var fileTarget = $('.filebox .upload-hidden');
   fileTarget.on('change', function () {
     if (window.FileReader) {
@@ -2277,8 +2288,14 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
     </div>
   </div>
 </div>
-</div>
 <script>
+$('textarea').each(function () {
+  this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
+}).on('input', function () {
+  this.style.height = 'auto';
+  this.style.height = (this.scrollHeight) + 'px';
+});
+
   var fileTarget = $('.filebox .upload-hidden');
   fileTarget.on('change', function () {
     if (window.FileReader) {
@@ -2400,6 +2417,13 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
 </div>
 </div>
 <script>
+  $('textarea').each(function () {
+    this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
+  }).on('input', function () {
+    this.style.height = 'auto';
+    this.style.height = (this.scrollHeight) + 'px';
+  });
+
   var fileTarget = $('.filebox .upload-hidden');
   fileTarget.on('change', function () {
     if (window.FileReader) {

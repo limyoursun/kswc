@@ -28,22 +28,22 @@ $(function () {
     }
   });
 
-    // tab
-    var tab_conts = $('.tab_conts'),
-      tab_list = $('.tab_list'),
-      tab_btn = $('.tab_list li');
+  // tab
+  var tab_conts = $('.tab_conts'),
+    tab_list = $('.tab_list'),
+    tab_btn = $('.tab_list li');
 
-    tab_conts.find('.tab_cont').hide();
-    tab_conts.find('.tab_cont:first').show();
-    tab_list.find('li:first').find('a').addClass('on');
-    tab_btn.on('click', 'a', function (e) {
-      e.preventDefault();
-      var getId = $(this).prop('href').split('#')[1];
-      $(this).parents('.tab').next('.tab_conts').find('.tab_cont').hide();
-      $(this).parents('.tab_list').find('a').removeClass('on');
-      $(this).addClass('on');
-      $('#' + getId).show();
-    });
+  tab_conts.find('.tab_cont').hide();
+  tab_conts.find('.tab_cont:first').show();
+  tab_list.find('li:first').find('a').addClass('on');
+  tab_btn.on('click', 'a', function (e) {
+    e.preventDefault();
+    var getId = $(this).prop('href').split('#')[1];
+    $(this).parents('.tab').next('.tab_conts').find('.tab_cont').hide();
+    $(this).parents('.tab_list').find('a').removeClass('on');
+    $(this).addClass('on');
+    $('#' + getId).show();
+  });
 
   // pop
   var popBtn = $('[openpop]');
@@ -225,3 +225,35 @@ function nxtMove() {
   banList.animate({ left: presentLoc });
   if (presentNum >= maxNum) nxtB.removeClass('on').attr('disabled', true);
 }
+
+var el = $('textarea');
+function textareaAutoHeight(el) {
+  setTimeout(() => {
+    el.style.height = 'auto';
+    let scrollHeight = el.scrollHeight;
+    let outlineHeight = el.offsetHeight - el.clientHeight;
+    el.style.height = (scrollHeight + outlineHeight) + 'px';
+  }, 0);
+}
+
+// textarea auto height
+$('textarea').each(function () {
+  this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
+}).on('input', function () {
+  this.style.height = 'auto';
+  this.style.height = (this.scrollHeight) + 'px';
+});
+
+$("textarea").on('keydown keyup', function () {
+  $(this).parents('tr').children('td').children('textarea').height(1).height($(this).prop('scrollHeight' + 0) + 'px');
+  var noneSelectTextarea = $(this).parent('td').siblings('td').children('textarea');
+  var meHeight = $(this)[0].scrollHeight;
+  var youHeight = noneSelectTextarea[0].scrollHeight;
+  if (meHeight < youHeight) {
+    $(this).height(1).height(youHeight + 1);
+    noneSelectTextarea.height(1).height(youHeight + 1);
+  } else {
+    $(this).height(1).height(meHeight + 1);
+    noneSelectTextarea.height(1).height(meHeight + 1);
+  }
+});

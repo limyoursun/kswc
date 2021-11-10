@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    textarea {
+      border: 0 none white;
+      overflow: hidden;
+      padding: 0;
+      outline: none;
+      background-color: #D0D0D0;
+    }
+  </style>
+</head>
+
+<body onload="init();">
+
+<div class="pop_overlay">
+  <div class="pop_area">
+    <div class="pop_wrap w_700">
+      <div class="pop_tit">
+        <h1>피해 상황 접수 보기</h1>
+        <button type="button" class="btn_pop_close" closePop></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <div class="p_center01">
+            <h2>피해 상황 접수 보기</h2>
+            <div>
+              <div class="tbl_pop">
+                <table class="tbl_view th_25">
+                  <caption>피해 상황 접수 보기</caption>
+                  <colgroup>
+                    <col width="10">
+                    <col width="500">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="organ">기관명</label>
+                      </th>
+                      <td colspan="3">
+                        <p class="alignC">대한항공</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="date">일자</label>
+                      </th>
+                      <td>
+                        <span>0000. 0. 00.(ㅇ)</span>
+                      </td>
+                      <th scope="row">
+                        <label for="time">시간</label>
+                      </th>
+                      <td>
+                        <span>00:00</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="place">지역(장소)</label>
+                      </th>
+                      <td colspan="3">
+                        <p class="alignC listcolon">
+                          <span>시애틀</span>
+                          <span>캐나다</span>
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="content">피해(장애) 내역</label>
+                      </th>
+                      <td colspan="3">
+                        <textarea name="content" disabled>
+o 총 2편의 미국→한국 항공기 북극항로 우회
+① KE 0921(시애틀→인천) : 비행시간 2시간 증가
+② KE515(캐나다→한국) : 비행시간 3시간 증가</textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="content2">주요 조치사항</label>
+                      </th>
+                      <td colspan="3">
+                        <textarea name="content2">
+o 총 2편의 항공기 북극항로 우회
+o 향후 출발 예정인 3편의 항공기 우회항로 지속 이용
+※ 비행시간 증가로 인해, 연결편 항공기를 탑승하지 못한 승객에 대하여 연결편 항공기 제공 등 조치</textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="specialnote">특이사항</label>
+                      </th>
+                      <td colspan="3">
+                        <textarea name="specialnote" rows="1" style="height:1em;">
+o 조치사항 : 5편의 항공기 항로 변경조치
+o 조치사항 : 5편의 항공기 항로 변경조치
+o 조치사항 : 5편의 항공기 항로 변경조치
+o 조치사항 : 5편의 항공기 항로 변경조치
+o 조치사항 : 5편의 항공기 항로 변경조치
+o 조치사항 : 5편의 항공기 항로 변경조치
+(북극항로→캄차카 항로)</textarea>
+
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="alignC">
+                <button class="btn btn_gray">닫기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <table>
+    <thead>
+      <tr>
+        <th>제목</th>
+      </tr>
+    </thead>
+    <tr>
+      <th>제목</th>
+      <td>
+        <textarea rows="1" style="height:1em;" id="text"></textarea>
+      </td>
+    </tr>
+  </table>
+</body>
+<script>
+
+  var observe;
+  if (window.attachEvent) {
+    observe = function (element, event, handler) {
+      element.attachEvent('on' + event, handler);
+    };
+  }
+  else {
+    observe = function (element, event, handler) {
+      element.addEventListener(event, handler, false);
+    };
+  }
+  function init() {
+    var text = document.getElementById('text');
+    function resize() {
+      text.style.height = 'auto';
+      text.style.height = text.scrollHeight + 'px';
+    }
+    /* 0-timeout to get the already changed text */
+    function delayedResize() {
+      window.setTimeout(resize, 0);
+    }
+    observe(text, 'change', resize);
+    observe(text, 'cut', delayedResize);
+    observe(text, 'paste', delayedResize);
+    observe(text, 'drop', delayedResize);
+    observe(text, 'keydown', delayedResize);
+
+    text.focus();
+    text.select();
+    resize();
+  }
+</script>
+
+</html>

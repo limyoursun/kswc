@@ -24,6 +24,7 @@ select{min-width:50px;padding-right:20px;background:url(../images/btn_select.png
 select::-ms-expand {display:none;}
 input::placeholder,
 textarea::placeholder{font-size:15px;}
+textarea{height:1em;}
 
 
 /* Common */
@@ -89,7 +90,7 @@ textarea::placeholder{font-size:15px;}
 .tbl_view textarea:disabled,
 .tbl_view input:disabled{border-color:transparent;}
 .tbl_view td a:hover{text-decoration:underline;}
-.tbl_view textarea{padding:10px;resize:none;}
+.tbl_view textarea{padding:10px;resize:none;min-height:64px;}
 .sub_wrap .tbl_view .td_content{display:block;height:auto;}
 .sub_wrap .tbl_view{margin-bottom:20px;}
 .sub_wrap .tbl_view th,

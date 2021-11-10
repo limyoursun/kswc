@@ -226,6 +226,10 @@
 .common04 h3::before{display:inline-block;content:'\f192';font-family:'axicon';margin-right:5px;color:#aaa;}
 
 /* 본부용 상황판 */
+input[type=text]:disabled,
+textarea:disabled{border:1px solid transparent;}
+.listcolon span::after{display:inline-block;content:',';}
+.listcolon span:last-child:after{display:none;}
 .situationinfo_wrap{width:500px;}
 .notice_wrap{width:470px;}
 .synthesis_wrap{width:570px;}

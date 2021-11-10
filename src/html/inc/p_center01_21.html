@@ -108,6 +108,13 @@
 </div>
 </div>
 <script>
+  $('textarea').each(function () {
+    this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
+  }).on('input', function () {
+    this.style.height = 'auto';
+    this.style.height = (this.scrollHeight) + 'px';
+  });
+
   var fileTarget = $('.filebox .upload-hidden');
   fileTarget.on('change', function () {
     if (window.FileReader) {
