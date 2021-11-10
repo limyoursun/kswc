@@ -28,6 +28,23 @@ $(function () {
     }
   });
 
+    // tab
+    var tab_conts = $('.tab_conts'),
+      tab_list = $('.tab_list'),
+      tab_btn = $('.tab_list li');
+
+    tab_conts.find('.tab_cont').hide();
+    tab_conts.find('.tab_cont:first').show();
+    tab_list.find('li:first').find('a').addClass('on');
+    tab_btn.on('click', 'a', function (e) {
+      e.preventDefault();
+      var getId = $(this).prop('href').split('#')[1];
+      $(this).parents('.tab').next('.tab_conts').find('.tab_cont').hide();
+      $(this).parents('.tab_list').find('a').removeClass('on');
+      $(this).addClass('on');
+      $('#' + getId).show();
+    });
+
   // pop
   var popBtn = $('[openpop]');
   popBtn.on('click', function () {

@@ -77,24 +77,44 @@
         <!-- 위 div에 classname none을 추가하면
                 경보 상황 없음 상황 css가 적용 됩니다.-->
         <div class="situation_wrap">
-          <div class="state_wrap">
+          <div class="state_wrap flex_wrap f_sb">
             <div class="flex_wrap f_s">
               <h2>실상황</h2>
               <div>
-                <h3>우주전파환경 경보 <b>G4</b> 발령</h3>
+                <h3>위기경보재난 <b>관심</b> 상황</h3>
                 <p>2021-09-23 15:30:00</p>
               </div>
               <h2></h2>
+            </div>
+            <div class="phase_wrap">
+              <ul>
+                <li class="on">
+                  <b>관심</b>
+                  <p>2021-07-01 16:30:00</p>
+                </li>
+                <li class="on">
+                  <b>주의</b>
+                  <p>2021-07-01 16:30:00</p>
+                </li>
+                <li class="on">
+                  <b>경계</b>
+                  <p>2021-07-01 16:30:00</p>
+                </li>
+                <li class="on">
+                  <b>심각</b>
+                  <p>2021-07-01 16:30:00</p>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="head_con flex_wrap f_sb">
             <div class="step situationinfo_wrap">
               <h3>우주전파재난 상황 분석 정보</h3>
               <ul class="list_depth1">
-                <li>
+                <li class="on">
                   <div class="tit">
                     <p>상황 판단회의 보고서</p>
-                    <button type="button" class="btn_open">
+                    <button type="button" class="btn_open on">
                       <span class=""></span>
                     </button>
                   </div>
@@ -109,44 +129,53 @@
                     </li>
                   </ul>
                 </li>
-                <li>
+                <li class="on">
                   <div class="tit">
                     <p>상황 보고서</p>
-                    <button type="button" class="btn_open">
+                    <button type="button" class="btn_open on">
                       <span class=""></span>
                     </button>
                   </div>
                   <ul class="list_depth2">
                     <li>
                       <div class="tit">
-                        <p>3-1. 본부 담당자 상황전파</p>
                         <dl>
-                          <dt>담당자</dt>
-                          <dd>권은주</dd>
-                          <dt>완료시각</dt>
-                          <dd>2021-09-23 16:35:00</dd>
+                          <dt>1차 경과 보고서</dt>
+                          <dd>2020.06.30</dd>
                         </dl>
                       </div>
                     </li>
                     <li>
                       <div class="tit">
-                        <p>3-2. 주관기관 및 유관기관 상황전파</p>
                         <dl>
-                          <dt>담당자</dt>
-                          <dd>기획팀장</dd>
-                          <dt>완료시각</dt>
-                          <dd>2021-09-23 16:38:00</dd>
+                          <dt>상황 발생 보고서</dt>
+                          <dd>2020.06.30</dd>
+                        </dl>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li class="on">
+                  <div class="tit">
+                    <p>보도자료 보고서</p>
+                    <button type="button" class="btn_open on">
+                      <span class=""></span>
+                    </button>
+                  </div>
+                  <ul class="list_depth2">
+                    <li>
+                      <div class="tit">
+                        <dl>
+                          <dt>상황 경과 보도자료</dt>
+                          <dd>2020.06.30</dd>
                         </dl>
                       </div>
                     </li>
                     <li>
                       <div class="tit">
-                        <p>3-3. 기관장 상황전파</p>
                         <dl>
-                          <dt>담당자</dt>
-                          <dd>대응반장</dd>
-                          <dt>완료시각</dt>
-                          <dd>2021-09-23 16:45:00</dd>
+                          <dt>상황 발생 보도자료</dt>
+                          <dd>2020.06.30</dd>
                         </dl>
                       </div>
                     </li>
@@ -154,7 +183,7 @@
                 </li>
                 <li>
                   <div class="tit">
-                    <p>보도자료 보고서</p>
+                    <p>위기징후 보고서</p>
                     <button type="button" class="btn_open">
                       <span class=""></span>
                     </button>
@@ -162,34 +191,43 @@
                   <ul class="list_depth2">
                     <li>
                       <div class="tit">
-                        <p>4-1. 상황 발생 보고서 작성</p>
                         <dl>
-                          <dt>담당자</dt>
-                          <dd>문준철</dd>
-                          <dt>완료시각</dt>
-                          <dd>2021-09-23 17:50:00</dd>
+                          <dt>상황 경과 보도자료</dt>
+                          <dd>2020.06.30</dd>
                         </dl>
                       </div>
                     </li>
                     <li>
                       <div class="tit">
-                        <p>4-2. 상황 발생 메모보고/메일 보고</p>
                         <dl>
-                          <dt>담당자</dt>
-                          <dd>김재훈</dd>
-                          <dt>완료시각</dt>
-                          <dd>2021-09-23 17:00:00</dd>
+                          <dt>상황 발생 보도자료</dt>
+                          <dd>2020.06.30</dd>
+                        </dl>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="tit">
+                    <p>우주전파환경 종합 보고서</p>
+                    <button type="button" class="btn_open">
+                      <span class=""></span>
+                    </button>
+                  </div>
+                  <ul class="list_depth2">
+                    <li>
+                      <div class="tit">
+                        <dl>
+                          <dt>상황 경과 보도자료</dt>
+                          <dd>2020.06.30</dd>
                         </dl>
                       </div>
                     </li>
                     <li>
                       <div class="tit">
-                        <p>4-3. 상황 발생 보고서 게시 (누리집, SNS 등)</p>
                         <dl>
-                          <dt>담당자</dt>
-                          <dd>홍길동</dd>
-                          <dt>완료시각</dt>
-                          <dd>2021-09-23 17:00:00</dd>
+                          <dt>상황 발생 보도자료</dt>
+                          <dd>2020.06.30</dd>
                         </dl>
                       </div>
                     </li>
@@ -198,8 +236,86 @@
               </ul>
             </div>
             <div class="notice_wrap">
+              <div>
+                <div class="tab box_tab">
+                  <ul class="tab_list">
+                    <li><a href="#tab01" class="on">Xray</a></li>
+                    <li><a href="#tab02">Proton</a></li>
+                    <li><a href="#tab03">Kp-Index</a></li>
+                    <li><a href="#tab04">The Sun<br>(EUV)</a></li>
+                    <li><a href="#tab05">Coronal<br>Mass<br>Ejections</a></li>
+                  </ul>
+                </div>
+                <div class="tab_conts">
+                  <div id="tab01" class="tab_cont">
+                    <img src="../images/img_xray.png" alt="Xray 임시 이미지">
+                    <ul class="criteria_wrap">
+                      <li style="top:35px;">R5 발령기준</li>
+                      <li style="top:56px;">R4 발령기준</li>
+                      <li style="top:86px;">R3 발령기준</li>
+                      <li style="top:103px;">R2 발령기준</li>
+                      <li style="top:120px;">R1 발령기준</li>
+                    </ul>
+                  </div>
+                  <div id="tab02" class="tab_cont">
+                    <img src="http://placehold.it/418x302" alt="Proton 임시 이미지">
+                  </div>
+                  <div id="tab03" class="tab_cont">
+                    <img src="http://placehold.it/418x302" alt="Kp-Index 임시 이미지">
+                  </div>
+                  <div id="tab04" class="tab_cont">
+                    <img src="http://placehold.it/418x302" alt="The Sun(EUV) 임시 이미지">
+                  </div>
+                  <div id="tab05" class="tab_cont">
+                    <img src="http://placehold.it/418x302" alt="Coronal Mass Ejections 임시 이미지">
+                  </div>
+                </div>
+              </div>
+              <div class="notice">
+                <div class="flex_wrap f_sb">
+                  <h3>유관기관 피해상황</h3>
+                  <a href="#">
+                    <i class="axi axi-plus"></i>
+                  </a>
+                </div>
+                <div>
+                  <div class="main_notice flex_wrap f_sb">
+                    <img src="../images/ico_notice.png" alt="확성기 아이콘">
+                    <div>
+                      <b>A 항공 피해발생건 10월 15일(금)</b>
+                      <p>2021.10.15일 발생한 A 항공 피해상황관련 내용입니다.</p>
+                    </div>
+                  </div>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <span>B통신사 피해발생</span>
+                        <span>2020.06.30</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span>전력 피해발생</span>
+                        <span>2020.06.30</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span>C 항공 피해발생</span>
+                        <span>2020.06.30</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div class="synthesis_wrap">
+              <a href="#">
+                <p>우주전파재난 상황 발령 &sol; 변경</p>
+              </a>
+              <div>
+                <img src="../images/img_organization.png" alt="위기관리 종합 체계도">
+              </div>
             </div>
           </div>
         </div>
