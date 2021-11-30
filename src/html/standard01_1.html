@@ -19,10 +19,12 @@
         <div class="article">
           <div class="tbl_wrap">
             <table class="tbl_view">
+                <!-- 아래 caption을 추가해주세요 -->
               <caption>실무/표준 메뉴얼 등록 테이블</caption>
               <colgroup>
-                <col width="180">
-                <col width="*">
+                <!-- 아래 width 작성 방식을 변경해주세요 -->
+                <col style="width:180px">
+                <col style="width:auto">
               </colgroup>
               <tbody>
                 <tr>
@@ -40,17 +42,21 @@
                   </td>
                 </tr>
                 <tr>
-                  <th><label for="content">내용</label></th>
+                  <!-- 아래 for를 title로 변경해주세요 -->
+                  <th><label title="content">내용</label></th>
                   <td>
-                    <textarea id="summernote" title="content" name="editordata"></textarea>
+                    <!-- textarea를 div로 변경해주세요 -->
+                    <div id="summernote" title="content"></div>
                   </td>
                 </tr>
                 <tr>
-                  <th><label for="file">첨부파일</label></th>
+                  <!-- 아래 for를 title로 변경해주세요 -->
+                  <th><label title="file">첨부파일</label></th>
                   <td>
                     <div class="manual_attach">
                       <div class="btn_upload_wrap">
-                        <input type="file" id="input_file" multiple="multiple">
+                      <!-- 아래 title="파일등록" 을 추가해주세요 -->
+                        <input type="file" id="input_file" multiple="multiple" title="파일 등록">
                         <button type="button" class="btn_axi btn_upload btn_l btn_skyblueline">파일첨부</button>
                       </div>
                       <form name="uploadForm" id="uploadForm" enctype="multipart/form-data" method="post">

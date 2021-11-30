@@ -10,17 +10,17 @@ $(function () {
     regional: ["ko"],
     dateFormat: "yy-mm-dd"
   });
-  $("[dataformat='datepic']").datepicker({
+  $(".datepic").datepicker({
     buttonText: "날짜를 선택해주세요."
   });
-  var from = $("[dataformat='from']").datepicker({
+  var from = $(".datepic.from").datepicker({
     buttonText: "시작날짜를 선택해주세요.",
     onClose: function (selectedDate) {
       var getName = $(this).attr('name');
       $("input[name='" + getName + "'].to").datepicker("option", "minDate", selectedDate);
     }
   });
-  var to = $("[dataformat='to']").datepicker({
+  var to = $(".datepic.to").datepicker({
     buttonText: "종료날짜를 선택해주세요.",
     onClose: function (selectedDate) {
       var getName = $(this).attr('name');
@@ -51,8 +51,8 @@ $(function () {
     var target = $(this).attr('openpop');
     $('#' + target).show();
   })
-  var closePop = $('.btn_pop_close');
-  closePop.on('click', function () {
+
+  $('.btn_pop_close').on('click', function () {
     $(this).parents('.pop_overlay').hide();
   })
 

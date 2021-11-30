@@ -3,7 +3,7 @@
     <div class="pop_wrap w_700">
       <div class="pop_tit">
         <h1>ㅣ상시업무ㅣ청사시설 유지관리</h1>
-        <button type="button" class="btn_pop_close" closePop></button>
+        <button type="button" class="btn_pop_close"></button>
       </div>
       <div class="pop_body">
         <div class="pop_cont">
@@ -19,19 +19,19 @@
               </dl>
               <div class="tbl_pop">
                 <div class="tbl_top flex_wrap f_sb">
-                  <h3>특이 사항 작성</h3>
+                  <h3>특이사항 작성</h3>
                 </div>
                 <table class="tbl_view th_20">
-                  <caption>특이 사항 작성</caption>
+                  <caption>특이사항 작성</caption>
                   <colgroup>
-                    <col width="10">
-                    <col width="500">
+                    <col style="width:10px">
+                    <col style="width:500px">
                   </colgroup>
                   <tbody>
                     <tr>
-                      <th>내용</th>
+                      <th><label for="situation3">내용</label></th>
                       <td>
-                        <textarea name="situation" placeholder="내용을 입력하여 주세요."></textarea>
+                        <textarea id="situation3" placeholder="내용을 입력하여 주세요."></textarea>
                       </td>
                     </tr>
                   </tbody>
@@ -49,12 +49,12 @@
             <h3>업무 수행 여부</h3>
             <ul>
               <li>
-                <input type="radio" id="done1" name="taskdone">
-                <label for="done1">완료</label>
+                <input type="radio" id="done3" name="taskdone">
+                <label for="done3">완료</label>
               </li>
               <li>
-                <input type="radio" id="incomplete1" name="taskdone">
-                <label for="incomplete1">미완료</label>
+                <input type="radio" id="incomplete3" name="taskdone">
+                <label for="incomplete3">미완료</label>
               </li>
             </ul>
           </div>
@@ -73,36 +73,5 @@
   }).on('input', function () {
     this.style.height = 'auto';
     this.style.height = (this.scrollHeight) + 'px';
-  });
-
-  function selectAll(selectAll) {
-    const checkboxes
-      = document.getElementsByName('check');
-
-    checkboxes.forEach((checkbox) => {
-      checkbox.checked = selectAll.checked;
-    })
-  }
-
-  $(function () {
-    $("#send_type2").click(function () {
-      var chk = $(this).is(':checked');
-      if (chk) {
-        $("#send_type1").attr('disabled', true);
-      }
-      else {
-        $("#send_type1").attr('disabled', false);
-      }
-    });
-
-    $("#send_type1").click(function () {
-      var chk = $(this).is(':checked');
-      if (chk) {
-        $("#send_type2").attr('disabled', true);
-      }
-      else {
-        $("#send_type2").attr('disabled', false);
-      }
-    });
   });
 </script>

@@ -3,7 +3,7 @@
     <div class="pop_wrap w_700">
       <div class="pop_tit">
         <h1>ㅣ경보발생ㅣ상황 발생 보고서 외부메일 보고</h1>
-        <button type="button" class="btn_pop_close" closePop></button>
+        <button type="button" class="btn_pop_close"></button>
       </div>
       <div class="pop_body">
         <div class="pop_cont">
@@ -16,14 +16,14 @@
                 <table class="tbl_view th_20">
                   <caption>전송 메시지</caption>
                   <colgroup>
-                    <col width="10">
-                    <col width="500">
+                    <col style="width:10px">
+                    <col style="width:500px">
                   </colgroup>
                   <tbody>
                     <tr>
-                      <th>내용</th>
+                      <th><label for="situation14">내용</label></th>
                       <td>
-                        <textarea name="situation">- 전리층 교란으로 단파통신 장애 발생 가능
+                        <textarea id="situation14">- 전리층 교란으로 단파통신 장애 발생 가능
 - 극항로를 운항하는 항공기의 단파통신 및 GPS 항법 장애 발생 가능
 ※ 자세한 사항은 추후 상황 경과보고서로 보고 드리겠습니다.</textarea>
                       </td>
@@ -32,9 +32,9 @@
                       <th>파일 첨부</th>
                       <td>
                         <div class="filebox bs3-primary">
-                          <input class="upload-name" value="파일 첨부" disabled="disabled">
+                          <input class="upload-name" value="파일 첨부" disabled="disabled" title="파임첨부">
                           <label for="ex_filename" class="btn_l btn_skyblue">업로드</label>
-                          <input type="file" id="ex_filename" class="upload-hidden">
+                          <input type="file" id="ex_filename" class="upload-hidden" title="파임첨부">
                         </div>
                       </td>
                     </tr>
@@ -49,14 +49,14 @@
                   </div>
                   <table class="tbl_com">
                     <colgroup>
-                      <col width="80">
-                      <col width="150">
-                      <col width="*">
+                      <col style="width:80px">
+                      <col style="width:150px">
+                      <col style="width:auto">
                     </colgroup>
                     <thead>
                       <tr>
                         <th scope="col">
-                          <input type="checkbox" onclick='selectAll(this)'>
+                          <input type="checkbox" title="check" onclick='selectAll(this)'>
                         </th>
                         <th scope="col">NO</th>
                         <th scope="col">이름</th>
@@ -65,13 +65,13 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td><input type="checkbox" name="check"></td>
+                        <td><input type="checkbox" title="check"></td>
                         <td>2</td>
                         <td>2021-09-23 15:01:00</td>
                         <td>G4</td>
                       </tr>
                       <tr>
-                        <td><input type="checkbox" name="check"></td>
+                        <td><input type="checkbox" title="check"></td>
                         <td>2</td>
                         <td>2021-09-23 15:01:00</td>
                         <td>G4</td>
@@ -93,7 +93,7 @@
                     <div>
                       <input type="checkbox" name="send" id="send_type2">
                       <label for="send_type2">예약발송</label>
-                      <input type="text" class="datepicker" id="date6" name="date" placeholder="YYYY-MM-DD" readonly
+                      <input type="text" class="datepicker datepic from" id="date6" name="date" placeholder="YYYY-MM-DD" readonly
                         dataformat="datepic" title="날짜 선택" value="2021-01-01">
                       <input type="time" value="11:00">
                     </div>
@@ -111,8 +111,8 @@
                   </div>
                   <table class="tbl_com">
                     <colgroup>
-                      <col width="200">
-                      <col width="*">
+                      <col style="width:200px">
+                      <col style="width:auto">
                     </colgroup>
                     <thead>
                       <tr>
@@ -150,12 +150,12 @@
             <h3>업무 수행 여부</h3>
             <ul>
               <li>
-                <input type="radio" id="done4" name="taskdone">
-                <label for="done4">완료</label>
+                <input type="radio" id="done14" name="taskdone">
+                <label for="done14">완료</label>
               </li>
               <li>
-                <input type="radio" id="incomplete4" name="taskdone">
-                <label for="incomplete4">미완료</label>
+                <input type="radio" id="incomplete14" name="taskdone">
+                <label for="incomplete14">미완료</label>
               </li>
             </ul>
           </div>
@@ -166,8 +166,6 @@
       </div>
     </div>
   </div>
-</div>
-</div>
 </div>
 
 <script>

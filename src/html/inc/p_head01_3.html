@@ -3,7 +3,7 @@
     <div class="pop_wrap w_700">
       <div class="pop_tit">
         <h1>피해 상황 접수 보기</h1>
-        <button type="button" class="btn_pop_close" closePop></button>
+        <button type="button" class="btn_pop_close"></button>
       </div>
       <div class="pop_body">
         <div class="pop_cont">
@@ -14,13 +14,15 @@
                 <table class="tbl_view th_25">
                   <caption>피해 상황 접수 보기</caption>
                   <colgroup>
-                    <col width="10">
-                    <col width="500">
+                    <col style="width:10px">
+                    <col style="width:500px">
+                    <col style="width:10px">
+                    <col style="width:500px">
                   </colgroup>
                   <tbody>
                     <tr>
                       <th scope="row">
-                        <label for="organ">기관명(부서명)</label>
+                        <label title="organ">기관명(부서명)</label>
                       </th>
                       <td colspan="3">
                         <p class="alignC">대한항공</p>
@@ -28,13 +30,13 @@
                     </tr>
                     <tr>
                       <th scope="row">
-                        <label for="date">일자</label>
+                        <label title="date">일자</label>
                       </th>
                       <td>
                         <span>0000. 0. 00.(ㅇ)</span>
                       </td>
                       <th scope="row">
-                        <label for="time">시간</label>
+                        <label title="time">시간</label>
                       </th>
                       <td>
                         <span>00:00</span>
@@ -42,7 +44,7 @@
                     </tr>
                     <tr>
                       <th scope="row">
-                        <label for="place">지역(장소)</label>
+                        <label title="place">지역(장소)</label>
                       </th>
                       <td colspan="3">
                         <p class="alignC listcolon">
@@ -53,10 +55,10 @@
                     </tr>
                     <tr>
                       <th scope="row">
-                        <label for="content">피해(장애) 내역</label>
+                        <label title="content">피해(장애) 내역</label>
                       </th>
                       <td colspan="3">
-                        <textarea disabled name="content">
+                        <textarea disabled title="content">
 o 총 2편의 미국→한국 항공기 북극항로 우회
 ① KE 0921(시애틀→인천) : 비행시간 2시간 증가
 ② KE515(캐나다→한국) : 비행시간 3시간 증가</textarea>
@@ -64,10 +66,10 @@ o 총 2편의 미국→한국 항공기 북극항로 우회
                     </tr>
                     <tr>
                       <th scope="row">
-                        <label for="content2">주요 조치사항</label>
+                        <label title="content2">주요 조치사항</label>
                       </th>
                       <td colspan="3">
-                        <textarea disabled name="content2">
+                        <textarea disabled title="content2">
 o 총 2편의 항공기 북극항로 우회
 o 향후 출발 예정인 3편의 항공기 우회항로 지속 이용
 ※ 비행시간 증가로 인해, 연결편 항공기를 탑승하지 못한 승객에 대하여 연결편 항공기 제공 등 조치</textarea>
@@ -75,10 +77,10 @@ o 향후 출발 예정인 3편의 항공기 우회항로 지속 이용
                     </tr>
                     <tr>
                       <th scope="row">
-                        <label for="specialnote">특이사항</label>
+                        <label title="specialnote">특이사항</label>
                       </th>
                       <td colspan="3">
-                        <textarea name="specialnote">늘어나는 textarea</textarea>
+                        <textarea title="specialnote">늘어나는 textarea</textarea>
                       </td>
                     </tr>
                   </tbody>

@@ -3,7 +3,7 @@
     <div class="pop_wrap w_800">
       <div class="pop_tit">
         <h1>ㅣ경보경과ㅣ상황판단회의 보고서 작성</h1>
-        <button type="button" class="btn_pop_close" closePop></button>
+        <button type="button" class="btn_pop_close"></button>
       </div>
       <div class="pop_body">
         <div class="pop_cont">
@@ -14,39 +14,37 @@
                 <table class="tbl_view th_20">
                   <caption>상황판단회의 보고서 작성</caption>
                   <colgroup>
-                    <col width="10">
-                    <col width="500">
+                    <col style="width:10px">
+                    <col style="width:500px">
                   </colgroup>
                   <tbody>
                     <tr>
                       <th scope="row">
-                        <label for="date">일시</label>
+                        <label for="date19">일시</label>
                       </th>
                       <td>
-                        <input type="text" class="datepicker" id="date4" name="date" placeholder="YYYY-MM-DD" readonly
+                        <input type="text" class="datepicker" id="date19" name="date" placeholder="YYYY-MM-DD" readonly
                           dataformat="datepic" title="날짜 선택" value="2021-01-01">
                       </td>
                     </tr>
                     <tr>
-                      <th scope="row">
-                        <label for="reason">상황 결정</label>
-                      </th>
+                      <th scope="row">상황 결정</th>
                       <td class="td_select">
                         <ul>
                           <li>
-                            <input type="radio" name="stage" id="stage1">
+                            <input type="radio" title="stage" id="stage1">
                             <label for="stage1">해제</label>
                           </li>
-                          <li><input type="radio" name="stage" id="stage2">
+                          <li><input type="radio" title="stage" id="stage2">
                             <label for="stage2">관심</label>
                           </li>
-                          <li><input type="radio" name="stage" id="stage3">
+                          <li><input type="radio" title="stage" id="stage3">
                             <label for="stage3">주의</label>
                           </li>
-                          <li><input type="radio" name="stage" id="stage4">
+                          <li><input type="radio" title="stage" id="stage4">
                             <label for="stage4">경계</label>
                           </li>
-                          <li><input type="radio" name="stage" id="stage5">
+                          <li><input type="radio" title="stage" id="stage5">
                             <label for="stage5">심각</label>
                           </li>
                         </ul>
@@ -82,26 +80,26 @@
                     </tr>
                     <tr>
                       <th scope="row">
-                        <label for="reason">판정 사유</label>
+                        <label for="reason19">판정 사유</label>
                       </th>
                       <td>
-                        <input type="text" id="reason">
+                        <input type="text" id="reason19">
                       </td>
                     </tr>
                     <tr>
                       <th scope="row">
-                        <label for="analysis">상황 분석</label>
+                        <label for="analysis19">상황 분석</label>
                       </th>
                       <td>
-                        <textarea name="analysis"></textarea>
+                        <textarea id="analysis19"></textarea>
                       </td>
                     </tr>
                     <tr>
                       <th scope="row">
-                        <label for="situation">조치 현황</label>
+                        <label for="situation19">조치 현황</label>
                       </th>
                       <td>
-                        <textarea name="situation"></textarea>
+                        <textarea id="situation19"></textarea>
                       </td>
                     </tr>
                   </tbody>
@@ -117,12 +115,12 @@
                 <h3>업무 수행 여부</h3>
                 <ul>
                   <li>
-                    <input type="radio" id="done7" name="taskdone">
-                    <label for="done7">완료</label>
+                    <input type="radio" id="done19" name="taskdone">
+                    <label for="done19">완료</label>
                   </li>
                   <li>
-                    <input type="radio" id="incomplete7" name="taskdone">
-                    <label for="incomplete7">미완료</label>
+                    <input type="radio" id="incomplete19" name="taskdone">
+                    <label for="incomplete19">미완료</label>
                   </li>
                 </ul>
               </div>
@@ -136,7 +134,7 @@
     </div>
   </div>
 </div>
-</div>
+
 <script>
 $('textarea').each(function () {
   this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
