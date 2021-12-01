@@ -16,13 +16,16 @@
                 <table class="tbl_view th_20">
                   <caption>전송 메시지</caption>
                   <colgroup>
+                    <!-- 아래와 같이 width 작성 방식을 변경해주세요 -->
                     <col style="width:10px">
                     <col style="width:500px">
                   </colgroup>
                   <tbody>
                     <tr>
+                      <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                       <th><label for="situation14">내용</label></th>
                       <td>
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <textarea id="situation14">- 전리층 교란으로 단파통신 장애 발생 가능
 - 극항로를 운항하는 항공기의 단파통신 및 GPS 항법 장애 발생 가능
 ※ 자세한 사항은 추후 상황 경과보고서로 보고 드리겠습니다.</textarea>
@@ -32,8 +35,10 @@
                       <th>파일 첨부</th>
                       <td>
                         <div class="filebox bs3-primary">
+                          <!-- 아래와 같이 title 속성을 추가해주세요 -->
                           <input class="upload-name" value="파일 첨부" disabled="disabled" title="파임첨부">
                           <label for="ex_filename" class="btn_l btn_skyblue">업로드</label>
+                          <!-- 아래와 같이 title 속성을 추가해주세요 -->
                           <input type="file" id="ex_filename" class="upload-hidden" title="파임첨부">
                         </div>
                       </td>
@@ -49,6 +54,8 @@
                   </div>
                   <table class="tbl_com">
                     <colgroup>
+                      <!-- 아래와 같이 width 작성 방식을 변경해주세요 -->
+                      <col style="width:70px">
                       <col style="width:80px">
                       <col style="width:150px">
                       <col style="width:auto">
@@ -56,6 +63,7 @@
                     <thead>
                       <tr>
                         <th scope="col">
+                          <!-- 아래와 같이 title을 추가해주세요 -->
                           <input type="checkbox" title="check" onclick='selectAll(this)'>
                         </th>
                         <th scope="col">NO</th>
@@ -65,12 +73,14 @@
                     </thead>
                     <tbody>
                       <tr>
+                        <!-- 아래와 같이 title을 추가해주세요 -->
                         <td><input type="checkbox" title="check"></td>
                         <td>2</td>
                         <td>2021-09-23 15:01:00</td>
                         <td>G4</td>
                       </tr>
                       <tr>
+                        <!-- 아래와 같이 title을 추가해주세요 -->
                         <td><input type="checkbox" title="check"></td>
                         <td>2</td>
                         <td>2021-09-23 15:01:00</td>
@@ -85,7 +95,7 @@
                   <div class="tbl_top flex_wrap f_sb">
                     <h3>발송 유형</h3>
                   </div>
-                  <div class="send_type flex_wrap f_sb">
+                  <div class="send_type flex_wrap f_sa">
                     <div>
                       <input type="checkbox" name="send" id="send_type1">
                       <label for="send_type1">즉시발송</label>
@@ -93,9 +103,8 @@
                     <div>
                       <input type="checkbox" name="send" id="send_type2">
                       <label for="send_type2">예약발송</label>
-                      <input type="text" class="datepicker datepic from" id="date6" name="date" placeholder="YYYY-MM-DD" readonly
-                        dataformat="datepic" title="날짜 선택" value="2021-01-01">
-                      <input type="time" value="11:00">
+                      <!-- 아래처럼 일시를 적을 수 있도록 datetimepicker를 적용해주세요 -->
+                      <input type="text" class="datetimepicker input_calendar" title="date" style="height:35px;" value="발생일시 선택">
                     </div>
                   </div>
                 </div>
@@ -111,6 +120,7 @@
                   </div>
                   <table class="tbl_com">
                     <colgroup>
+                      <!-- 아래와 같이 width 작성 방식을 변경해주세요 -->
                       <col style="width:200px">
                       <col style="width:auto">
                     </colgroup>
@@ -150,11 +160,15 @@
             <h3>업무 수행 여부</h3>
             <ul>
               <li>
+                <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                 <input type="radio" id="done14" name="taskdone">
+                <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                 <label for="done14">완료</label>
               </li>
               <li>
+                <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                 <input type="radio" id="incomplete14" name="taskdone">
+                <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                 <label for="incomplete14">미완료</label>
               </li>
             </ul>

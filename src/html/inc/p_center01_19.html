@@ -14,17 +14,19 @@
                 <table class="tbl_view th_20">
                   <caption>상황판단회의 보고서 작성</caption>
                   <colgroup>
+                    <!-- 아래와 같이 width 작성 방식을 변경해주세요 -->
                     <col style="width:10px">
                     <col style="width:500px">
                   </colgroup>
                   <tbody>
                     <tr>
                       <th scope="row">
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <label for="date19">일시</label>
                       </th>
                       <td>
-                        <input type="text" class="datepicker" id="date19" name="date" placeholder="YYYY-MM-DD" readonly
-                          dataformat="datepic" title="날짜 선택" value="2021-01-01">
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
+                        <input type="text" class="datepicker input_calendar" title="date" value="발생시각 선택">
                       </td>
                     </tr>
                     <tr>
@@ -32,18 +34,23 @@
                       <td class="td_select">
                         <ul>
                           <li>
+                            <!-- 아래와 같이 title을 추가해주세요 -->
                             <input type="radio" title="stage" id="stage1">
                             <label for="stage1">해제</label>
                           </li>
+                          <!-- 아래와 같이 title을 추가해주세요 -->
                           <li><input type="radio" title="stage" id="stage2">
                             <label for="stage2">관심</label>
                           </li>
+                          <!-- 아래와 같이 title을 추가해주세요 -->
                           <li><input type="radio" title="stage" id="stage3">
                             <label for="stage3">주의</label>
                           </li>
+                          <!-- 아래와 같이 title을 추가해주세요 -->
                           <li><input type="radio" title="stage" id="stage4">
                             <label for="stage4">경계</label>
                           </li>
+                          <!-- 아래와 같이 title을 추가해주세요 -->
                           <li><input type="radio" title="stage" id="stage5">
                             <label for="stage5">심각</label>
                           </li>
@@ -80,25 +87,31 @@
                     </tr>
                     <tr>
                       <th scope="row">
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <label for="reason19">판정 사유</label>
                       </th>
                       <td>
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <input type="text" id="reason19">
                       </td>
                     </tr>
                     <tr>
                       <th scope="row">
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <label for="analysis19">상황 분석</label>
                       </th>
                       <td>
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <textarea id="analysis19"></textarea>
                       </td>
                     </tr>
                     <tr>
                       <th scope="row">
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <label for="situation19">조치 현황</label>
                       </th>
                       <td>
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <textarea id="situation19"></textarea>
                       </td>
                     </tr>
@@ -115,11 +128,15 @@
                 <h3>업무 수행 여부</h3>
                 <ul>
                   <li>
+                    <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                     <input type="radio" id="done19" name="taskdone">
+                    <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                     <label for="done19">완료</label>
                   </li>
                   <li>
+                    <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                     <input type="radio" id="incomplete19" name="taskdone">
+                    <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                     <label for="incomplete19">미완료</label>
                   </li>
                 </ul>
@@ -136,12 +153,12 @@
 </div>
 
 <script>
-$('textarea').each(function () {
-  this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
-}).on('input', function () {
-  this.style.height = 'auto';
-  this.style.height = (this.scrollHeight) + 'px';
-});
+  $('textarea').each(function () {
+    this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
+  }).on('input', function () {
+    this.style.height = 'auto';
+    this.style.height = (this.scrollHeight) + 'px';
+  });
 
   var fileTarget = $('.filebox .upload-hidden');
   fileTarget.on('change', function () {

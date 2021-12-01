@@ -14,72 +14,88 @@
                 <table class="tbl_view th_25">
                   <caption>위성 분야 피해 접수 작성 &sol; 내역</caption>
                   <colgroup>
+                    <!-- 아래와 같이 width 작성 방식을 변경해주세요 -->
                     <col style="width:10px">
                     <col style="width:500px">
                   </colgroup>
                   <tbody>
                     <tr>
                       <th scope="row">
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <label for="name20">제목</label>
                       </th>
                       <td colspan="3">
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <input id="name20" type="text">
                       </td>
                     </tr>
                     <tr>
                       <th scope="row">
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <label for="type20">유형</label>
                       </th>
                       <td>
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <select id="type20">
                           <option value="전체">전체</option>
                         </select>
                       </td>
                       <th scope="row">
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <label for="department20">기관명(부서)</label>
                       </th>
                       <td>
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <input id="department20" type="text">
                       </td>
                     </tr>
                     <tr>
                       <th scope="row">
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <label for="date20">일자</label>
                       </th>
                       <td colspan="3">
-                        <input type="text" class="datepicker" id="date20" name="date" placeholder="YYYY-MM-DD" readonly
-                          dataformat="datepic" title="날짜 선택" value="2021-01-01">
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
+                        <input type="text" class="datepicker input_calendar" title="date" value="발생시각 선택">
                       </td>
                     </tr>
                     <tr>
                       <th scope="row">
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <label for="place20">지역(장소)</label>
                       </th>
                       <td colspan="3">
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <textarea id="place20"></textarea>
                       </td>
                     </tr>
                     <tr>
                       <th scope="row">
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <label for="damage20">피해(장애) 내역</label>
                       </th>
                       <td colspan="3">
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <textarea id="damage20"></textarea>
                       </td>
                     </tr>
                     <tr>
                       <th scope="row">
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <label for="action20">주요 조치사항</label>
                       </th>
                       <td colspan="3">
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <textarea id="action20"></textarea>
                       </td>
                     </tr>
                     <tr>
                       <th scope="row">
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <label for="specialnote20">특이사항</label>
                       </th>
                       <td colspan="3">
+                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <textarea id="specialnote20"></textarea>
                       </td>
                     </tr>
@@ -89,9 +105,10 @@
                       </th>
                       <td colspan="3">
                         <div class="filebox bs3-primary">
+                          <!-- 아래와 같이 title을 추가해주세요 -->
                           <input class="upload-name" value="파일 첨부" disabled="disabled" title="파일 첨부">
-
                           <label for="ex_filename" class="btn_l btn_skyblue">업로드</label>
+                          <!-- 아래와 같이 title을 추가해주세요 -->
                           <input type="file" id="ex_filename" class="upload-hidden" title="파일 첨부">
                         </div>
                       </td>
@@ -105,11 +122,15 @@
                 <h3>업무 수행 여부</h3>
                 <ul>
                   <li>
+                    <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                     <input type="radio" id="done20" name="taskdone">
+                    <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                     <label for="done20">완료</label>
                   </li>
                   <li>
+                    <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                     <input type="radio" id="incomplete20" name="taskdone">
+                    <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                     <label for="incomplete20">미완료</label>
                   </li>
                 </ul>
@@ -126,12 +147,12 @@
 </div>
 
 <script>
-$('textarea').each(function () {
-  this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
-}).on('input', function () {
-  this.style.height = 'auto';
-  this.style.height = (this.scrollHeight) + 'px';
-});
+  $('textarea').each(function () {
+    this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
+  }).on('input', function () {
+    this.style.height = 'auto';
+    this.style.height = (this.scrollHeight) + 'px';
+  });
 
   var fileTarget = $('.filebox .upload-hidden');
   fileTarget.on('change', function () {

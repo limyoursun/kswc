@@ -14,6 +14,7 @@
                 <table class="tbl_view th_25">
                   <caption>피해 상황 접수 보기</caption>
                   <colgroup>
+                    <!-- 아래와 같이 width 작성 형식을 변경해주세요 -->
                     <col style="width:10px">
                     <col style="width:500px">
                     <col style="width:10px">
@@ -22,6 +23,7 @@
                   <tbody>
                     <tr>
                       <th scope="row">
+                        <!-- 아래와 같이 for를 title로 변경해주세요 -->
                         <label title="organ">기관명(부서명)</label>
                       </th>
                       <td colspan="3">
@@ -30,12 +32,14 @@
                     </tr>
                     <tr>
                       <th scope="row">
+                        <!-- 아래와 같이 for를 title로 변경해주세요 -->
                         <label title="date">일자</label>
                       </th>
                       <td>
                         <span>0000. 0. 00.(ㅇ)</span>
                       </td>
                       <th scope="row">
+                        <!-- 아래와 같이 for를 title로 변경해주세요 -->
                         <label title="time">시간</label>
                       </th>
                       <td>
@@ -44,6 +48,7 @@
                     </tr>
                     <tr>
                       <th scope="row">
+                        <!-- 아래와 같이 for를 title로 변경해주세요 -->
                         <label title="place">지역(장소)</label>
                       </th>
                       <td colspan="3">
@@ -55,9 +60,11 @@
                     </tr>
                     <tr>
                       <th scope="row">
+                        <!-- 아래와 같이 for를 title로 변경해주세요 -->
                         <label title="content">피해(장애) 내역</label>
                       </th>
                       <td colspan="3">
+                        <!-- 아래와 같이 for를 title로 변경해주세요 -->
                         <textarea disabled title="content">
 o 총 2편의 미국→한국 항공기 북극항로 우회
 ① KE 0921(시애틀→인천) : 비행시간 2시간 증가
@@ -66,9 +73,11 @@ o 총 2편의 미국→한국 항공기 북극항로 우회
                     </tr>
                     <tr>
                       <th scope="row">
+                        <!-- 아래와 같이 for를 title로 변경해주세요 -->
                         <label title="content2">주요 조치사항</label>
                       </th>
                       <td colspan="3">
+                        <!-- 아래와 같이 for를 title로 변경해주세요 -->
                         <textarea disabled title="content2">
 o 총 2편의 항공기 북극항로 우회
 o 향후 출발 예정인 3편의 항공기 우회항로 지속 이용
@@ -77,9 +86,11 @@ o 향후 출발 예정인 3편의 항공기 우회항로 지속 이용
                     </tr>
                     <tr>
                       <th scope="row">
+                        <!-- 아래와 같이 for를 title로 변경해주세요 -->
                         <label title="specialnote">특이사항</label>
                       </th>
                       <td colspan="3">
+                        <!-- 아래와 같이 for를 title로 변경해주세요 -->
                         <textarea title="specialnote">늘어나는 textarea</textarea>
                       </td>
                     </tr>
@@ -98,10 +109,10 @@ o 향후 출발 예정인 3편의 항공기 우회항로 지속 이용
 </div>
 
 <script>
-$('textarea').each(function () {
-  this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
-}).on('input', function () {
-  this.style.height = 'auto';
-  this.style.height = (this.scrollHeight) + 'px';
-});
+  $('textarea').each(function () {
+    this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
+  }).on('input', function () {
+    this.style.height = 'auto';
+    this.style.height = (this.scrollHeight) + 'px';
+  });
 </script>

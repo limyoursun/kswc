@@ -114,5 +114,6 @@ dl>.dl_inline::before{content:',';margin-right:5px;}
 .issued_wrap ul{margin-right:10px;}
 
 /* 20211201 추가 */
+.pop_wrap .tbl_view input.datepicker{width:160px;}
 .pop_wrap .tbl_view td span.note-icon-caret,
 .pop_wrap .tbl_view td span.note-current-fontsize{line-height:1.4;}

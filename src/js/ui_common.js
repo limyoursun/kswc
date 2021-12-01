@@ -2,10 +2,11 @@ $(function () {
   /*calendar*/
   // 시간까지
   $.datetimepicker.setLocale('kr');
-  $('#datetimepicker').datetimepicker();
+  $('.datetimepicker').datetimepicker();
 // 시간제외
   $.datetimepicker.setLocale('kr');
-  $('#datepicker').datetimepicker({
+  $('.datepicker').datetimepicker({
+    format: 'Y/m/d',
     timepicker: false
   });
 // 시작 날짜
