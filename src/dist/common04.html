@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,8 @@
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/sub.css">
   <link rel="stylesheet" href="../css/pop.css">
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.css">
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.css">
 </head>
 
 <body>
@@ -92,9 +95,10 @@
             <table class="tbl_com tbl_tit">
               <caption>코드 리스트 제목 테이블</caption>
               <colgroup>
-                <col width="100">
-                <col width="*">
-                <col width="185">
+                <!-- 아래와 같이 width 작성 형식을 변경해주세요 -->
+                <col style="width:100px">
+                <col style="width:auto">
+                <col style="width:185px">
                 <col class="fix_scroll">
               </colgroup>
               <thead>
@@ -110,9 +114,10 @@
               <table class="tbl_com">
                 <caption>코드 리스트 내용 테이블</caption>
                 <colgroup>
-                  <col width="100">
-                  <col width="*">
-                  <col width="185">
+                  <!-- 아래와 같이 width 작성 형식을 변경해주세요 -->
+                  <col style="width:100px">
+                  <col style="width:auto">
+                  <col style="width:185px">
                 </colgroup>
                 <tbody>
                   <tr>
@@ -152,11 +157,12 @@
             <table class="tbl_com tbl_tit">
               <caption>코드 리스트 제목 테이블</caption>
               <colgroup>
-                <col width="100">
-                <col width="250">
-                <col width="*">
-                <col width="135">
-                <col width="135">
+                <!-- 아래와 같이 width 작성 형식을 변경해주세요 -->
+                <col style="width:100px">
+                <col style="width:250px">
+                <col style="width:auto">
+                <col style="width:135px">
+                <col style="width:135px">
                 <col class="fix_scroll">
               </colgroup>
               <thead>
@@ -174,11 +180,12 @@
               <table class="tbl_com">
                 <caption>코드 리스트 내용 테이블</caption>
                 <colgroup>
-                  <col width="100">
-                  <col width="250">
-                  <col width="*">
-                  <col width="135">
-                  <col width="135">
+                  <!-- 아래와 같이 width 작성 형식을 변경해주세요 -->
+                  <col style="width:100px">
+                  <col style="width:250px">
+                  <col style="width:auto">
+                  <col style="width:135px">
+                  <col style="width:135px">
                 </colgroup>
                 <tbody>
                   <tr>
@@ -213,34 +220,35 @@
   </div>
   <div class="pop_overlay">
   <div class="pop_area">
-  <div class="pop_wrap w_400">
-    <div class="pop_tit">
-      <h1>코드항목 추가</h1>
-      <button type="button" class="btn_pop_close"></button>
-    </div>
-    <div class="pop_body">
-      <div class="pop_cont">
-        <table class="tbl_view alignL">
-          <caption>코드항목 추가 테이블</caption>
-          <colgroup>
-            <col width='150'>
-            <col width='*'>
-          </colgroup>
-          <tr>
-            <th>
-              <label for="addcode">코드그룹추가</label>
-            </th>
-            <td>
-              <input type="text" id="addcode">
-            </td>
-          </tr>
-        </table>
-        <div class="btn_wrap alignC">
-          <button type="button" class="btn btn_blue">적용</button>
+    <div class="pop_wrap w_400">
+      <div class="pop_tit">
+        <h1>코드항목 추가</h1>
+        <button type="button" class="btn_pop_close"></button>
+      </div>
+      <div class="pop_body">
+        <div class="pop_cont">
+          <table class="tbl_view alignL">
+            <caption>코드항목 추가 테이블</caption>
+            <colgroup>
+              <!-- 아래와 같이 width 작성 형식을 변경해주세요 -->
+              <col style="width:150px">
+              <col style="width:auto">
+            </colgroup>
+            <tr>
+              <th>
+                <label for="addcode">코드그룹추가</label>
+              </th>
+              <td>
+                <input type="text" id="addcode">
+              </td>
+            </tr>
+          </table>
+          <div class="btn_wrap alignC">
+            <button type="button" class="btn btn_blue">적용</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 </div>
   <div class="pop_overlay">
@@ -255,8 +263,9 @@
           <table class="tbl_view alignL">
             <caption>하위코드 추가 테이블</caption>
             <colgroup>
-              <col width='150'>
-              <col width='*'>
+              <!-- 아래와 같이 width 작성 형식을 변경해주세요 -->
+              <col style="width:150px">
+              <col style="width:auto">
             </colgroup>
             <tr>
               <th>
@@ -287,6 +296,7 @@
 <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
 <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
 <script src="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.full.min.js"></script>
 <script src="../plugins/jqueryui-timepicker-addon/dist/i18n/jquery-ui-timepicker-ko.js"></script>
 <script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
 <script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>

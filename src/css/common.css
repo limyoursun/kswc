@@ -269,3 +269,7 @@ nav h1{padding-right:20px;background-color:#000d2a;line-height:127px;text-align:
 .note-modal-body .note-group-select-from-files label{display:block;width: 90px;height:33px;padding:0;padding-left:10px;border:1px solid #284278;background-color:#284278;cursor:pointer;font-size:16px;font-weight:normal;color:#f8f8f8;line-height:30px;}
 .note-modal-body .note-group-select-from-files label:hover,
 .note-modal-body .note-group-select-from-files label:active{background-color:#395fac;border:1px solid #395fac;color:#fff;}
+
+/* 20211201 추가 */
+.input_calendar{background: #fff url(../images/btn_calendar.png) no-repeat top 4px right 4px;background-size:20px;
+cursor:pointer;}

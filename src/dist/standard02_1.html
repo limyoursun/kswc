@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,8 @@
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/sub.css">
   <link rel="stylesheet" href="../css/pop.css">
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.css">
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.css">
 </head>
 
 <body>
@@ -86,17 +89,17 @@
         <div class="article">
           <div class="tbl_wrap">
             <table class="tbl_view">
-                <!-- 아래 caption을 추가해주세요 -->
+                <!-- 아래와 같이 caption을 추가해주세요 -->
               <caption>행동 메뉴얼 등록 테이블</caption>
               <colgroup>
-                <!-- 아래 width 작성 방식을 변경해주세요 -->
+                <!-- 아래와 같이 width 작성 방식을 변경해주세요 -->
                 <col style="width:180px">
                 <col style="width:auto">
               </colgroup>
               <tbody>
                 <tr>
                   <th><label for="title">제목</label></th>
-                  <!-- 아래 input에 id="title" 를 추가해주세요 -->
+                  <!-- 아래와 같이 input에 id="title" 를 추가해주세요 -->
                   <td><input type="text" id="title" value="대응반 비상소집 응소"></td>
                 </tr>
                 <tr>
@@ -112,7 +115,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <!-- 아래 for를 title로 변경해주세요 -->
+                  <!-- 아래와 같이 for를 title로 변경해주세요 -->
                   <th><label title="content">내용</label></th>
                   <td>
                     <!-- textarea를 div로 수정해주세요 -->
@@ -120,12 +123,12 @@
                   </td>
                 </tr>
                 <tr>
-                  <!-- 아래 for를 title로 변경해주세요 -->
+                  <!-- 아래와 같이 for를 title로 변경해주세요 -->
                   <th><label title="file">첨부파일</label></th>
                   <td>
                     <div class="manual_attach">
                       <div class="btn_upload_wrap">
-                        <!-- 아래 input에 title="파일등록" 을 추가해주세요 -->
+                        <!-- 아래와 같이 input에 title="파일등록" 을 추가해주세요 -->
                         <input type="file" id="input_file" multiple="multiple" title="파일등록">
                         <button type="button" class="btn_axi btn_upload btn_l btn_skyblueline">파일첨부</button>
                       </div>
@@ -157,6 +160,7 @@
 <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
 <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
 <script src="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.full.min.js"></script>
 <script src="../plugins/jqueryui-timepicker-addon/dist/i18n/jquery-ui-timepicker-ko.js"></script>
 <script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
 <script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>

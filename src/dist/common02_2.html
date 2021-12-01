@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,8 @@
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/sub.css">
   <link rel="stylesheet" href="../css/pop.css">
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.css">
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.css">
 </head>
 
 <body>
@@ -88,19 +91,24 @@
             <table class="tbl_view">
               <caption>그룹 분류 테이블</caption>
               <colgroup>
+                <!-- 아래와 같이 width 작성 형식을 변경해주세요 -->
                 <col style="width:180px">
+                <col style="width:auto">
+                <col style="width:auto">
                 <col style="width:auto">
               </colgroup>
               <tbody>
                 <tr>
                   <th class="input_necessary">
-                    <label for="sort">그룹종류</label>
+                    <!-- 아래와 같이 for를 title로 변경해주세요 -->
+                    <label title="sort">그룹종류</label>
                   </th>
                   <td style="width:200px;">
                     <span>내부</span>
                   </td>
                   <th class="input_necessary" style="width:150px;">
-                    <label for="name">그룹명</label>
+                    <!-- 아래와 같이 for를 title로 변경해주세요 -->
+                    <label title="name">그룹명</label>
                   </th>
                   <td>
                     <span>우주전파센터 전 직원</span>
@@ -108,7 +116,8 @@
                 </tr>
                 <tr>
                   <th class="input_necessary">
-                    <label for="explanation">그룹설명</label>
+                    <!-- 아래와 같이 for를 title로 변경해주세요 -->
+                    <label title="explanation">그룹설명</label>
                   </th>
                   <td colspan="3">
                     <span>우주전파재난 센터내 전 직원</span>
@@ -122,6 +131,7 @@
               <table class="tbl_com">
                 <caption>그룹 등록 내역 테이블</caption>
                 <colgroup>
+                  <!-- 아래와 같이 width 작성 형식을 변경해주세요 -->
                   <col style="width:100px">
                   <col style="width:185px">
                   <col style="width:auto">
@@ -196,6 +206,7 @@
 <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
 <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
 <script src="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.full.min.js"></script>
 <script src="../plugins/jqueryui-timepicker-addon/dist/i18n/jquery-ui-timepicker-ko.js"></script>
 <script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
 <script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>

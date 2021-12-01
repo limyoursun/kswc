@@ -70,8 +70,9 @@
               <table>
                 <caption>재난대응 세부업무 옵션</caption>
                 <colgroup>
-                  <col width="100">
-                  <col width="*">
+                <!-- 아래와 같이 width 작성 형식을 변경해주세요 -->
+                  <col style="width:100px">
+                  <col style="width:auto">
                 </colgroup>
                 <tbody>
                   <tr>
@@ -113,9 +114,12 @@
                     <th><label for="option">옵션선택</label></th>
                     <td class="alignL">
                       <input type="checkbox" id="option">
-                      <label for="sms">SMS/MMS</label>
-                      <input type="checkbox" id="option">
-                      <label for="mail">E-mail</label>
+                      <!-- 아래와 같이 for를 title로 변경해주세요 -->
+                      <label title="sms">SMS/MMS</label>
+                      <!-- 아래와 같이 id를 option에서 option2로 변경해주세요 -->
+                      <input type="checkbox" id="option2">
+                      <!-- 아래와 같이 for를 title로 변경해주세요 -->
+                      <label title="mail">E-mail</label>
                     </td>
                   </tr>
                 </tbody>

@@ -42,7 +42,7 @@ dl>.dl_inline:nth-child(2)::before{display:none;}
 dl>.dl_inline::before{content:',';margin-right:5px;}
 .pop_wrap .tbl_view tr{border:1px solid #e4e4e4;border-width:1px 0;}
 .pop_wrap .tbl_view th{padding:5px 15px;line-height:32px;}
-.pop_wrap .tbl_view td{padding:5px 15px;}
+.pop_wrap .tbl_view td{padding:5px 15px;line-height:32px;}
 .pop_wrap .tbl_view input{padding-bottom:1px;}
 .pop_wrap .tbl_view input[type=text]{line-height:32px;height:32px;}
 .pop_wrap .tbl_view select{width:100%;height:32px;}
@@ -112,3 +112,7 @@ dl>.dl_inline::before{content:',';margin-right:5px;}
 .issued_wrap ul{margin-bottom:20px;}
 .issued_wrap li{display:inline-block;font-size:16px;line-height:33px;margin-right:5px;}
 .issued_wrap ul{margin-right:10px;}
+
+/* 20211201 추가 */
+.pop_wrap .tbl_view td span.note-icon-caret,
+.pop_wrap .tbl_view td span.note-current-fontsize{line-height:1.4;}

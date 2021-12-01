@@ -21,8 +21,11 @@
             <table class="tbl_view">
               <caption>그룹 분류 테이블</caption>
               <colgroup>
-                <col width="180">
-                <col width="*">
+                <!-- 아래와 같이 width 작성 형식을 변경해주세요 -->
+                <col style="width:180px">
+                <col style="width:auto">
+                <col style="width:auto">
+                <col style="width:auto">
               </colgroup>
               <tbody>
                 <tr>
@@ -53,9 +56,10 @@
                 </tr>
                 <tr>
                   <th class="input_necessary">
-                    <label for="file">그룹 인원 등록</label>
+                    <!-- 아래와 같이 for를 title로 변경해주세요 -->
+                    <label title="file">그룹 인원 등록</label>
                   </th>
-                  <td colspan="5">
+                  <td colspan="3">
                     <button type="button" class="btn_axi btn_search btn_l btn_skyblueline">주소록 불러오기</button>
                     <ul class="attendee_wrap">
                       <li>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,8 @@
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/sub.css">
   <link rel="stylesheet" href="../css/pop.css">
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.css">
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.css">
 </head>
 
 <body>
@@ -109,12 +112,13 @@
               </select>
             </li>
             <li>
-              <label for="date" class="dot">기간</label>
+              <!-- 아래와 같이 datepicker를 변경해주세요 -->
+              <label title="date" class="dot">기간</label>
               <span class="period period_multi">
-                <input type="text" class="datepicker from" id="date" name="date" placeholder="YYYY-MM-DD" readonly
-                  dataformat="from" title="시작 날짜 선택">
-                <input type="text" class="datepicker to" name="date" placeholder="YYYY-MM-DD" readonly dataformat="to"
-                  title="종료  날짜 선택">
+                <input type="text" id="date_timepicker_start" class="input_calendar" value="YYYY/MM/DD"
+                  placeholder="기간 종료일 선택" title="기간 종료일 선택">
+                <input type="text" id="date_timepicker_end" class="input_calendar" value="YYYY/MM/DD"
+                  placeholder="기간 종료일 선택" title="기간 종료일 선택">
               </span>
             </li>
             <li>
@@ -134,10 +138,13 @@
             </div>
             <table class="tbl_com">
               <colgroup>
-                <col width="100">
-                <col width="185">
-                <col width="285">
-                <col width="600">
+                <!-- 아래와 같이 width 작성 형식을 변경해주세요 -->
+                <col style="width:100px">
+                <col style="width:185px">
+                <col style="width:285px">
+                <col style="width:auto">
+                <col style="width:200px">
+                <col style="width:200px">
               </colgroup>
               <thead>
                 <tr>
@@ -254,6 +261,7 @@
 <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
 <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
 <script src="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.full.min.js"></script>
 <script src="../plugins/jqueryui-timepicker-addon/dist/i18n/jquery-ui-timepicker-ko.js"></script>
 <script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
 <script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>

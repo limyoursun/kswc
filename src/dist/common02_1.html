@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,8 @@
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/sub.css">
   <link rel="stylesheet" href="../css/pop.css">
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.css">
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.css">
 </head>
 
 <body>
@@ -88,8 +91,11 @@
             <table class="tbl_view">
               <caption>그룹 분류 테이블</caption>
               <colgroup>
-                <col width="180">
-                <col width="*">
+                <!-- 아래와 같이 width 작성 형식을 변경해주세요 -->
+                <col style="width:180px">
+                <col style="width:auto">
+                <col style="width:auto">
+                <col style="width:auto">
               </colgroup>
               <tbody>
                 <tr>
@@ -120,9 +126,10 @@
                 </tr>
                 <tr>
                   <th class="input_necessary">
-                    <label for="file">그룹 인원 등록</label>
+                    <!-- 아래와 같이 for를 title로 변경해주세요 -->
+                    <label title="file">그룹 인원 등록</label>
                   </th>
-                  <td colspan="5">
+                  <td colspan="3">
                     <button type="button" class="btn_axi btn_search btn_l btn_skyblueline">주소록 불러오기</button>
                     <ul class="attendee_wrap">
                       <li>
@@ -167,8 +174,9 @@
           <div class="search_wrap">
             <ul class="search">
               <li>
-                <label for="sort" class="dot">유형</label>
-                <select id="sort" title="전체">
+                <!-- 아래와 같이 중복 아이디(sort->sort2)를 변경해주세요 -->
+                <label for="sort2" class="dot">유형</label>
+                <select id="sort2" title="전체">
                   <option value="전체">전체</option>
                   <option value="내부">내부</option>
                   <option value="외부">외부</option>
@@ -180,12 +188,13 @@
             <table class="tbl_col">
               <caption>훈련결과 제목 테이블</caption>
               <colgroup>
-                <col width="50">
-                <col width="80">
-                <col width="100">
-                <col width="*">
-                <col width="150">
-                <col width="150">
+                <!-- 아래와 같이 width 작성 형식을 변경해주세요 -->
+                <col style="width:50px">
+                <col style="width:80px">
+                <col style="width:100px">
+                <col style="width:auto">
+                <col style="width:150px">
+                <col style="width:150px">
                 <col class="fix_scroll">
               </colgroup>
               <thead>
@@ -204,12 +213,13 @@
               <table class="tbl_col">
                 <caption>훈련결과 내용 테이블</caption>
                 <colgroup>
-                  <col width="50">
-                  <col width="80">
-                  <col width="100">
-                  <col width="*">
-                  <col width="150">
-                  <col width="150">
+                <!-- 아래와 같이 width 작성 형식을 변경해주세요 -->
+                  <col style="width:50px">
+                  <col style="width:80px">
+                  <col style="width:100px">
+                  <col style="width:auto">
+                  <col style="width:150px">
+                  <col style="width:150px">
                 </colgroup>
                 <tbody class="contactInfo">
                   <tr>
@@ -351,6 +361,7 @@
 <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
 <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
 <script src="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.full.min.js"></script>
 <script src="../plugins/jqueryui-timepicker-addon/dist/i18n/jquery-ui-timepicker-ko.js"></script>
 <script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
 <script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>

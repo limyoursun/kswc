@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,8 @@
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/sub.css">
   <link rel="stylesheet" href="../css/pop.css">
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.css">
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.css">
 </head>
 
 <body>
@@ -137,8 +140,9 @@
               <table>
                 <caption>재난대응 세부업무 옵션</caption>
                 <colgroup>
-                  <col width="100">
-                  <col width="*">
+                <!-- 아래와 같이 width 작성 형식을 변경해주세요 -->
+                  <col style="width:100px">
+                  <col style="width:auto">
                 </colgroup>
                 <tbody>
                   <tr>
@@ -180,9 +184,12 @@
                     <th><label for="option">옵션선택</label></th>
                     <td class="alignL">
                       <input type="checkbox" id="option">
-                      <label for="sms">SMS/MMS</label>
-                      <input type="checkbox" id="option">
-                      <label for="mail">E-mail</label>
+                      <!-- 아래와 같이 for를 title로 변경해주세요 -->
+                      <label title="sms">SMS/MMS</label>
+                      <!-- 아래와 같이 id를 option에서 option2로 변경해주세요 -->
+                      <input type="checkbox" id="option2">
+                      <!-- 아래와 같이 for를 title로 변경해주세요 -->
+                      <label title="mail">E-mail</label>
                     </td>
                   </tr>
                 </tbody>
@@ -211,6 +218,7 @@
 <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
 <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
 <script src="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.full.min.js"></script>
 <script src="../plugins/jqueryui-timepicker-addon/dist/i18n/jquery-ui-timepicker-ko.js"></script>
 <script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
 <script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>

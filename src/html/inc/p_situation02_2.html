@@ -10,28 +10,32 @@
           <table class="tbl_view alignL">
             <caption>조치사항 등록 테이블</caption>
             <colgroup>
-              <col width='100'>
-              <col width='*'>
+                <!-- 아래와 같이 width 작성 형식을 변경해주세요 -->
+              <col style="width:100px">
+              <col style="width:auto">
             </colgroup>
             <tr>
               <th>
-                <label for="title">제목</label>
+                <label for="title2">제목</label>
               </th>
-              <td><input type="text" id="title" value="모의훈련 상황 평가 전달"></td>
+                  <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
+              <td><input type="text" id="title2" value="모의훈련 상황 평가 전달"></td>
             </tr>
             <tr>
               <th>
-                <label for="manage">담당자</label>
+                <label for="manage2">담당자</label>
               </th>
-              <td><input type="text" id="manage" value="평가 담당자"></td>
+                  <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
+              <td><input type="text" id="manage2" value="평가 담당자"></td>
             </tr>
             <tr>
               <th>
-                <label for="content">내용</label>
+                <label title="content2">내용</label>
               </th>
               <td>
                 <div class="input_content">
-                  <textarea class="summernote_pop" id="content" name="editordata"></textarea>
+                  <!-- 아래와 같이 textarea를 div로 변경해주세요 -->
+                  <div class="summernote_pop"></div>
                 </div>
               </td>
             </tr>
