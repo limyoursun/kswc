@@ -17,6 +17,8 @@
                     <!-- 아래와 같이 width 작성 방식을 변경해주세요 -->
                     <col style="width:10px">
                     <col style="width:500px">
+                    <col style="width:auto">
+                    <col style="width:auto">
                   </colgroup>
                   <tbody>
                     <tr>
@@ -55,8 +57,8 @@
                         <label for="date20">일자</label>
                       </th>
                       <td colspan="3">
-                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
-                        <input type="text" class="datepicker input_calendar" title="date" value="발생시각 선택">
+                        <!-- 아래와 같이 중복 아이디 추가와 새로운 datepicker를 적용해주세요 -->
+                        <input type="text" id="date20" class="datepicker input_calendar" title="date" value="발생시각 선택">
                       </td>
                     </tr>
                     <tr>
@@ -101,15 +103,16 @@
                     </tr>
                     <tr>
                       <th scope="row">
-                        <label for="file">첨부파일</label>
+                          <!-- 아래와 같이 title을 추가해주세요 -->
+                        <label title="file">첨부파일</label>
                       </th>
                       <td colspan="3">
                         <div class="filebox bs3-primary">
-                          <!-- 아래와 같이 title을 추가해주세요 -->
+                          <!-- 아래와 같이 title을 추가, 중복 아이디 변경해주세요 -->
                           <input class="upload-name" value="파일 첨부" disabled="disabled" title="파일 첨부">
-                          <label for="ex_filename" class="btn_l btn_skyblue">업로드</label>
-                          <!-- 아래와 같이 title을 추가해주세요 -->
-                          <input type="file" id="ex_filename" class="upload-hidden" title="파일 첨부">
+                          <label for="ex_filename4" class="btn_l btn_skyblue">업로드</label>
+                          <!-- 아래와 같이 title을 추가, 중복 아이디 변경해주세요 -->
+                          <input type="file" id="ex_filename4" class="upload-hidden" title="파일 첨부">
                         </div>
                       </td>
                     </tr>

@@ -25,8 +25,8 @@
                         <label for="date19">일시</label>
                       </th>
                       <td>
-                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
-                        <input type="text" class="datepicker input_calendar" title="date" value="발생시각 선택">
+                        <!-- 아래와 같이 중복 아이디 추가와 새로운 datepicker를 적용해주세요 -->
+                        <input type="text" id="date19" class="datepicker input_calendar" title="date" value="발생시각 선택">
                       </td>
                     </tr>
                     <tr>
@@ -59,7 +59,8 @@
                     </tr>
                     <tr>
                       <th scope="row">
-                        <label for="reason">피해 가능 분야</label>
+                          <!-- 아래와 같이 title을 추가해주세요 -->
+                        <label title="reason">피해 가능 분야</label>
                       </th>
                       <td>
                         <table class="tbl_com">

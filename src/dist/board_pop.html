@@ -8,14 +8,13 @@
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../plugins/axicon/axicon.min.css" />
   <link rel="stylesheet" href="../plugins/jquery-ui/themes/base/jquery-ui.min.css" />
-  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.css" />
   <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css" />
   <link rel="stylesheet" href="../plugins/summernote/css/summernote-lite.css">
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.css"> <!-- datepicker 변경으로 인한 추가 및 수정 부분 -->
+  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.css"> <!-- datepicker 변경으로 인한 추가 및 수정 부분 -->
+  <link rel="stylesheet" href="../css/pop.css">
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/sub.css">
-  <link rel="stylesheet" href="../css/pop.css">
-  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.css">
-  <link rel="stylesheet" href="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.css">
 </head>
 
 <body>
@@ -79,9 +78,9 @@
   <script src="../plugins/jquery/dist/jquery.min.js"></script>
 <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
 <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js"></script>
-<script src="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.js"></script>
-<script src="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.full.min.js"></script>
-<script src="../plugins/jqueryui-timepicker-addon/dist/i18n/jquery-ui-timepicker-ko.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.js"></script> <!-- datepicker 변경으로 인한 추가 및 수정 부분 -->
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.full.min.js"></script> <!-- datepicker 변경으로 인한 추가 및 수정 부분 -->
+<script src="../plugins/jqueryui-timepicker-addon/dist/i18n/jquery-ui-timepicker-ko.js"></script> <!-- datepicker 변경으로 인한 추가 및 수정 부분 -->
 <script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
 <script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>
 <script src="../plugins/smarteditor2/js/service/HuskyEZCreator.js"></script>
@@ -164,11 +163,11 @@
                   <table class="tbl_com">
                     <colgroup>
                       <!-- 아래와 같이 width 작성 방식을 변경해주세요 -->
-                      <col style="width:100px">
+                      <col style="width:80px">
                       <col style="width:auto">
-                      <col style="width:120px">
-                      <col style="width:120px">
-                      <col style="width:120px">
+                      <col style="width:100px">
+                      <col style="width:100px">
+                      <col style="width:100px">
                     </colgroup>
                     <thead>
                       <tr>
@@ -349,11 +348,11 @@
                   <table class="tbl_com">
                     <colgroup>
                 <!-- 아래와 같이 width 작성 방식을 변경해주세요 -->
-                      <col style="width:100px">
+                      <col style="width:80px">
                       <col style="width:auto">
-                      <col style="width:120px">
-                      <col style="width:120px">
-                      <col style="width:120px">
+                      <col style="width:100px">
+                      <col style="width:100px">
+                      <col style="width:100px">
                     </colgroup>
                     <thead>
                       <tr>
@@ -622,7 +621,7 @@
                   </div>
                   <table class="tbl_com">
                     <colgroup>
-                <!-- 아래와 같이 width 작성 방식을 변경해주세요 -->
+                      <!-- 아래와 같이 width 작성 방식을 변경해주세요 -->
                       <col style="width:auto">
                       <col style="width:250px">
                       <col style="width:80px">
@@ -640,7 +639,7 @@
                   <div style="height:230px;">
                     <table class="tbl_com send_type">
                       <colgroup>
-                <!-- 아래와 같이 width 작성 방식을 변경해주세요 -->
+                        <!-- 아래와 같이 width 작성 방식을 변경해주세요 -->
                         <col style="width:auto">
                         <col style="width:250px">
                         <col style="width:80px">
@@ -654,28 +653,36 @@
                             </select>
                           </td>
                           <td>
-                            <input type="text" class="datetimepicker input_calendar" title="date" style="width:100%; height:35px;" value="발생일시 선택">
+                            <!-- 아래처럼 일시를 적을 수 있도록 datetimepicker를 적용해주세요 -->
+                            <input type="text" class="datetimepicker input_calendar" title="date"
+                              style="width:100%; height:35px;" value="발생일시 선택">
                           </td>
                           <td>3</td>
                           <td><button type="button" class="btn_s btn_blue">저장</button></td>
                         </tr>
                         <tr>
                           <td>지자기교란(G)</td>
-                          <td> <input type="text" class="datetimepicker input_calendar" title="date" style="width:100%;height:35px;" value="발생일시 선택">
+                          <!-- 아래처럼 일시를 적을 수 있도록 datetimepicker를 적용해주세요 -->
+                          <td> <input type="text" class="datetimepicker input_calendar" title="date"
+                              style="width:100%;height:35px;" value="발생일시 선택">
                           </td>
                           <td>G4</td>
                           <td><button type="button" class="btn_s btn_skyblue">편집</button></td>
                         </tr>
                         <tr>
                           <td>태양흑점폭발(R)</td>
-                          <td> <input type="text" class="datetimepicker input_calendar" title="date" style="width:100%;height:35px;" value="발생일시 선택">
+                          <!-- 아래처럼 일시를 적을 수 있도록 datetimepicker를 적용해주세요 -->
+                          <td> <input type="text" class="datetimepicker input_calendar" title="date"
+                              style="width:100%;height:35px;" value="발생일시 선택">
                           </td>
                           <td>R0</td>
                           <td></td>
                         </tr>
                         <tr>
                           <td>지자기교란(G)</td>
-                          <td> <input type="text" class="datetimepicker input_calendar" title="date" style="width:100%;height:35px;" value="발생일시 선택">
+                          <!-- 아래처럼 일시를 적을 수 있도록 datetimepicker를 적용해주세요 -->
+                          <td> <input type="text" class="datetimepicker input_calendar" title="date"
+                              style="width:100%;height:35px;" value="발생일시 선택">
                           </td>
                           <td>G3</td>
                           <td></td>
@@ -1398,7 +1405,7 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
                       <!-- 아래와 같이 width 작성 방식을 변경해주세요 -->
                       <col style="width:70px">
                       <col style="width:80px">
-                      <col style="width:150px">
+                      <col style="width:300px">
                       <col style="width:auto">
                     </colgroup>
                     <thead>
@@ -1598,6 +1605,7 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
                       <col style="width:140px">
                       <col style="width:140px">
                       <col style="width:140px">
+                      <col style="width:auto">
                     </colgroup>
                     <thead>
                       <tr>
@@ -1619,6 +1627,7 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
                         <col style="width:140px">
                         <col style="width:140px">
                         <col style="width:140px">
+                        <col style="width:auto">
                       </colgroup>
                       <tbody>
                         <tr>
@@ -1717,8 +1726,8 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
                       <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                       <th><label for="situation16">내용</label></th>
                       <td>
-                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
-                        <textarea name="situation16" placeholder="내용을 입력하여 주세요."></textarea>
+                        <!-- 아래와 같이 중복 아이디를 추가해주세요 -->
+                        <textarea id="situation16" placeholder="내용을 입력하여 주세요."></textarea>
                       </td>
                     </tr>
                   </tbody>
@@ -1898,7 +1907,8 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
                   <tbody>
                     <tr>
                       <th scope="row">그림1</th>
-                      <td colspan="3">
+                      <!-- 아래와 같이 colspan 값을 제거해주세요 -->
+                      <td>
                         <div class="filebox bs3-primary">
                           <input class="upload-name" value="파일 첨부" disabled="disabled" title="파일첨부">
 
@@ -1912,14 +1922,15 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
                         <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <label for="explanation18_1">그림1 설명</label>
                       </th>
-                      <td colspan="3">
+                      <!-- 아래와 같이 colspan 값을 제거해주세요 -->
+                      <td>
                         <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <input id="explanation18_1" type="text">
                       </td>
                     </tr>
                     <tr>
                       <th scope="row">그림2</th>
-                      <td colspan="3">
+                      <td>
                         <div class="filebox bs3-primary">
                           <input class="upload-name" value="파일 첨부" disabled="disabled" title="파일첨부">
                           <label for="ex_filename2" class="btn_l btn_skyblue">업로드</label>
@@ -1932,7 +1943,8 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
                         <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <label for="explanation18_2">그림2 설명</label>
                       </th>
-                      <td colspan="3">
+                      <!-- 아래와 같이 colspan 값을 제거해주세요 -->
+                      <td>
                         <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <input id="explanation18_2" type="text" value="">
                       </td>
@@ -1942,7 +1954,8 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
                         <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <label for="explanation18_3">기타사항</label>
                       </th>
-                      <td colspan="3">
+                      <!-- 아래와 같이 colspan 값을 제거해주세요 -->
+                      <td>
                         <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
                         <input id="explanation18_3" type="text" value="">
                       </td>
@@ -1967,7 +1980,8 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
                   <tbody>
                     <tr>
                       <th scope="row">그림1</th>
-                      <td colspan="3">
+                      <!-- 아래와 같이 colspan 값을 제거해주세요 -->
+                      <td>
                         <div class="filebox bs3-primary">
                           <!-- 아래와 같이 title을 추가해주세요 -->
                           <input class="upload-name" value="파일 첨부" disabled="disabled" title="파일첨부">
@@ -1981,7 +1995,8 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
                       <th scope="row">
                         <label for="explanation1">그림1 설명</label>
                       </th>
-                      <td colspan="3">
+                      <!-- 아래와 같이 colspan 값을 제거해주세요 -->
+                      <td>
                         <input id="explanation1" type="text">
                       </td>
                     </tr>
@@ -1989,7 +2004,8 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
                       <th scope="row">
                         <label for="explanation2">기타사항</label>
                       </th>
-                      <td colspan="3">
+                      <!-- 아래와 같이 colspan 값을 제거해주세요 -->
+                      <td>
                         <input id="explanation2" type="text" value="">
                       </td>
                     </tr>
@@ -2067,8 +2083,8 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
                         <label for="date19">일시</label>
                       </th>
                       <td>
-                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
-                        <input type="text" class="datepicker input_calendar" title="date" value="발생시각 선택">
+                        <!-- 아래와 같이 중복 아이디 추가와 새로운 datepicker를 적용해주세요 -->
+                        <input type="text" id="date19" class="datepicker input_calendar" title="date" value="발생시각 선택">
                       </td>
                     </tr>
                     <tr>
@@ -2101,7 +2117,8 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
                     </tr>
                     <tr>
                       <th scope="row">
-                        <label for="reason">피해 가능 분야</label>
+                          <!-- 아래와 같이 title을 추가해주세요 -->
+                        <label title="reason">피해 가능 분야</label>
                       </th>
                       <td>
                         <table class="tbl_com">
@@ -2232,6 +2249,8 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
                     <!-- 아래와 같이 width 작성 방식을 변경해주세요 -->
                     <col style="width:10px">
                     <col style="width:500px">
+                    <col style="width:auto">
+                    <col style="width:auto">
                   </colgroup>
                   <tbody>
                     <tr>
@@ -2270,8 +2289,8 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
                         <label for="date20">일자</label>
                       </th>
                       <td colspan="3">
-                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
-                        <input type="text" class="datepicker input_calendar" title="date" value="발생시각 선택">
+                        <!-- 아래와 같이 중복 아이디 추가와 새로운 datepicker를 적용해주세요 -->
+                        <input type="text" id="date20" class="datepicker input_calendar" title="date" value="발생시각 선택">
                       </td>
                     </tr>
                     <tr>
@@ -2316,15 +2335,16 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
                     </tr>
                     <tr>
                       <th scope="row">
-                        <label for="file">첨부파일</label>
+                          <!-- 아래와 같이 title을 추가해주세요 -->
+                        <label title="file">첨부파일</label>
                       </th>
                       <td colspan="3">
                         <div class="filebox bs3-primary">
-                          <!-- 아래와 같이 title을 추가해주세요 -->
+                          <!-- 아래와 같이 title을 추가, 중복 아이디 변경해주세요 -->
                           <input class="upload-name" value="파일 첨부" disabled="disabled" title="파일 첨부">
-                          <label for="ex_filename" class="btn_l btn_skyblue">업로드</label>
-                          <!-- 아래와 같이 title을 추가해주세요 -->
-                          <input type="file" id="ex_filename" class="upload-hidden" title="파일 첨부">
+                          <label for="ex_filename4" class="btn_l btn_skyblue">업로드</label>
+                          <!-- 아래와 같이 title을 추가, 중복 아이디 변경해주세요 -->
+                          <input type="file" id="ex_filename4" class="upload-hidden" title="파일 첨부">
                         </div>
                       </td>
                     </tr>
@@ -2399,6 +2419,8 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
                     <!-- 아래와 같이 width 작성 방식을 변경해주세요 -->
                     <col style="width:10px">
                     <col style="width:500px">
+                    <col style="width:auto">
+                    <col style="width:auto">
                   </colgroup>
                   <tbody>
                     <tr>
@@ -2464,8 +2486,8 @@ OOOO-OO-OO-OO:OO-R4(발령)</textarea>
                         <label for="content21">피해(장애) 내역</label>
                       </th>
                       <td colspan="3">
-                        <!-- 아래와 같이 중복 아이디를 변경해주세요 -->
-                        <textarea name="content21" style="min-height:200px;">□ 과학기술정보통신부(장관 임혜숙, 이하 ‘과기정통부’)는 0월 00일 00시 00분, 강력한 태양흑점폭발이 발생함에 따라 우주전파재난 “관심” 위기경보를 발령하였다고 밝혔다.
+                        <!-- 아래와 같이 중복 아이디를 추가해주세요 -->
+                        <textarea id="content21" style="min-height:200px;">□ 과학기술정보통신부(장관 임혜숙, 이하 ‘과기정통부’)는 0월 00일 00시 00분, 강력한 태양흑점폭발이 발생함에 따라 우주전파재난 “관심” 위기경보를 발령하였다고 밝혔다.
 ㅇ 우주전파재난 “관심” 위기경보는 태양 전면에서 관측된 흑점 0000에서 규모00 수준의 태양흑점이 폭발함에 따라 발생된 태양전파들이 지구에 도달하여 지구대기권이 교란되어 발령되었다.
 □ 과학기술정보통신부는 상황매뉴얼의 비상체계에 따라 우주전파재난 대응팀을 구성·운영하면서,
 ㅇ 위성·방송통신(과기정통부), 항공ㆍ항법(국토교통부), 전력(산업통상자원부) 등 각 산업 분야의 소관 부처와 함께 우주전파재난 발생에 따른 피해 발생에 대비하고 있다.

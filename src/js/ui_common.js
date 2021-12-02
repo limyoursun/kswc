@@ -1,4 +1,5 @@
 $(function () {
+  // 20211201 적용 캘린더 변경으로 인한 수정 -- S
   /*calendar*/
   // 시간까지
   $.datetimepicker.setLocale('kr');
@@ -29,6 +30,7 @@ $(function () {
     },
     timepicker: false
   });
+  // 20211201 적용 캘린더 변경으로 인한 수정 -- E
 
   // tab
   var tab_conts = $('.tab_conts'),
